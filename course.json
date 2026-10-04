@@ -1,0 +1,21 @@
+{
+  "sources": [
+    {"id":"lec01-02","file":"ELEC6910J_Lec_1_2_updated.pdf","pages":85},
+    {"id":"lec03-04","file":"ELEC6910J_Lec_3_4.pdf","pages":81},
+    {"id":"lec05-06","file":"ELEC6910J_Lec_5_6.pdf","pages":65},
+    {"id":"lec07-08","file":"ELEC6910J_Lec_7_8.pdf","pages":57},
+    {"id":"lec09-10","file":"ELEC6910J_Lec_9_10.pdf","pages":41}
+  ],
+  "chapters": [
+    {"number":1,"title":"Introduction","zh":"导论与学习范式","source":"lec01-02","start":1,"end":49},
+    {"number":2,"title":"Probability Basics","zh":"概率基础","source":"lec01-02","start":50,"end":85},
+    {"number":3,"title":"Multi-Armed Bandits","zh":"多臂老虎机与探索","source":"lec03-04","start":1,"end":35},
+    {"number":4,"title":"Markov Decision Processes","zh":"马尔可夫决策过程","source":"lec03-04","start":36,"end":81},
+    {"number":5,"title":"Value Functions & Bellman Equations","zh":"价值函数与贝尔曼方程","source":"lec05-06","start":1,"end":35},
+    {"number":6,"title":"Value Iteration","zh":"动态规划与价值迭代","source":"lec05-06","start":36,"end":65},
+    {"number":7,"title":"Policy Evaluation","zh":"固定策略与策略评估","source":"lec07-08","start":1,"end":29},
+    {"number":8,"title":"Policy Iteration & Convergence","zh":"策略改进、迭代与收敛","source":"lec07-08","start":30,"end":57},
+    {"number":9,"title":"Monte-Carlo Prediction","zh":"蒙特卡洛预测","source":"lec09-10","start":1,"end":23},
+    {"number":10,"title":"Monte-Carlo Control","zh":"蒙特卡洛控制","source":"lec09-10","start":24,"end":41}
+  ]
+}

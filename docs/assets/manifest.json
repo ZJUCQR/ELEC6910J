@@ -1,0 +1,2430 @@
+{
+  "total_pages": 329,
+  "sources": [
+    {
+      "id": "lec01-02",
+      "file": "ELEC6910J_Lec_1_2_updated.pdf",
+      "pages": 85,
+      "sha256": "019e744087e45a2c12ee98ef8006c1b91b63bcb6db7cbd117ce2de8118e9e98e",
+      "slides": [
+        {
+          "page": 1,
+          "title": "ELEC6910J",
+          "image": "assets/slides/lec01-02/001.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 2,
+          "title": "Teaching Team",
+          "image": "assets/slides/lec01-02/002.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 3,
+          "title": "DeepReinforcementLearning=",
+          "image": "assets/slides/lec01-02/003.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 4,
+          "title": "Logistics",
+          "image": "assets/slides/lec01-02/004.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 5,
+          "title": "Schedule",
+          "image": "assets/slides/lec01-02/005.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 6,
+          "title": "Waiting List",
+          "image": "assets/slides/lec01-02/006.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 7,
+          "title": "Grading",
+          "image": "assets/slides/lec01-02/007.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 8,
+          "title": "Topics",
+          "image": "assets/slides/lec01-02/008.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 9,
+          "title": "Outline",
+          "image": "assets/slides/lec01-02/009.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 10,
+          "title": "What is AI?",
+          "image": "assets/slides/lec01-02/010.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 11,
+          "title": "Rational Decisions",
+          "image": "assets/slides/lec01-02/011.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 12,
+          "title": "Machine Learning",
+          "image": "assets/slides/lec01-02/012.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 13,
+          "title": "PEAS",
+          "image": "assets/slides/lec01-02/013.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 14,
+          "title": "Machine Learning",
+          "image": "assets/slides/lec01-02/014.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 15,
+          "title": "Supervised Learning",
+          "image": "assets/slides/lec01-02/015.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 16,
+          "title": "Supervised Learning: Regression",
+          "image": "assets/slides/lec01-02/016.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 17,
+          "title": "Supervised Learning: Classification",
+          "image": "assets/slides/lec01-02/017.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 18,
+          "title": "Supervised Learning: Classification",
+          "image": "assets/slides/lec01-02/018.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 19,
+          "title": "Natural Language Processing",
+          "image": "assets/slides/lec01-02/019.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 20,
+          "title": "Natural Language Processing",
+          "image": "assets/slides/lec01-02/020.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 21,
+          "title": "Supervised Learning in NLP",
+          "image": "assets/slides/lec01-02/021.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 22,
+          "title": "ChatGPT",
+          "image": "assets/slides/lec01-02/022.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 23,
+          "title": "Computer Vision",
+          "image": "assets/slides/lec01-02/023.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 24,
+          "title": "Supervised Learning in CV",
+          "image": "assets/slides/lec01-02/024.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 25,
+          "title": "Supervised Learning in CV",
+          "image": "assets/slides/lec01-02/025.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 26,
+          "title": "Autonomous Driving",
+          "image": "assets/slides/lec01-02/026.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 27,
+          "title": "Stable Diffusion",
+          "image": "assets/slides/lec01-02/027.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 28,
+          "title": "Unsupervised Learning",
+          "image": "assets/slides/lec01-02/028.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 29,
+          "title": "Unsupervised Learning",
+          "image": "assets/slides/lec01-02/029.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 30,
+          "title": "Designing Rational Agents",
+          "image": "assets/slides/lec01-02/030.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 31,
+          "title": "Rational Decisions",
+          "image": "assets/slides/lec01-02/031.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 32,
+          "title": "Reinforcement Learning",
+          "image": "assets/slides/lec01-02/032.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 33,
+          "title": "Examples of DRL",
+          "image": "assets/slides/lec01-02/033.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 34,
+          "title": "Examples of DRL",
+          "image": "assets/slides/lec01-02/034.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 35,
+          "title": "Examples of DRL",
+          "image": "assets/slides/lec01-02/035.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 36,
+          "title": "Examples of DRL",
+          "image": "assets/slides/lec01-02/036.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 37,
+          "title": "Examples of DRL",
+          "image": "assets/slides/lec01-02/037.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 38,
+          "title": "Examples of DRL",
+          "image": "assets/slides/lec01-02/038.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 39,
+          "title": "Examples of DRL",
+          "image": "assets/slides/lec01-02/039.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 40,
+          "title": "Reinforcement Learning",
+          "image": "assets/slides/lec01-02/040.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 41,
+          "title": "Reinforcement Learning",
+          "image": "assets/slides/lec01-02/041.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 42,
+          "title": "Reinforcement Learning",
+          "image": "assets/slides/lec01-02/042.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 43,
+          "title": "Reinforcement Learning",
+          "image": "assets/slides/lec01-02/043.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 44,
+          "title": "Reinforcement Learning",
+          "image": "assets/slides/lec01-02/044.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 45,
+          "title": "Deep Reinforcement Learning",
+          "image": "assets/slides/lec01-02/045.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 46,
+          "title": "Robotics",
+          "image": "assets/slides/lec01-02/046.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 47,
+          "title": "Robotics",
+          "image": "assets/slides/lec01-02/047.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 48,
+          "title": "Multi-Agent RL",
+          "image": "assets/slides/lec01-02/048.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 49,
+          "title": "Multi-Agent RL",
+          "image": "assets/slides/lec01-02/049.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 50,
+          "title": "ELEC6910J",
+          "image": "assets/slides/lec01-02/050.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 51,
+          "title": "Outline",
+          "image": "assets/slides/lec01-02/051.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 52,
+          "title": "Uncertainty",
+          "image": "assets/slides/lec01-02/052.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 53,
+          "title": "Set Operations            Set Relations",
+          "image": "assets/slides/lec01-02/053.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 54,
+          "title": "Useful Properties of Set Operations",
+          "image": "assets/slides/lec01-02/054.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 55,
+          "title": "Basic Laws of Probability (Discrete)",
+          "image": "assets/slides/lec01-02/055.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 56,
+          "title": "Basic Laws of Probability (Discrete)",
+          "image": "assets/slides/lec01-02/056.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 57,
+          "title": "Random Variables",
+          "image": "assets/slides/lec01-02/057.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 58,
+          "title": "Probability Distributions",
+          "image": "assets/slides/lec01-02/058.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 59,
+          "title": "Probabilities of Events",
+          "image": "assets/slides/lec01-02/059.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 60,
+          "title": "Marginal Distributions",
+          "image": "assets/slides/lec01-02/060.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 61,
+          "title": "Conditional Probabilities",
+          "image": "assets/slides/lec01-02/061.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 62,
+          "title": "Conditional Probabilities",
+          "image": "assets/slides/lec01-02/062.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 63,
+          "title": "Conditional Probabilities",
+          "image": "assets/slides/lec01-02/063.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 64,
+          "title": "Conditional Probabilities",
+          "image": "assets/slides/lec01-02/064.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 65,
+          "title": "Normalizing a Distribution",
+          "image": "assets/slides/lec01-02/065.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 66,
+          "title": "Conditional Distributions",
+          "image": "assets/slides/lec01-02/066.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 67,
+          "title": "The Product (or Chain) Rule",
+          "image": "assets/slides/lec01-02/067.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 68,
+          "title": "The Product (or Chain) Rule",
+          "image": "assets/slides/lec01-02/068.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 69,
+          "title": "The Product (or Chain) Rule",
+          "image": "assets/slides/lec01-02/069.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 70,
+          "title": "Total Probability Theorem",
+          "image": "assets/slides/lec01-02/070.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 71,
+          "title": "Total Probability Theorem",
+          "image": "assets/slides/lec01-02/071.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 72,
+          "title": "𝑃𝐸𝐹→𝑃(𝐹|𝐸)Bayes’ Rule",
+          "image": "assets/slides/lec01-02/072.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 73,
+          "title": "𝑃𝐸𝐹→𝑃(𝐹|𝐸)Bayes’ Rule",
+          "image": "assets/slides/lec01-02/073.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 74,
+          "title": "𝑃𝐸𝐹→𝑃(𝐹|𝐸)Bayes’ Rule",
+          "image": "assets/slides/lec01-02/074.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 75,
+          "title": "Independence",
+          "image": "assets/slides/lec01-02/075.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 76,
+          "title": "Independence",
+          "image": "assets/slides/lec01-02/076.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 77,
+          "title": "Conditional Independence",
+          "image": "assets/slides/lec01-02/077.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 78,
+          "title": "Expectation",
+          "image": "assets/slides/lec01-02/078.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 79,
+          "title": "Intuition: Measure of Spread",
+          "image": "assets/slides/lec01-02/079.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 80,
+          "title": "Variance",
+          "image": "assets/slides/lec01-02/080.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 81,
+          "title": "Variance Intuition",
+          "image": "assets/slides/lec01-02/081.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 82,
+          "title": "Standard Deviation",
+          "image": "assets/slides/lec01-02/082.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 83,
+          "title": "The Core Probability Toolkit",
+          "image": "assets/slides/lec01-02/083.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 84,
+          "title": "Learning Challenges",
+          "image": "assets/slides/lec01-02/084.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 85,
+          "title": "Thanks for your listening.",
+          "image": "assets/slides/lec01-02/085.webp",
+          "width": 1600,
+          "height": 901
+        }
+      ]
+    },
+    {
+      "id": "lec03-04",
+      "file": "ELEC6910J_Lec_3_4.pdf",
+      "pages": 81,
+      "sha256": "6f36852f6d2140405620634830d268f161400ef8e1ffa9142712a3afc736cb10",
+      "slides": [
+        {
+          "page": 1,
+          "title": "ELEC6910J",
+          "image": "assets/slides/lec03-04/001.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 2,
+          "title": "Recap: The Core Probability Toolkit",
+          "image": "assets/slides/lec03-04/002.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 3,
+          "title": "Recap: Machine Learning",
+          "image": "assets/slides/lec03-04/003.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 4,
+          "title": "Recap",
+          "image": "assets/slides/lec03-04/004.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 5,
+          "title": "Reinforcement Learning",
+          "image": "assets/slides/lec03-04/005.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 6,
+          "title": "Reinforcement Learning",
+          "image": "assets/slides/lec03-04/006.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 7,
+          "title": "Multi-Armed Bandits",
+          "image": "assets/slides/lec03-04/007.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 8,
+          "title": "Multi-Armed Bandits",
+          "image": "assets/slides/lec03-04/008.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 9,
+          "title": "Multi-Armed Bandits",
+          "image": "assets/slides/lec03-04/009.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 10,
+          "title": "Multi-Armed Bandits",
+          "image": "assets/slides/lec03-04/010.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 11,
+          "title": "Multi-Armed Bandits",
+          "image": "assets/slides/lec03-04/011.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 12,
+          "title": "Multi-Armed Bandits",
+          "image": "assets/slides/lec03-04/012.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 13,
+          "title": "Multi-Armed Bandits",
+          "image": "assets/slides/lec03-04/013.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 14,
+          "title": "Multi-Armed Bandits",
+          "image": "assets/slides/lec03-04/014.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 15,
+          "title": "Multi-Armed Bandits",
+          "image": "assets/slides/lec03-04/015.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 16,
+          "title": "The Exploration/Exploitation Dilemma",
+          "image": "assets/slides/lec03-04/016.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 17,
+          "title": "The Exploration/Exploitation Dilemma",
+          "image": "assets/slides/lec03-04/017.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 18,
+          "title": "The Exploration/Exploitation Dilemma",
+          "image": "assets/slides/lec03-04/018.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 19,
+          "title": "Regret",
+          "image": "assets/slides/lec03-04/019.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 20,
+          "title": "Regret",
+          "image": "assets/slides/lec03-04/020.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 21,
+          "title": "Forming Action-Value Estimates",
+          "image": "assets/slides/lec03-04/021.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 22,
+          "title": "Forming Action-Value Estimates",
+          "image": "assets/slides/lec03-04/022.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 23,
+          "title": "Forming Action-Value Estimates",
+          "image": "assets/slides/lec03-04/023.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 24,
+          "title": "Forming Action-Value Estimates",
+          "image": "assets/slides/lec03-04/024.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 25,
+          "title": "Forming Action-Value Estimates",
+          "image": "assets/slides/lec03-04/025.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 26,
+          "title": "Forming Action-Value Estimates",
+          "image": "assets/slides/lec03-04/026.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 27,
+          "title": "Action selection in multi-armed bandits",
+          "image": "assets/slides/lec03-04/027.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 28,
+          "title": "Epsilon-Greedy Action Selection",
+          "image": "assets/slides/lec03-04/028.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 29,
+          "title": "Epsilon-Greedy Action Selection",
+          "image": "assets/slides/lec03-04/029.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 30,
+          "title": "Greedy v.s. Epsilon-Greedy",
+          "image": "assets/slides/lec03-04/030.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 31,
+          "title": "Non-Stationary Bandits",
+          "image": "assets/slides/lec03-04/031.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 32,
+          "title": "Non-Stationary Bandits",
+          "image": "assets/slides/lec03-04/032.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 33,
+          "title": "Action selection in multi-armed bandits",
+          "image": "assets/slides/lec03-04/033.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 34,
+          "title": "Contextual Bandits",
+          "image": "assets/slides/lec03-04/034.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 35,
+          "title": "Multi-Armed Bandits",
+          "image": "assets/slides/lec03-04/035.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 36,
+          "title": "ELEC6910J",
+          "image": "assets/slides/lec03-04/036.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 37,
+          "title": "Definitions",
+          "image": "assets/slides/lec03-04/037.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 38,
+          "title": "Reinforcement Learning",
+          "image": "assets/slides/lec03-04/038.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 39,
+          "title": "Markov Decision Process (MDP)",
+          "image": "assets/slides/lec03-04/039.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 40,
+          "title": "Markov Decision Process (MDP)",
+          "image": "assets/slides/lec03-04/040.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 41,
+          "title": "Markov Decision Process (MDP)",
+          "image": "assets/slides/lec03-04/041.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 42,
+          "title": "Markov Decision Process (MDP)",
+          "image": "assets/slides/lec03-04/042.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 43,
+          "title": "Markov Decision Process (MDP)",
+          "image": "assets/slides/lec03-04/043.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 44,
+          "title": "Markov Decision Process (MDP)",
+          "image": "assets/slides/lec03-04/044.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 45,
+          "title": "Policies",
+          "image": "assets/slides/lec03-04/045.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 46,
+          "title": "Policies",
+          "image": "assets/slides/lec03-04/046.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 47,
+          "title": "Markov Decision Process (MDP)",
+          "image": "assets/slides/lec03-04/047.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 48,
+          "title": "More about Markov…",
+          "image": "assets/slides/lec03-04/048.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 49,
+          "title": "More about Markov…",
+          "image": "assets/slides/lec03-04/049.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 50,
+          "title": "Fully Observable v.s. Partially Observable",
+          "image": "assets/slides/lec03-04/050.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 51,
+          "title": "Markov Decision Process (MDP)",
+          "image": "assets/slides/lec03-04/051.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 52,
+          "title": "Markov Decision Process (MDP)",
+          "image": "assets/slides/lec03-04/052.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 53,
+          "title": "Markov Decision Process (MDP)",
+          "image": "assets/slides/lec03-04/053.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 54,
+          "title": "Markov Decision Process (MDP)",
+          "image": "assets/slides/lec03-04/054.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 55,
+          "title": "Markov Decision Process (MDP)",
+          "image": "assets/slides/lec03-04/055.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 56,
+          "title": "Markov Decision Process (MDP)",
+          "image": "assets/slides/lec03-04/056.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 57,
+          "title": "Utilities of Sequences",
+          "image": "assets/slides/lec03-04/057.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 58,
+          "title": "Utilities of Sequences",
+          "image": "assets/slides/lec03-04/058.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 59,
+          "title": "Utilities of Sequences",
+          "image": "assets/slides/lec03-04/059.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 60,
+          "title": "Discounting",
+          "image": "assets/slides/lec03-04/060.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 61,
+          "title": "Discounting",
+          "image": "assets/slides/lec03-04/061.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 62,
+          "title": "Discounting",
+          "image": "assets/slides/lec03-04/062.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 63,
+          "title": "Quiz: Discounting",
+          "image": "assets/slides/lec03-04/063.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 64,
+          "title": "Quiz: Discounting",
+          "image": "assets/slides/lec03-04/064.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 65,
+          "title": "Discounted Return",
+          "image": "assets/slides/lec03-04/065.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 66,
+          "title": "Episodic Tasks v.s. Continuing Tasks",
+          "image": "assets/slides/lec03-04/066.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 67,
+          "title": "Episodic Tasks v.s. Continuing Tasks",
+          "image": "assets/slides/lec03-04/067.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 68,
+          "title": "Infinite Utilities?",
+          "image": "assets/slides/lec03-04/068.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 69,
+          "title": "Infinite Utilities?",
+          "image": "assets/slides/lec03-04/069.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 70,
+          "title": "Recap: Markov Decision Process (MDP)",
+          "image": "assets/slides/lec03-04/070.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 71,
+          "title": "Optimal Quantities",
+          "image": "assets/slides/lec03-04/071.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 72,
+          "title": "Solving MDPs",
+          "image": "assets/slides/lec03-04/072.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 73,
+          "title": "Quantities",
+          "image": "assets/slides/lec03-04/073.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 74,
+          "title": "Quantities",
+          "image": "assets/slides/lec03-04/074.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 75,
+          "title": "Optimal Quantities",
+          "image": "assets/slides/lec03-04/075.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 76,
+          "title": "Optimal Quantities",
+          "image": "assets/slides/lec03-04/076.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 77,
+          "title": "Optimal Quantities",
+          "image": "assets/slides/lec03-04/077.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 78,
+          "title": "Value of States",
+          "image": "assets/slides/lec03-04/078.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 79,
+          "title": "Value of States",
+          "image": "assets/slides/lec03-04/079.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 80,
+          "title": "Problem: How to solve these equations?",
+          "image": "assets/slides/lec03-04/080.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 81,
+          "title": "Thanks!",
+          "image": "assets/slides/lec03-04/081.webp",
+          "width": 1600,
+          "height": 901
+        }
+      ]
+    },
+    {
+      "id": "lec05-06",
+      "file": "ELEC6910J_Lec_5_6.pdf",
+      "pages": 65,
+      "sha256": "e3173af38695b49594a56c5d4be2e0feb41027f7181ceecc19a66b5205e174fe",
+      "slides": [
+        {
+          "page": 1,
+          "title": "ELEC6910J",
+          "image": "assets/slides/lec05-06/001.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 2,
+          "title": "Recap: Multi-Armed Bandits",
+          "image": "assets/slides/lec05-06/002.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 3,
+          "title": "Recap: Exploration/Exploitation Dilemma",
+          "image": "assets/slides/lec05-06/003.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 4,
+          "title": "Recap: Forming Action-Value Estimates",
+          "image": "assets/slides/lec05-06/004.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 5,
+          "title": "Recap: Epsilon-Greedy Action Selection",
+          "image": "assets/slides/lec05-06/005.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 6,
+          "title": "Recap: Markov Decision Process (MDP)",
+          "image": "assets/slides/lec05-06/006.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 7,
+          "title": "Recap: Markov Decision Process (MDP)",
+          "image": "assets/slides/lec05-06/007.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 8,
+          "title": "Recap: Markov Decision Process (MDP)",
+          "image": "assets/slides/lec05-06/008.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 9,
+          "title": "Recap: Discounted Return",
+          "image": "assets/slides/lec05-06/009.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 10,
+          "title": "Value Functions",
+          "image": "assets/slides/lec05-06/010.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 11,
+          "title": "Value Functions",
+          "image": "assets/slides/lec05-06/011.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 12,
+          "title": "Value Functions",
+          "image": "assets/slides/lec05-06/012.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 13,
+          "title": "𝑉∗(𝑠)Value Functions",
+          "image": "assets/slides/lec05-06/013.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 14,
+          "title": "𝑉∗(𝑠)Value Functions",
+          "image": "assets/slides/lec05-06/014.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 15,
+          "title": "𝑉∗(𝑠)Value Functions",
+          "image": "assets/slides/lec05-06/015.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 16,
+          "title": "Value Functions",
+          "image": "assets/slides/lec05-06/016.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 17,
+          "title": "Value Functions",
+          "image": "assets/slides/lec05-06/017.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 18,
+          "title": "Value Functions",
+          "image": "assets/slides/lec05-06/018.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 19,
+          "title": "Value Functions",
+          "image": "assets/slides/lec05-06/019.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 20,
+          "title": "Value Functions",
+          "image": "assets/slides/lec05-06/020.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 21,
+          "title": "Value Functions",
+          "image": "assets/slides/lec05-06/021.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 22,
+          "title": "Value Functions",
+          "image": "assets/slides/lec05-06/022.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 23,
+          "title": "Value Functions",
+          "image": "assets/slides/lec05-06/023.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 24,
+          "title": "Value Functions",
+          "image": "assets/slides/lec05-06/024.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 25,
+          "title": "Value Functions",
+          "image": "assets/slides/lec05-06/025.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 26,
+          "title": "Value Functions",
+          "image": "assets/slides/lec05-06/026.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 27,
+          "title": "Markov Decision Process (MDP)",
+          "image": "assets/slides/lec05-06/027.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 28,
+          "title": "Optimal Value Functions",
+          "image": "assets/slides/lec05-06/028.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 29,
+          "title": "Bellman Equation for V",
+          "image": "assets/slides/lec05-06/029.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 30,
+          "title": "σ𝑎𝜋𝑎𝑠…",
+          "image": "assets/slides/lec05-06/030.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 31,
+          "title": "Summary: Bellman equation for Q",
+          "image": "assets/slides/lec05-06/031.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 32,
+          "title": "Optimal Value Functions",
+          "image": "assets/slides/lec05-06/032.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 33,
+          "title": "Optimal Value Functions",
+          "image": "assets/slides/lec05-06/033.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 34,
+          "title": "Value Functions",
+          "image": "assets/slides/lec05-06/034.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 35,
+          "title": "Problem: How to solve these equations?",
+          "image": "assets/slides/lec05-06/035.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 36,
+          "title": "ELEC6910J",
+          "image": "assets/slides/lec05-06/036.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 37,
+          "title": "Recap: Markov Decision Process (MDP)",
+          "image": "assets/slides/lec05-06/037.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 38,
+          "title": "Dynamic Programming",
+          "image": "assets/slides/lec05-06/038.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 39,
+          "title": "Solving Bellman Equations",
+          "image": "assets/slides/lec05-06/039.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 40,
+          "title": "Value Iteration",
+          "image": "assets/slides/lec05-06/040.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 41,
+          "title": "Value Iteration",
+          "image": "assets/slides/lec05-06/041.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 42,
+          "title": "Value Iteration",
+          "image": "assets/slides/lec05-06/042.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 43,
+          "title": "Value Iteration",
+          "image": "assets/slides/lec05-06/043.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 44,
+          "title": "Value Iteration",
+          "image": "assets/slides/lec05-06/044.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 45,
+          "title": "Value Iteration",
+          "image": "assets/slides/lec05-06/045.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 46,
+          "title": "Value Iteration",
+          "image": "assets/slides/lec05-06/046.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 47,
+          "title": "Value Iteration",
+          "image": "assets/slides/lec05-06/047.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 48,
+          "title": "Value Iteration",
+          "image": "assets/slides/lec05-06/048.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 49,
+          "title": "Value Iteration",
+          "image": "assets/slides/lec05-06/049.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 50,
+          "title": "Value Iteration",
+          "image": "assets/slides/lec05-06/050.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 51,
+          "title": "Value Iteration",
+          "image": "assets/slides/lec05-06/051.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 52,
+          "title": "Value Iteration",
+          "image": "assets/slides/lec05-06/052.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 53,
+          "title": "Value Iteration",
+          "image": "assets/slides/lec05-06/053.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 54,
+          "title": "Value Iteration",
+          "image": "assets/slides/lec05-06/054.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 55,
+          "title": "Value Iteration",
+          "image": "assets/slides/lec05-06/055.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 56,
+          "title": "Value Iteration",
+          "image": "assets/slides/lec05-06/056.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 57,
+          "title": "Value Iteration",
+          "image": "assets/slides/lec05-06/057.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 58,
+          "title": "Value Iteration",
+          "image": "assets/slides/lec05-06/058.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 59,
+          "title": "Value Iteration",
+          "image": "assets/slides/lec05-06/059.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 60,
+          "title": "Value Iteration",
+          "image": "assets/slides/lec05-06/060.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 61,
+          "title": "Computing Actions from Values",
+          "image": "assets/slides/lec05-06/061.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 62,
+          "title": "Computing Actions from Q-Values",
+          "image": "assets/slides/lec05-06/062.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 63,
+          "title": "Problems with Value Iteration",
+          "image": "assets/slides/lec05-06/063.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 64,
+          "title": "Problems with Value Iteration",
+          "image": "assets/slides/lec05-06/064.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 65,
+          "title": "Thanks!",
+          "image": "assets/slides/lec05-06/065.webp",
+          "width": 1600,
+          "height": 901
+        }
+      ]
+    },
+    {
+      "id": "lec07-08",
+      "file": "ELEC6910J_Lec_7_8.pdf",
+      "pages": 57,
+      "sha256": "6d3378a02abb1d278e0d219218962ea45f3cd982aff63283d597bbaa33a605b7",
+      "slides": [
+        {
+          "page": 1,
+          "title": "ELEC6910J",
+          "image": "assets/slides/lec07-08/001.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 2,
+          "title": "Announcements",
+          "image": "assets/slides/lec07-08/002.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 3,
+          "title": "Project",
+          "image": "assets/slides/lec07-08/003.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 4,
+          "title": "Recap: Markov Decision Process (MDP)",
+          "image": "assets/slides/lec07-08/004.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 5,
+          "title": "Recap: Value Functions",
+          "image": "assets/slides/lec07-08/005.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 6,
+          "title": "Recap: Value Functions",
+          "image": "assets/slides/lec07-08/006.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 7,
+          "title": "Bellman Expectation Equations",
+          "image": "assets/slides/lec07-08/007.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 8,
+          "title": "Bellman Expectation Equations",
+          "image": "assets/slides/lec07-08/008.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 9,
+          "title": "Bellman Expectation Equations",
+          "image": "assets/slides/lec07-08/009.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 10,
+          "title": "Bellman Optimality Equations",
+          "image": "assets/slides/lec07-08/010.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 11,
+          "title": "Bellman Optimality Equations",
+          "image": "assets/slides/lec07-08/011.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 12,
+          "title": "Bellman Optimality Equations",
+          "image": "assets/slides/lec07-08/012.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 13,
+          "title": "Value Iteration",
+          "image": "assets/slides/lec07-08/013.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 14,
+          "title": "Value Iteration",
+          "image": "assets/slides/lec07-08/014.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 15,
+          "title": "Computing Actions from Values",
+          "image": "assets/slides/lec07-08/015.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 16,
+          "title": "Value Iteration",
+          "image": "assets/slides/lec07-08/016.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 17,
+          "title": "Value Iteration",
+          "image": "assets/slides/lec07-08/017.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 18,
+          "title": "Value Iteration",
+          "image": "assets/slides/lec07-08/018.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 19,
+          "title": "Value Iteration",
+          "image": "assets/slides/lec07-08/019.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 20,
+          "title": "Value Iteration",
+          "image": "assets/slides/lec07-08/020.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 21,
+          "title": "Policy Iteration-Part 1: Policy Evaluation",
+          "image": "assets/slides/lec07-08/021.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 22,
+          "title": "Fixed Policies",
+          "image": "assets/slides/lec07-08/022.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 23,
+          "title": "Utilities for a Fixed Policy",
+          "image": "assets/slides/lec07-08/023.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 24,
+          "title": "Utilities for a Fixed Policy",
+          "image": "assets/slides/lec07-08/024.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 25,
+          "title": "Policy Evaluation",
+          "image": "assets/slides/lec07-08/025.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 26,
+          "title": "Policy Evaluation",
+          "image": "assets/slides/lec07-08/026.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 27,
+          "title": "Policy Evaluation",
+          "image": "assets/slides/lec07-08/027.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 28,
+          "title": "Policy Evaluation",
+          "image": "assets/slides/lec07-08/028.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 29,
+          "title": "Policy Evaluation",
+          "image": "assets/slides/lec07-08/029.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 30,
+          "title": "ELEC6910J",
+          "image": "assets/slides/lec07-08/030.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 31,
+          "title": "Policy Iteration-Part 2: Policy Improvement",
+          "image": "assets/slides/lec07-08/031.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 32,
+          "title": "Policy Improvement",
+          "image": "assets/slides/lec07-08/032.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 33,
+          "title": "Policy Improvement",
+          "image": "assets/slides/lec07-08/033.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 34,
+          "title": "Policy Improvement",
+          "image": "assets/slides/lec07-08/034.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 35,
+          "title": "Policy Improvement",
+          "image": "assets/slides/lec07-08/035.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 36,
+          "title": "Policy Improvement",
+          "image": "assets/slides/lec07-08/036.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 37,
+          "title": "Policy Improvement",
+          "image": "assets/slides/lec07-08/037.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 38,
+          "title": "Policy Improvement",
+          "image": "assets/slides/lec07-08/038.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 39,
+          "title": "Policy Iteration",
+          "image": "assets/slides/lec07-08/039.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 40,
+          "title": "Policy Iteration",
+          "image": "assets/slides/lec07-08/040.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 41,
+          "title": "Policy Iteration",
+          "image": "assets/slides/lec07-08/041.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 42,
+          "title": "Policy Iteration",
+          "image": "assets/slides/lec07-08/042.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 43,
+          "title": "Policy Iteration",
+          "image": "assets/slides/lec07-08/043.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 44,
+          "title": "Policy Iteration",
+          "image": "assets/slides/lec07-08/044.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 45,
+          "title": "Convergence",
+          "image": "assets/slides/lec07-08/045.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 46,
+          "title": "Convergence",
+          "image": "assets/slides/lec07-08/046.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 47,
+          "title": "Value Function ∞-Norm",
+          "image": "assets/slides/lec07-08/047.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 48,
+          "title": "Convergence: Bellman Expectation Backup is a Contraction",
+          "image": "assets/slides/lec07-08/048.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 49,
+          "title": "Convergence: Iterative Policy Evaluation and Policy Iteration",
+          "image": "assets/slides/lec07-08/049.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 50,
+          "title": "Convergence: Bellman Optimality Backup is a Contraction",
+          "image": "assets/slides/lec07-08/050.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 51,
+          "title": "Convergence: Value Iteration",
+          "image": "assets/slides/lec07-08/051.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 52,
+          "title": "Comparison",
+          "image": "assets/slides/lec07-08/052.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 53,
+          "title": "Summary",
+          "image": "assets/slides/lec07-08/053.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 54,
+          "title": "Summary",
+          "image": "assets/slides/lec07-08/054.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 55,
+          "title": "Problem",
+          "image": "assets/slides/lec07-08/055.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 56,
+          "title": "课件图示 · 第 56 页",
+          "image": "assets/slides/lec07-08/056.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 57,
+          "title": "Thanks!",
+          "image": "assets/slides/lec07-08/057.webp",
+          "width": 1600,
+          "height": 901
+        }
+      ]
+    },
+    {
+      "id": "lec09-10",
+      "file": "ELEC6910J_Lec_9_10.pdf",
+      "pages": 41,
+      "sha256": "5cc180c35bb9890c0ac9c31d83e77a1fae771d3477bd84d0df502f46b7f97926",
+      "slides": [
+        {
+          "page": 1,
+          "title": "ELEC6910J",
+          "image": "assets/slides/lec09-10/001.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 2,
+          "title": "Recap: Value Iteration",
+          "image": "assets/slides/lec09-10/002.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 3,
+          "title": "Recap: Policy Evaluation",
+          "image": "assets/slides/lec09-10/003.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 4,
+          "title": "Recap: Policy Evaluation",
+          "image": "assets/slides/lec09-10/004.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 5,
+          "title": "Recap: Policy Improvement",
+          "image": "assets/slides/lec09-10/005.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 6,
+          "title": "Recap: Policy Iteration",
+          "image": "assets/slides/lec09-10/006.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 7,
+          "title": "Recap: Problems of DP",
+          "image": "assets/slides/lec09-10/007.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 8,
+          "title": "Monte-Carlo Prediction",
+          "image": "assets/slides/lec09-10/008.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 9,
+          "title": "Monte-Carlo Prediction",
+          "image": "assets/slides/lec09-10/009.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 10,
+          "title": "Monte-Carlo Prediction",
+          "image": "assets/slides/lec09-10/010.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 11,
+          "title": "Monte-Carlo Prediction",
+          "image": "assets/slides/lec09-10/011.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 12,
+          "title": "Monte-Carlo Prediction",
+          "image": "assets/slides/lec09-10/012.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 13,
+          "title": "Monte-Carlo Prediction",
+          "image": "assets/slides/lec09-10/013.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 14,
+          "title": "Monte-Carlo Prediction",
+          "image": "assets/slides/lec09-10/014.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 15,
+          "title": "Monte-Carlo Prediction",
+          "image": "assets/slides/lec09-10/015.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 16,
+          "title": "Monte-Carlo Prediction",
+          "image": "assets/slides/lec09-10/016.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 17,
+          "title": "Monte-Carlo Prediction",
+          "image": "assets/slides/lec09-10/017.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 18,
+          "title": "Monte-Carlo Prediction",
+          "image": "assets/slides/lec09-10/018.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 19,
+          "title": "Monte-Carlo Prediction",
+          "image": "assets/slides/lec09-10/019.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 20,
+          "title": "Monte-Carlo Estimation of Action Values",
+          "image": "assets/slides/lec09-10/020.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 21,
+          "title": "Monte-Carlo Estimation of Action Values",
+          "image": "assets/slides/lec09-10/021.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 22,
+          "title": "Monte-Carlo Estimation of Action Values",
+          "image": "assets/slides/lec09-10/022.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 23,
+          "title": "Monte-Carlo Prediction",
+          "image": "assets/slides/lec09-10/023.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 24,
+          "title": "ELEC6910J",
+          "image": "assets/slides/lec09-10/024.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 25,
+          "title": "Monte-Carlo Control",
+          "image": "assets/slides/lec09-10/025.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 26,
+          "title": "Monte-Carlo Control with Exploring Starts",
+          "image": "assets/slides/lec09-10/026.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 27,
+          "title": "Monte-Carlo Control with Exploring Starts",
+          "image": "assets/slides/lec09-10/027.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 28,
+          "title": "Monte-Carlo Control without Exploring Starts",
+          "image": "assets/slides/lec09-10/028.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 29,
+          "title": "Monte-Carlo Control with Soft Policies",
+          "image": "assets/slides/lec09-10/029.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 30,
+          "title": "Monte-Carlo Control with Soft Policies",
+          "image": "assets/slides/lec09-10/030.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 31,
+          "title": "Monte-Carlo Control with Soft Policies",
+          "image": "assets/slides/lec09-10/031.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 32,
+          "title": "Monte-Carlo Control with Soft Policies",
+          "image": "assets/slides/lec09-10/032.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 33,
+          "title": "Monte-Carlo Control with Soft Policies",
+          "image": "assets/slides/lec09-10/033.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 34,
+          "title": "Monte-Carlo Control with Soft Policies",
+          "image": "assets/slides/lec09-10/034.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 35,
+          "title": "Monte-Carlo Control with Soft Policies",
+          "image": "assets/slides/lec09-10/035.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 36,
+          "title": "Monte-Carlo Control with Soft Policies",
+          "image": "assets/slides/lec09-10/036.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 37,
+          "title": "Dynamic Programming v.s. Monte Carlo",
+          "image": "assets/slides/lec09-10/037.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 38,
+          "title": "Dynamic Programming v.s. Monte Carlo",
+          "image": "assets/slides/lec09-10/038.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 39,
+          "title": "课件图示 · 第 39 页",
+          "image": "assets/slides/lec09-10/039.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 40,
+          "title": "Announcement",
+          "image": "assets/slides/lec09-10/040.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 41,
+          "title": "Thanks and Happy Holiday!",
+          "image": "assets/slides/lec09-10/041.webp",
+          "width": 1600,
+          "height": 901
+        }
+      ]
+    }
+  ],
+  "chapters": [
+    {
+      "number": 1,
+      "title": "Introduction",
+      "zh": "导论与学习范式",
+      "source": "lec01-02",
+      "start": 1,
+      "end": 49
+    },
+    {
+      "number": 2,
+      "title": "Probability Basics",
+      "zh": "概率基础",
+      "source": "lec01-02",
+      "start": 50,
+      "end": 85
+    },
+    {
+      "number": 3,
+      "title": "Multi-Armed Bandits",
+      "zh": "多臂老虎机与探索",
+      "source": "lec03-04",
+      "start": 1,
+      "end": 35
+    },
+    {
+      "number": 4,
+      "title": "Markov Decision Processes",
+      "zh": "马尔可夫决策过程",
+      "source": "lec03-04",
+      "start": 36,
+      "end": 81
+    },
+    {
+      "number": 5,
+      "title": "Value Functions & Bellman Equations",
+      "zh": "价值函数与贝尔曼方程",
+      "source": "lec05-06",
+      "start": 1,
+      "end": 35
+    },
+    {
+      "number": 6,
+      "title": "Value Iteration",
+      "zh": "动态规划与价值迭代",
+      "source": "lec05-06",
+      "start": 36,
+      "end": 65
+    },
+    {
+      "number": 7,
+      "title": "Policy Evaluation",
+      "zh": "固定策略与策略评估",
+      "source": "lec07-08",
+      "start": 1,
+      "end": 29
+    },
+    {
+      "number": 8,
+      "title": "Policy Iteration & Convergence",
+      "zh": "策略改进、迭代与收敛",
+      "source": "lec07-08",
+      "start": 30,
+      "end": 57
+    },
+    {
+      "number": 9,
+      "title": "Monte-Carlo Prediction",
+      "zh": "蒙特卡洛预测",
+      "source": "lec09-10",
+      "start": 1,
+      "end": 23
+    },
+    {
+      "number": 10,
+      "title": "Monte-Carlo Control",
+      "zh": "蒙特卡洛控制",
+      "source": "lec09-10",
+      "start": 24,
+      "end": 41
+    }
+  ]
+}

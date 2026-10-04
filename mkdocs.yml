@@ -1,0 +1,102 @@
+site_name: ELEC6910J · 强化学习笔记
+site_description: ELEC6910J Deep Reinforcement Learning 中文课程笔记，含原课件例题、公式推导与逐页档案。
+site_url: https://zjucqr.github.io/ELEC6910J/
+repo_name: ZJUCQR/ELEC6910J
+repo_url: https://github.com/ZJUCQR/ELEC6910J
+edit_uri: edit/main/docs/
+copyright: 笔记整理 © ZJUCQR · 课件及原图归原作者所有
+theme:
+  name: material
+  language: zh
+  font: false
+  custom_dir: overrides
+  icon:
+    logo: material/book-open-page-variant
+    repo: fontawesome/brands/github
+  features:
+    - navigation.tabs
+    - navigation.indexes
+    - navigation.expand
+    - navigation.top
+    - navigation.footer
+    - navigation.tracking
+    - search.highlight
+    - search.suggest
+    - search.share
+    - content.action.edit
+    - content.code.copy
+    - toc.follow
+  palette:
+    - scheme: default
+      primary: custom
+      accent: blue
+      toggle:
+        icon: material/weather-night
+        name: 切换到深色模式
+    - scheme: slate
+      primary: custom
+      accent: blue
+      toggle:
+        icon: material/weather-sunny
+        name: 切换到浅色模式
+plugins:
+  - search:
+      lang: [zh, en]
+hooks:
+  - scripts/hooks.py
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - footnotes
+  - toc:
+      permalink: true
+      toc_depth: 3
+  - pymdownx.details
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+extra_css:
+  - assets/vendor/katex/katex.min.css
+  - assets/stylesheets/extra.css
+extra_javascript:
+  - assets/vendor/katex/katex.min.js
+  - assets/javascripts/site.js
+nav:
+  - Main · 课程笔记:
+      - 课程首页: index.md
+      - "1: Introduction": chapters/01-introduction.md
+      - "2: Probability Basics": chapters/02-probability.md
+      - "3: Multi-Armed Bandits": chapters/03-bandits.md
+      - "4: Markov Decision Processes": chapters/04-mdp.md
+      - "5: Value Functions & Bellman Equations": chapters/05-bellman.md
+      - "6: Value Iteration": chapters/06-value-iteration.md
+      - "7: Policy Evaluation": chapters/07-policy-evaluation.md
+      - "8: Policy Iteration & Convergence": chapters/08-policy-iteration.md
+      - "9: Monte-Carlo Prediction": chapters/09-mc-prediction.md
+      - "10: Monte-Carlo Control": chapters/10-mc-control.md
+  - Examples · 例题:
+      - 例题索引: examples.md
+  - Reference · 速查:
+      - 公式速查: reference/formulas.md
+      - 术语对照: reference/glossary.md
+      - 资料来源与说明: reference/sources.md
+  - Slides · 课件:
+      - 课件总览: slides/index.md
+      - "L1 · Introduction": slides/lecture-01.md
+      - "L2 · Probability": slides/lecture-02.md
+      - "L3 · Bandits": slides/lecture-03.md
+      - "L4 · MDP": slides/lecture-04.md
+      - "L5 · Bellman Equations": slides/lecture-05.md
+      - "L6 · Value Iteration": slides/lecture-06.md
+      - "L7 · Policy Evaluation": slides/lecture-07.md
+      - "L8 · Policy Iteration": slides/lecture-08.md
+      - "L9 · MC Prediction": slides/lecture-09.md
+      - "L10 · MC Control": slides/lecture-10.md
