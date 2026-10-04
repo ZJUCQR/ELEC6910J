@@ -70,16 +70,24 @@ with sync_playwright() as p:
     page.locator("[data-racing-lab]").screenshot(path=str(shots/"racing-demo.png"))
     report["checks"].append("racing iterations, discount change, reset")
 
-    for term in ["Bellman", "蒙特卡洛", "餐厅"]:
+    # Start Chinese search on a fresh page, and reject stale previous results.
+    page.goto(base+"chapters/02-probability/", wait_until="networkidle")
+    for term in ["蒙特卡洛", "Bellman", "餐厅"]:
         query = page.locator(".md-search__input")
+        previous = page.locator(".md-search-result__list").text_content()
         query.fill(term)
-        page.wait_for_function("() => { const e=document.querySelector('.md-search-result__list'); return e && e.textContent.trim().length > 0; }")
-        page.wait_for_timeout(900)
+        page.wait_for_function("""({term, previous}) => {
+            const list = document.querySelector('.md-search-result__list');
+            const first = document.querySelector('.md-search-result__item');
+            return list && first && list.textContent !== previous &&
+                first.textContent.replace(/\u200b/g, '').includes(term);
+        }""", arg={"term":term, "previous":previous})
         result = page.locator(".md-search-result__list").inner_text()
         assert len(result.strip()) > 0, term
         report["search"][term] = {"matches":page.locator(".md-search-result__item").count(),"excerpt":result[:180]}
         print("SEARCH",term,report["search"][term]["matches"],flush=True)
         page.keyboard.press("Escape")
+    report["checks"].append("fresh Chinese search and input without keyup")
 
     page.goto(base+"chapters/09-mc-prediction/",wait_until="networkidle")
     page.locator('label[title="切换到深色模式"]').click()

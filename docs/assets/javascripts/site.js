@@ -82,6 +82,21 @@
     input.addEventListener("input", update);
     update();
   }
+  function setupSearchInput() {
+    const input = document.querySelector(".md-search__input");
+    if (!input || input.dataset.inputBound) return;
+    input.dataset.inputBound = "true";
+    // Material watches keyup. Paste, mobile keyboards and IME input may only
+    // emit input/compositionend, so notify the existing search implementation.
+    const notify = () => input.dispatchEvent(new KeyboardEvent("keyup", {
+      key: "Unidentified", bubbles: true,
+    }));
+    input.addEventListener("input", (event) => {
+      if (!event.isComposing) notify();
+    });
+    input.addEventListener("compositionend", notify);
+    input.form?.addEventListener("reset", () => setTimeout(notify, 0));
+  }
   function setupRacing() {
     const lab = document.querySelector("[data-racing-lab]");
     if (!lab || lab.dataset.bound) return;
@@ -121,7 +136,7 @@
     reset();
   }
   function init() {
-    renderMath(); ensureLightbox(); setupArchive(); setupRacing();
+    renderMath(); ensureLightbox(); setupArchive(); setupRacing(); setupSearchInput();
     document.querySelectorAll(".slide-figure img").forEach((img) => {
       img.loading = "lazy"; img.decoding = "async";
     });
