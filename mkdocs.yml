@@ -81,6 +81,5 @@ nav:
   - "9: Monte-Carlo Prediction": chapters/09-mc-prediction.md
   - "10: Monte-Carlo Control": chapters/10-mc-control.md
 not_in_nav: |
-  /examples.md
   /reference/
   /slides/

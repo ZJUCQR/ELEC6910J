@@ -12,7 +12,7 @@ base = args.base_url.rstrip("/") + "/"
 shots = ROOT / ".work/screenshots"
 shots.mkdir(parents=True, exist_ok=True)
 routes = [""] + [str(p.relative_to(ROOT/"site").parent)+"/" for p in sorted((ROOT/"site/chapters").glob("*/index.html"))]
-routes += ["examples/", "reference/formulas/", "reference/glossary/", "reference/sources/", "slides/"]
+routes += ["reference/formulas/", "reference/glossary/", "reference/sources/", "slides/"]
 routes += [f"slides/lecture-{i:02}/" for i in range(1,11)]
 report = {"pages": [], "search": {}, "checks": []}
 

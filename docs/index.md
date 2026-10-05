@@ -17,7 +17,6 @@ description: ELEC6910J 中文课程笔记。从概率与探索，到 Bellman 方
 </div>
 
 [从第 1 章开始 →](chapters/01-introduction.md){ .md-button .md-button--primary }
-[查找课件例题](examples.md){ .md-button }
 
 <div class="cover-stats"><div><strong>10</strong><span>讲课程笔记</span></div><div><strong>329</strong><span>页课件档案</span></div><div><strong>05</strong><span>份原课件</span></div><div><strong>中 / EN</strong><span>术语对照</span></div></div>
 </div>
@@ -80,7 +79,6 @@ description: ELEC6910J 中文课程笔记。从概率与探索，到 Bellman 方
 
 ## 复习入口
 
-- [例题索引](examples.md)：按问题找到截图、计算步骤和对应章节。
 - [公式速查](#formulas)：概率、回报、Bellman、DP 与 MC 的核心公式。
 - [术语对照](#glossary)：中英术语和符号。
 - [完整课件与下载](slides/index.md)：329 页原页档案和五份 PDF。
