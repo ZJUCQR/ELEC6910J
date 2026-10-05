@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="zh">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex">
+    <title>{{ page.title }} · {{ config.site_name }}</title>
+    <link rel="canonical" href="{{ config.site_url }}#{{ page.meta.redirect_anchor }}">
+    <script>
+      window.location.replace({{ (base_url ~ "/") | tojson }} +
+        (window.location.hash || {{ ("#" ~ page.meta.redirect_anchor) | tojson }}));
+    </script>
+    <noscript>
+      <meta http-equiv="refresh" content="0; url={{ base_url }}/#{{ page.meta.redirect_anchor }}">
+    </noscript>
+  </head>
+  <body>
+    <main>{{ page.content }}</main>
+  </body>
+</html>

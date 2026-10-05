@@ -5,7 +5,7 @@
 根据 HKUST Ling PAN 老师的五份 ELEC6910J 课件整理的中文课程笔记。涵盖 Lecture 1–10：导论、概率、Bandits、MDP、Bellman 方程、动态规划与 Monte Carlo。
 
 - 10 章中文讲解，保留英文术语、公式、原课件实例与页码。
-- 329 页截图档案、5 份公开 PDF、例题索引、公式速查与术语表。
+- 329 页截图档案、5 份公开 PDF、例题索引；公式速查与术语表汇总在课程笔记主页。
 - 桌面三栏阅读、手机导航、中英文搜索、图片放大、深浅主题。
 - 赛车价值迭代演示，使用与课件相同的转移模型。
 - 组织与语言参考 [T-ComputerNetworks](https://zhengliangduanfang.github.io/T-ComputerNetworks/)，视觉采用独立设计的墨绿／米白主题。
@@ -52,9 +52,10 @@ python scripts/check_browser.py
 
 | 路径 | 用途 |
 | --- | --- |
+| docs/index.md | 课程笔记主页、公式速查与术语对照 |
 | docs/chapters/ | 十章正文 |
 | docs/examples.md | 例题索引 |
-| docs/reference/ | 公式、术语、来源与勘误 |
+| docs/reference/ | 来源与勘误，以及公式、术语旧地址的跳转 |
 | docs/slides/ | 按讲次划分的逐页档案 |
 | docs/assets/pdf/ | 已检查的公开 PDF |
 | docs/assets/slides/ | 1600px 课件截图 |
