@@ -343,5 +343,5 @@ $\epsilon$-soft 要求 $\pi(a\mid s)\geq\epsilon/m$。固定正 $\epsilon$ 会�
 | $N(s),N(s,a)$ | 纳入统计的访问计数 |
 
 <div class="source-note" markdown="1">
-笔记组织与语言参考 [ZhengliangDuanfang · 计算机网络](https://zhengliangduanfang.github.io/T-ComputerNetworks/)；视觉重新设计。课程内容与原图归课件作者及其注明的来源所有。发现问题可在 [GitHub 仓库](https://github.com/ZJUCQR/ELEC6910J/issues)反馈。
+课程内容与原图归课件作者及其注明的来源所有。发现问题可在 [GitHub 仓库](https://github.com/ZJUCQR/ELEC6910J/issues)反馈。
 </div>

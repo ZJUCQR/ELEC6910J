@@ -8,7 +8,6 @@
 - 329 页截图档案、5 份公开 PDF；公式速查与术语表汇总在课程笔记主页。
 - 桌面三栏阅读、手机导航、中英文搜索、图片放大、深浅主题。
 - 赛车价值迭代演示，使用与课件相同的转移模型。
-- 组织与语言参考 [T-ComputerNetworks](https://zhengliangduanfang.github.io/T-ComputerNetworks/)，视觉采用独立设计的墨绿／米白主题。
 
 ## 本地预览
 
