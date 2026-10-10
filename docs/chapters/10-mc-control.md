@@ -2,10 +2,7 @@
 
 <p class="chapter-subtitle">蒙特卡洛控制 · 一边探索，一边改进策略</p>
 
-!!! info "本章对应课件"
-
-    Lecture 10 · <strong>ELEC6910J_Lec_9_10.pdf，p. 24–41</strong>。
-    [查看本讲全部课件](../slides/lecture-10.md) · [下载 PDF](../assets/pdf/ELEC6910J_Lec_9_10.pdf)
+**主要内容**：Monte Carlo 控制、Exploring Starts、soft policy 与 Blackjack。
 
 ## 10.1 From Prediction to Control
 
@@ -208,7 +205,21 @@ $$
 ## 10.7 本章检查
 
 - ES 和 soft policy 分别在哪个环节提供探索？
-- $\epsilon$-soft 是否都属于 $\epsilon$-greedy？不是，前者是更大的策略类。
+- $\epsilon$-soft 是否都属于 $\epsilon$-greedy？
 - 为什么 $\epsilon$-soft 的概率下界必须允许等号？
 - Blackjack 中 $V^\pi(s)$ 是胜率，还是胜负奖励的期望？
-- 如果不想等回合结束才学习，怎样用后继价值构造更新目标？下一章进入 [TD Prediction](11-td-prediction.md)。
+- 如果不想等回合结束才学习，怎样用后继价值构造更新目标？
+
+??? success "参考答案"
+
+    1. **探索发生的位置不同**：Exploring Starts 在回合开始时随机选择起始状态—动作对，使每一对都有机会被选为起点；soft policy 在每次到达某状态时，都为各可用动作保留正概率。后者减少对任意起点重置的依赖，但动作概率为正本身不保证所有状态都能被访问，仍需关注状态可达性与长期覆盖。
+    2. **$\epsilon$-soft 是更大的策略类**：它只规定每个动作的概率至少为 $\epsilon/m$；$\epsilon$-greedy 还要求将剩余概率分配给贪心动作。例如两个动作价值不等，取 $\epsilon=0.2$，策略 $(0.5,0.5)$ 满足每项至少为 $0.1$，却不是该 $\epsilon$ 下的贪心混合策略 $(0.9,0.1)$。
+    3. **下界必须含等号**：$\epsilon$-greedy 中，非贪心动作的概率恰好为 $\epsilon/m$。若改成严格大于，会错误地排除这类策略；当 $\epsilon=1$ 时，还会要求 $m$ 个概率都大于 $1/m$，使总和超过 1。
+    4. **Blackjack 的价值是奖励期望**：按胜 $+1$、负 $-1$、平 $0$、$\gamma=1$ 的设定，
+
+        $$
+        V^\pi(s)=P_\pi(\mathrm{win}\mid s)-P_\pi(\mathrm{lose}\mid s).
+        $$
+
+        例如胜率 $0.5$、负率 $0.3$、平率 $0.2$，价值为 $0.2$，不是胜率 $0.5$。只有奖励定义改为“胜为 1，其余为 0”时，价值才等于胜率。
+    5. **用一步经验加后继估计**：TD Prediction 使用 $Y_t=R_{t+1}+\gamma V(S_{t+1})$，然后更新 $V(S_t)\leftarrow V(S_t)+\alpha[Y_t-V(S_t)]$。这样收到一次转移就可学习；若后继已经终止，目标只取 $R_{t+1}$。
