@@ -16,9 +16,6 @@ description: ELEC6910J 中文课程笔记与期中复习。从概率与探索，
 <div class="arithmatex">\(G_t = R_{t+1} + \gamma G_{t+1}\)</div>
 </div>
 
-[从第 1 章开始 →](chapters/01-introduction.md){ .md-button .md-button--primary }
-[期中考试复习](#midterm){ .md-button }
-
 </div>
 
 ## Mid-Term Exam · 期中复习 {#midterm}
