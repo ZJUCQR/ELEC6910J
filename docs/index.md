@@ -19,7 +19,6 @@ description: ELEC6910J 中文课程笔记与期中复习。从概率与探索，
 [从第 1 章开始 →](chapters/01-introduction.md){ .md-button .md-button--primary }
 [期中考试复习](#midterm){ .md-button }
 
-<div class="cover-stats"><div><strong>12</strong><span>讲课程笔记</span></div><div><strong>425</strong><span>页课件档案</span></div><div><strong>06</strong><span>份原课件</span></div><div><strong>中 / EN</strong><span>术语对照</span></div></div>
 </div>
 
 ## Mid-Term Exam · 期中复习 {#midterm}
