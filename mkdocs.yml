@@ -80,6 +80,8 @@ nav:
   - "8: Policy Iteration & Convergence": chapters/08-policy-iteration.md
   - "9: Monte-Carlo Prediction": chapters/09-mc-prediction.md
   - "10: Monte-Carlo Control": chapters/10-mc-control.md
+  - "11: Temporal Difference Prediction": chapters/11-td-prediction.md
+  - "12: Temporal Difference Control": chapters/12-td-control.md
 not_in_nav: |
   /reference/
   /slides/

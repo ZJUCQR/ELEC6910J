@@ -111,7 +111,7 @@ def main():
             ])
         (archive_dir / f"lecture-{ch['number']:02}.md").write_text('\n'.join(lines))
     (DOCS / 'assets/manifest.json').write_text(json.dumps(manifest, ensure_ascii=False, indent=2)+'\n')
-    print(f"Complete: {manifest['total_pages']} pages, 10 archives.")
+    print(f"Complete: {manifest['total_pages']} pages, {len(COURSE['chapters'])} archives.")
 
 
 if __name__ == '__main__':

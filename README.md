@@ -2,10 +2,11 @@
 
 [在线阅读](https://zjucqr.github.io/ELEC6910J/) · [内容规划](PLAN.md)
 
-根据 HKUST Ling PAN 老师的五份 ELEC6910J 课件整理的中文课程笔记。涵盖 Lecture 1–10：导论、概率、Bandits、MDP、Bellman 方程、动态规划与 Monte Carlo。
+根据 HKUST Ling PAN 老师的六份 ELEC6910J 课件整理的中文课程笔记。涵盖 Lecture 1–12：导论、概率、Bandits、MDP、Bellman 方程、动态规划、Monte Carlo、TD、SARSA 与 Q-learning，并衔接 DQN 入门。
 
-- 10 章中文讲解，保留英文术语、公式、原课件实例与页码。
-- 329 页截图档案、5 份公开 PDF；公式速查与术语表汇总在课程笔记主页。
+- 12 章中文讲解，保留英文术语、公式、原课件实例与页码。
+- 425 页截图档案、6 份公开 PDF；公式速查与术语表汇总在课程笔记主页。
+- 首页整理期中考试范围、复习顺序、手算练习与自测答案，范围依据 Lecture 11–12 的 p. 95。
 - 桌面三栏阅读、手机导航、中英文搜索、图片放大、深浅主题。
 - 赛车价值迭代演示，使用与课件相同的转移模型。
 
@@ -28,7 +29,7 @@ python -m mkdocs build --strict
 python scripts/check_site.py
 ~~~
 
-检查包括本地链接、页码锚点、329 页覆盖、示例计算，以及正文中的首次访问 MC 实现。
+检查包括本地链接、页码锚点、全部 425 页覆盖、示例计算，以及正文中的 MC、TD、SARSA 与 Q-learning 更新代码。
 
 浏览器验收脚本为 scripts/check_browser.py。先安装 Chromium，再以实际 Pages 路径提供预览：
 
@@ -51,8 +52,8 @@ python scripts/check_browser.py
 
 | 路径 | 用途 |
 | --- | --- |
-| docs/index.md | 课程笔记主页、公式速查与术语对照 |
-| docs/chapters/ | 十章正文 |
+| docs/index.md | 课程笔记主页、期中复习、公式速查与术语对照 |
+| docs/chapters/ | 十二章正文 |
 | docs/reference/ | 来源与勘误，以及公式、术语旧地址的跳转 |
 | docs/slides/ | 按讲次划分的逐页档案 |
 | docs/assets/pdf/ | 已检查的公开 PDF |
@@ -86,4 +87,4 @@ GitHub Pages 使用 GitHub Actions 构建。推送 main 后，工作流严格构
 
 课件、原图及其引用素材归原作者所有，保留原页署名；本站不为这些材料重新授予许可。新增讲解与原页差异在 [资料来源与说明](docs/reference/sources.md) 中记录。现有课件中的视频以 PDF 提供的静态页面保留。
 
-课程大纲提到的 TD、Policy Gradient、Actor-Critic 等后续内容尚未提供，本站不将其列为已经覆盖。
+第 11–12 讲已包含 TD 与控制方法；DQN 目前只涉及基本表示与损失思路。Policy Gradient、Actor-Critic 等后续内容尚未提供。

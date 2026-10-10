@@ -4,7 +4,7 @@
 
 ## 1. 课程来源
 
-本站根据提供的五份 ELEC6910J Deep Reinforcement Learning 课件整理，共 329 页，授课教师为 HKUST ECE 的 **Ling PAN**。
+本站根据提供的六份 ELEC6910J Deep Reinforcement Learning 课件整理，共 425 页，授课教师为 HKUST ECE 的 **Ling PAN**。
 
 | 文件 | 页数 | 对应内容 |
 | --- | ---: | --- |
@@ -13,10 +13,11 @@
 | [ELEC6910J_Lec_5_6.pdf](../assets/pdf/ELEC6910J_Lec_5_6.pdf) | 65 | Value Functions、Bellman、Value Iteration |
 | [ELEC6910J_Lec_7_8.pdf](../assets/pdf/ELEC6910J_Lec_7_8.pdf) | 57 | Policy Evaluation、Improvement、Iteration、Convergence |
 | [ELEC6910J_Lec_9_10.pdf](../assets/pdf/ELEC6910J_Lec_9_10.pdf) | 41 | MC Prediction、MC Control |
+| [ELEC6910J_Lec_11_12.pdf](../assets/pdf/ELEC6910J_Lec_11_12.pdf) | 96 | TD Prediction、SARSA、Q-learning、多步方法与 DQN 入门 |
 
 原课件注明部分内容改编自 UC Berkeley CS188 / CS285、Stanford CS109 / CS229、CMU 10-403 等。各页原有署名和致谢保留在截图及 PDF 中。
 
-课件推荐 Sutton 与 Barto 的 Reinforcement Learning。可结合作者提供的[教材页面](http://incompleteideas.net/book/the-book-2nd.html)阅读，但本站的章节范围以这五份文件为准。
+课件推荐 Sutton 与 Barto 的 Reinforcement Learning。可结合作者提供的[教材页面](http://incompleteideas.net/book/the-book-2nd.html)阅读，但本站的章节范围以这六份文件为准。
 
 课程课件、截图及其引用素材的权利属于原作者。本站新增说明为学习整理，不代表授课教师的官方讲义；也不为原课件重新授予许可。
 
@@ -36,9 +37,15 @@
 | Lec 7–8，[p. 30](../slides/lecture-08.md#p030) | 第二部分封面仍为 Lecture 7 | 依据文件分组和主题，将此部分编为第 8 章 |
 | Lec 9–10，[p. 14](../slides/lecture-09.md#p014) | 每次访问回报展开项与前文不一致 | 用 $(r_2+(1+\gamma)r_3)/2$，并说明 $\gamma=1$ 的特殊情形 |
 | Lec 9–10，[p. 21](../slides/lecture-09.md#p021) | “Converge quadratically” 易与数值迭代二次收敛混淆 | 说明独立有限方差样本均值的 MSE 与标准误差速率 |
-| Lec 9–10，[p. 30](../slides/lecture-10.md#p030) | $\epsilon$-soft 一处使用严格大于 | 采用标准下界 $\pi(a\mid s)\geq\epsilon/|\mathcal A(s)|$ |
+| Lec 9–10，[p. 30](../slides/lecture-10.md#p030) | $\epsilon$-soft 一处使用严格大于 | 采用标准下界 $\pi(a\mid s)\geq\epsilon/\lvert\mathcal A(s)\rvert$ |
+| Lec 11–12，[p. 13–16](../slides/lecture-11.md#p013) | 部分 Bellman 式的后继价值写成当前状态 $V_k^\pi(s)$ | 按一步分解和 sample 公式使用 $V_k^\pi(s')$ |
+| Lec 11–12，[p. 28](../slides/lecture-11.md#p028)、[p. 45](../slides/lecture-11.md#p045) | 回报展开的下标与指数不一致；MC 说明误指 $S_{t+1}$ | 统一从 $S_t$ 的回报更新 $V(S_t)$，奖励使用 $R_{t+1},R_{t+2},\ldots$ |
+| Lec 11–12，[p. 64–65](../slides/lecture-12.md#p064) | 以 $\epsilon_t=1/t$ 说明 GLIE | 区分“趋于贪心”与“无限探索”；衰减概率本身不能保证任意 MDP 中的覆盖 |
+| Lec 11–12，[p. 69](../slides/lecture-12.md#p069) | 多步回报边界未包含等号；其他表项用两个不等式的“且”描述 | $t+n\geq T$ 时不再自举；未更新表项满足 $(s,a)\ne(S_t,A_t)$ |
 
 对 Bellman 方程唯一解、压缩映射与算法收敛，正文补充有限状态、折扣、终止性、访问覆盖等相应条件，避免把有限步演示推广为无条件结论。
+
+首页的[期中复习范围](../index.md#midterm)依据 Lec 11–12 的 [p. 95](../slides/lecture-12.md#p095)；准备顺序与自测练习为笔记整理，不作为考试题型或分值说明。
 
 ## 3. 公开副本与页码
 

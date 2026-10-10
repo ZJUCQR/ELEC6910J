@@ -1,5 +1,5 @@
 {
-  "total_pages": 329,
+  "total_pages": 425,
   "sources": [
     {
       "id": "lec01-02",
@@ -2343,6 +2343,686 @@
           "height": 901
         }
       ]
+    },
+    {
+      "id": "lec11-12",
+      "file": "ELEC6910J_Lec_11_12.pdf",
+      "pages": 96,
+      "sha256": "30ab00d7ebec5dc8a3b411eb6516e8fe9669d7ad39df4de737f358354df7d0b3",
+      "slides": [
+        {
+          "page": 1,
+          "title": "ELEC6910J",
+          "image": "assets/slides/lec11-12/001.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 2,
+          "title": "Announcements",
+          "image": "assets/slides/lec11-12/002.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 3,
+          "title": "Recap: Policy Evaluation",
+          "image": "assets/slides/lec11-12/003.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 4,
+          "title": "Recap: Policy Improvement",
+          "image": "assets/slides/lec11-12/004.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 5,
+          "title": "Recap: Policy Iteration",
+          "image": "assets/slides/lec11-12/005.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 6,
+          "title": "Recap: Problems of DP",
+          "image": "assets/slides/lec11-12/006.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 7,
+          "title": "Recap: Monte-Carlo Prediction",
+          "image": "assets/slides/lec11-12/007.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 8,
+          "title": "Recap: Monte-Carlo Control",
+          "image": "assets/slides/lec11-12/008.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 9,
+          "title": "Recap: Monte-Carlo Control with Exploring Starts",
+          "image": "assets/slides/lec11-12/009.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 10,
+          "title": "Recap: Monte-Carlo Control with Soft Policies",
+          "image": "assets/slides/lec11-12/010.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 11,
+          "title": "Recap: Dynamic Programming v.s. Monte Carlo",
+          "image": "assets/slides/lec11-12/011.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 12,
+          "title": "Temporal Difference (TD) Learning",
+          "image": "assets/slides/lec11-12/012.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 13,
+          "title": "Motivation: Why Not Use Bellman Updates?",
+          "image": "assets/slides/lec11-12/013.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 14,
+          "title": "Idea: Sample-based Updates",
+          "image": "assets/slides/lec11-12/014.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 15,
+          "title": "Idea: Sample-based Updates",
+          "image": "assets/slides/lec11-12/015.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 16,
+          "title": "Idea: Sampled-Based Bellman Updates",
+          "image": "assets/slides/lec11-12/016.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 17,
+          "title": "Temporal Difference Prediction",
+          "image": "assets/slides/lec11-12/017.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 18,
+          "title": "Temporal Difference Prediction",
+          "image": "assets/slides/lec11-12/018.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 19,
+          "title": "Temporal Difference Prediction",
+          "image": "assets/slides/lec11-12/019.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 20,
+          "title": "Temporal Difference Prediction",
+          "image": "assets/slides/lec11-12/020.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 21,
+          "title": "Temporal Difference Prediction",
+          "image": "assets/slides/lec11-12/021.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 22,
+          "title": "Temporal Difference Prediction",
+          "image": "assets/slides/lec11-12/022.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 23,
+          "title": "Temporal Difference Prediction",
+          "image": "assets/slides/lec11-12/023.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 24,
+          "title": "Temporal Difference Prediction",
+          "image": "assets/slides/lec11-12/024.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 25,
+          "title": "Temporal Difference Prediction",
+          "image": "assets/slides/lec11-12/025.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 26,
+          "title": "Temporal Difference Prediction",
+          "image": "assets/slides/lec11-12/026.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 27,
+          "title": "Comparison",
+          "image": "assets/slides/lec11-12/027.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 28,
+          "title": "Bias v.s. Variance",
+          "image": "assets/slides/lec11-12/028.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 29,
+          "title": "Bias v.s. Variance",
+          "image": "assets/slides/lec11-12/029.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 30,
+          "title": "Bias v.s. Variance",
+          "image": "assets/slides/lec11-12/030.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 31,
+          "title": "Temporal Difference Prediction",
+          "image": "assets/slides/lec11-12/031.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 32,
+          "title": "Comparison: TD Methods Bootstrap and Sample",
+          "image": "assets/slides/lec11-12/032.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 33,
+          "title": "Temporal Difference Prediction",
+          "image": "assets/slides/lec11-12/033.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 34,
+          "title": "Temporal Difference Prediction",
+          "image": "assets/slides/lec11-12/034.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 35,
+          "title": "Temporal Difference Prediction",
+          "image": "assets/slides/lec11-12/035.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 36,
+          "title": "Temporal Difference Prediction",
+          "image": "assets/slides/lec11-12/036.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 37,
+          "title": "Temporal Difference Prediction",
+          "image": "assets/slides/lec11-12/037.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 38,
+          "title": "Temporal Difference Prediction",
+          "image": "assets/slides/lec11-12/038.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 39,
+          "title": "Temporal Difference Prediction",
+          "image": "assets/slides/lec11-12/039.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 40,
+          "title": "Unified View of Reinforcement Learning",
+          "image": "assets/slides/lec11-12/040.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 41,
+          "title": "Unifying MC and TD(0)",
+          "image": "assets/slides/lec11-12/041.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 42,
+          "title": "Unifying MC and TD(0)",
+          "image": "assets/slides/lec11-12/042.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 43,
+          "title": "Unifying MC and TD(0)",
+          "image": "assets/slides/lec11-12/043.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 44,
+          "title": "Unifying MC and TD(0)",
+          "image": "assets/slides/lec11-12/044.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 45,
+          "title": "𝑛-Step TD Prediction",
+          "image": "assets/slides/lec11-12/045.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 46,
+          "title": "𝑛-Step TD Prediction",
+          "image": "assets/slides/lec11-12/046.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 47,
+          "title": "𝑛-Step TD Prediction",
+          "image": "assets/slides/lec11-12/047.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 48,
+          "title": "𝑛-Step TD Prediction",
+          "image": "assets/slides/lec11-12/048.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 49,
+          "title": "Model-free Estimation",
+          "image": "assets/slides/lec11-12/049.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 50,
+          "title": "Learning Action-Value Function",
+          "image": "assets/slides/lec11-12/050.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 51,
+          "title": "ELEC6910J",
+          "image": "assets/slides/lec11-12/051.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 52,
+          "title": "Temporal Difference (TD) Learning",
+          "image": "assets/slides/lec11-12/052.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 53,
+          "title": "SARSA: On-Policy TD Control",
+          "image": "assets/slides/lec11-12/053.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 54,
+          "title": "SARSA: On-Policy TD Control",
+          "image": "assets/slides/lec11-12/054.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 55,
+          "title": "SARSA: On-Policy TD Control",
+          "image": "assets/slides/lec11-12/055.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 56,
+          "title": "SARSA: On-Policy TD Control",
+          "image": "assets/slides/lec11-12/056.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 57,
+          "title": "SARSA: On-Policy TD Control",
+          "image": "assets/slides/lec11-12/057.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 58,
+          "title": "SARSA: On-Policy TD Control",
+          "image": "assets/slides/lec11-12/058.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 59,
+          "title": "SARSA: On-Policy TD Control",
+          "image": "assets/slides/lec11-12/059.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 60,
+          "title": "SARSA: On-Policy TD Control",
+          "image": "assets/slides/lec11-12/060.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 61,
+          "title": "SARSA: On-Policy TD Control",
+          "image": "assets/slides/lec11-12/061.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 62,
+          "title": "SARSA: On-Policy TD Control",
+          "image": "assets/slides/lec11-12/062.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 63,
+          "title": "SARSA: On-Policy TD Control",
+          "image": "assets/slides/lec11-12/063.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 64,
+          "title": "SARSA: On-Policy TD Control",
+          "image": "assets/slides/lec11-12/064.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 65,
+          "title": "SARSA: On-Policy TD Control",
+          "image": "assets/slides/lec11-12/065.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 66,
+          "title": "SARSA: On-Policy TD Control",
+          "image": "assets/slides/lec11-12/066.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 67,
+          "title": "SARSA: On-Policy TD Control",
+          "image": "assets/slides/lec11-12/067.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 68,
+          "title": "𝑛-step SARSA",
+          "image": "assets/slides/lec11-12/068.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 69,
+          "title": "𝑛-step SARSA",
+          "image": "assets/slides/lec11-12/069.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 70,
+          "title": "𝑛-step SARSA",
+          "image": "assets/slides/lec11-12/070.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 71,
+          "title": "Bellman Optimality Equation",
+          "image": "assets/slides/lec11-12/071.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 72,
+          "title": "Q-value Iteration",
+          "image": "assets/slides/lec11-12/072.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 73,
+          "title": "Q-learning: Off-Policy TD Control",
+          "image": "assets/slides/lec11-12/073.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 74,
+          "title": "Q-learning: Off-Policy TD Control",
+          "image": "assets/slides/lec11-12/074.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 75,
+          "title": "Q-learning: Off-Policy TD Control",
+          "image": "assets/slides/lec11-12/075.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 76,
+          "title": "Q-learning: Off-Policy TD Control",
+          "image": "assets/slides/lec11-12/076.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 77,
+          "title": "Q-learning: Off-Policy TD Control",
+          "image": "assets/slides/lec11-12/077.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 78,
+          "title": "Q-learning: Off-Policy TD Control",
+          "image": "assets/slides/lec11-12/078.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 79,
+          "title": "Q-learning: Off-Policy TD Control",
+          "image": "assets/slides/lec11-12/079.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 80,
+          "title": "Q-learning: Off-Policy TD Control",
+          "image": "assets/slides/lec11-12/080.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 81,
+          "title": "Q-learning: Off-Policy TD Control",
+          "image": "assets/slides/lec11-12/081.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 82,
+          "title": "Q-learning: Off-Policy TD Control",
+          "image": "assets/slides/lec11-12/082.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 83,
+          "title": "Q-learning: Off-Policy TD Control",
+          "image": "assets/slides/lec11-12/083.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 84,
+          "title": "Q-learning: Off-Policy TD Control",
+          "image": "assets/slides/lec11-12/084.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 85,
+          "title": "Q-learning: Off-Policy TD Control",
+          "image": "assets/slides/lec11-12/085.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 86,
+          "title": "On-Policy vs Off-Policy",
+          "image": "assets/slides/lec11-12/086.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 87,
+          "title": "On-Policy vs Off-Policy",
+          "image": "assets/slides/lec11-12/087.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 88,
+          "title": "Q-learning: Off-Policy TD Control",
+          "image": "assets/slides/lec11-12/088.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 89,
+          "title": "Q-learning: Off-Policy TD Control",
+          "image": "assets/slides/lec11-12/089.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 90,
+          "title": "Q-learning                                            Too many states",
+          "image": "assets/slides/lec11-12/090.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 91,
+          "title": "Q-learning",
+          "image": "assets/slides/lec11-12/091.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 92,
+          "title": "Deep Q-Networks",
+          "image": "assets/slides/lec11-12/092.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 93,
+          "title": "Deep Q-Networks",
+          "image": "assets/slides/lec11-12/093.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 94,
+          "title": "Part 1: Summary",
+          "image": "assets/slides/lec11-12/094.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 95,
+          "title": "For Mid-Term Exam",
+          "image": "assets/slides/lec11-12/095.webp",
+          "width": 1600,
+          "height": 901
+        },
+        {
+          "page": 96,
+          "title": "课件图示 · 第 96 页",
+          "image": "assets/slides/lec11-12/096.webp",
+          "width": 1600,
+          "height": 901
+        }
+      ]
     }
   ],
   "chapters": [
@@ -2425,6 +3105,22 @@
       "source": "lec09-10",
       "start": 24,
       "end": 41
+    },
+    {
+      "number": 11,
+      "title": "Temporal Difference Prediction",
+      "zh": "时序差分预测与多步回报",
+      "source": "lec11-12",
+      "start": 1,
+      "end": 50
+    },
+    {
+      "number": 12,
+      "title": "Temporal Difference Control",
+      "zh": "SARSA、Q-learning 与时序差分控制",
+      "source": "lec11-12",
+      "start": 51,
+      "end": 96
     }
   ]
 }

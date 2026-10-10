@@ -187,15 +187,16 @@ button:focus-visible, a:focus-visible, input:focus-visible { outline: 2px solid 
   .race-states > div { padding: .5rem .35rem; }
   .race-states strong { font-size: 1.1rem; }
   .race-states span, .race-states small { font-size: .53rem; }
-  .md-typeset .chapter-index table:not([class]) { display: block; border: 0; }
-  .md-typeset .chapter-index table thead { display: none; }
-  .md-typeset .chapter-index table tbody { display: block; }
-  .md-typeset .chapter-index table tr { display: block; border: 1px solid var(--line); border-radius: .25rem; padding: .65rem .8rem; margin-bottom: .55rem; background: var(--paper); }
-  .md-typeset .chapter-index table td { display: block; border: 0; padding: .2rem 0; line-height: 1.75; }
-  .md-typeset .chapter-index table td:first-child { font-size: .78rem; font-weight: 600; }
-  .md-typeset .chapter-index table td:nth-child(2) { font-size: .7rem; }
-  .md-typeset .chapter-index table td:nth-child(3) { font-size: .62rem; color: var(--muted); }
+  .md-typeset :is(.chapter-index, .exam-scope) table:not([class]) { display: block; border: 0; }
+  .md-typeset :is(.chapter-index, .exam-scope) table thead { display: none; }
+  .md-typeset :is(.chapter-index, .exam-scope) table tbody { display: block; }
+  .md-typeset :is(.chapter-index, .exam-scope) table tr { display: block; border: 1px solid var(--line); border-radius: .25rem; padding: .65rem .8rem; margin-bottom: .55rem; background: var(--paper); }
+  .md-typeset :is(.chapter-index, .exam-scope) table td { display: block; border: 0; padding: .2rem 0; line-height: 1.75; }
+  .md-typeset :is(.chapter-index, .exam-scope) table td:first-child { font-size: .78rem; font-weight: 600; }
+  .md-typeset :is(.chapter-index, .exam-scope) table td:nth-child(2) { font-size: .7rem; }
+  .md-typeset :is(.chapter-index, .exam-scope) table td:nth-child(3) { font-size: .62rem; color: var(--muted); }
   .md-typeset .chapter-index table td:nth-child(3)::before { content: "例子 · "; }
+  .md-typeset .exam-scope table td:nth-child(3) { font-size: .7rem; color: var(--md-default-fg-color); }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 @media print {

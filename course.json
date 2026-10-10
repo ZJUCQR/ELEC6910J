@@ -4,7 +4,8 @@
     {"id":"lec03-04","file":"ELEC6910J_Lec_3_4.pdf","pages":81},
     {"id":"lec05-06","file":"ELEC6910J_Lec_5_6.pdf","pages":65},
     {"id":"lec07-08","file":"ELEC6910J_Lec_7_8.pdf","pages":57},
-    {"id":"lec09-10","file":"ELEC6910J_Lec_9_10.pdf","pages":41}
+    {"id":"lec09-10","file":"ELEC6910J_Lec_9_10.pdf","pages":41},
+    {"id":"lec11-12","file":"ELEC6910J_Lec_11_12.pdf","pages":96}
   ],
   "chapters": [
     {"number":1,"title":"Introduction","zh":"导论与学习范式","source":"lec01-02","start":1,"end":49},
@@ -16,6 +17,8 @@
     {"number":7,"title":"Policy Evaluation","zh":"固定策略与策略评估","source":"lec07-08","start":1,"end":29},
     {"number":8,"title":"Policy Iteration & Convergence","zh":"策略改进、迭代与收敛","source":"lec07-08","start":30,"end":57},
     {"number":9,"title":"Monte-Carlo Prediction","zh":"蒙特卡洛预测","source":"lec09-10","start":1,"end":23},
-    {"number":10,"title":"Monte-Carlo Control","zh":"蒙特卡洛控制","source":"lec09-10","start":24,"end":41}
+    {"number":10,"title":"Monte-Carlo Control","zh":"蒙特卡洛控制","source":"lec09-10","start":24,"end":41},
+    {"number":11,"title":"Temporal Difference Prediction","zh":"时序差分预测与多步回报","source":"lec11-12","start":1,"end":50},
+    {"number":12,"title":"Temporal Difference Control","zh":"SARSA、Q-learning 与时序差分控制","source":"lec11-12","start":51,"end":96}
   ]
 }

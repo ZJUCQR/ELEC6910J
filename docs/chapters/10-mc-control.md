@@ -211,4 +211,4 @@ $$
 - $\epsilon$-soft 是否都属于 $\epsilon$-greedy？不是，前者是更大的策略类。
 - 为什么 $\epsilon$-soft 的概率下界必须允许等号？
 - Blackjack 中 $V^\pi(s)$ 是胜率，还是胜负奖励的期望？
-- 目前材料止于 MC Control；课程大纲提到的 TD 等后续内容，需等待相应课件再补充。
+- 如果不想等回合结束才学习，怎样用后继价值构造更新目标？下一章进入 [TD Prediction](11-td-prediction.md)。

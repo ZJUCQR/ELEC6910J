@@ -1,6 +1,6 @@
 # Slides · 完整课件
 
-<p class="chapter-subtitle">五份文件，329 页 · 按讲次查看与下载</p>
+<p class="chapter-subtitle">六份文件，425 页 · 按讲次查看与下载</p>
 
 逐页档案保留所有页面，包括例题分步、图示、复习页和教学事务页。正文合并讲解的重复内容，也可以在这里逐页核对。点击页标题展开，点击图片放大。
 
@@ -18,6 +18,8 @@
 | [L8](lecture-08.md) | Policy Iteration & Convergence | Lec 7–8：30–57 | 28 |
 | [L9](lecture-09.md) | Monte-Carlo Prediction | Lec 9–10：1–23 | 23 |
 | [L10](lecture-10.md) | Monte-Carlo Control | Lec 9–10：24–41 | 18 |
+| [L11](lecture-11.md) | Temporal Difference Prediction | Lec 11–12：1–50 | 50 |
+| [L12](lecture-12.md) | Temporal Difference Control | Lec 11–12：51–96 | 46 |
 
 ## PDF 下载
 
@@ -26,6 +28,7 @@
 - [Lecture 5–6 · Bellman Equations & Value Iteration](../assets/pdf/ELEC6910J_Lec_5_6.pdf) · 65 页
 - [Lecture 7–8 · Policy Evaluation & Iteration](../assets/pdf/ELEC6910J_Lec_7_8.pdf) · 57 页
 - [Lecture 9–10 · Monte Carlo](../assets/pdf/ELEC6910J_Lec_9_10.pdf) · 41 页
+- [Lecture 11–12 · TD Prediction & Control](../assets/pdf/ELEC6910J_Lec_11_12.pdf) · 96 页
 
 !!! note "公开副本说明"
 

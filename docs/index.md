@@ -1,6 +1,6 @@
 ---
 title: 深度强化学习
-description: ELEC6910J 中文课程笔记。从概率与探索，到 Bellman 方程、动态规划和 Monte Carlo。
+description: ELEC6910J 中文课程笔记与期中复习。从概率与探索，到动态规划、Monte Carlo、TD、SARSA 和 Q-learning。
 ---
 
 <div class="course-cover" markdown="1">
@@ -17,9 +17,74 @@ description: ELEC6910J 中文课程笔记。从概率与探索，到 Bellman 方
 </div>
 
 [从第 1 章开始 →](chapters/01-introduction.md){ .md-button .md-button--primary }
+[期中考试复习](#midterm){ .md-button }
 
-<div class="cover-stats"><div><strong>10</strong><span>讲课程笔记</span></div><div><strong>329</strong><span>页课件档案</span></div><div><strong>05</strong><span>份原课件</span></div><div><strong>中 / EN</strong><span>术语对照</span></div></div>
+<div class="cover-stats"><div><strong>12</strong><span>讲课程笔记</span></div><div><strong>425</strong><span>页课件档案</span></div><div><strong>06</strong><span>份原课件</span></div><div><strong>中 / EN</strong><span>术语对照</span></div></div>
 </div>
+
+## Mid-Term Exam · 期中复习 {#midterm}
+
+### 考试范围
+
+以下范围依据 **Lecture 11–12，PDF p. 95「For Mid-Term Exam」** 整理。[查看原页](slides/lecture-12.md#p095) · [下载课件](assets/pdf/ELEC6910J_Lec_11_12.pdf#page=95)。
+
+<div class="exam-scope" markdown="1">
+
+| 课件列出的主题 | 对应笔记 | 复习时需要掌握 |
+| --- | --- | --- |
+| Bandits and Markov Decision Process | [第 3 章](chapters/03-bandits.md)、[第 4 章](chapters/04-mdp.md) | 探索与利用；状态、动作、转移、奖励；Markov 性；折扣回报 |
+| Value Functions and Bellman Equations | [第 5 章](chapters/05-bellman.md) | $V^\pi$ 与 $Q^\pi$；期望方程与最优方程；策略平均与动作最大值 |
+| Dynamic Programming | [第 6 章](chapters/06-value-iteration.md)、[第 7 章](chapters/07-policy-evaluation.md)、[第 8 章](chapters/08-policy-iteration.md) | Value Iteration；Policy Evaluation、Improvement、Iteration；终止边界与收敛条件 |
+| Monte-Carlo Methods | [第 9 章](chapters/09-mc-prediction.md)、[第 10 章](chapters/10-mc-control.md) | Prediction 与 Control；First-Visit / Every-Visit；完整回报；ES 与 soft policy |
+| Temporal Difference Prediction | [第 11 章](chapters/11-td-prediction.md) | TD target、TD error、TD(0)；采样与自举；偏差与方差；多步回报 |
+| Temporal Difference Control：On-policy SARSA、Off-policy Q-learning | [第 12 章](chapters/12-td-control.md) | 实际下一动作与贪心目标的差别；Q 表更新；探索覆盖、步长与 GLIE；多步 SARSA |
+
+</div>
+
+概率基础作为前置工具复习；DQN 在本次课件中仅作引入。这两项均未在 p. 95 单列为考试主题，复习时优先掌握上表明确列出的内容。
+
+!!! info "课件中的考试通知"
+
+    [PDF p. 2](slides/lecture-11.md#p002) 记载考试时间为 **10 月 23 日 15:00**，并提到后续复习课；该页未注明年份。具体时间及范围调整以课程最新通知为准。
+
+### 复习顺序
+
+1. **先串起概念**：从 MDP 和回报出发，写出 Bellman 关系；再按“需要模型吗、是否采样、是否自举、何时更新、评估哪种策略”比较 DP、MC、TD、SARSA 与 Q-learning。
+2. **再独立手算**：做下面的练习。每一步都写清旧值、目标、误差与新值，终止状态单独处理；完成后再展开答案核对。
+3. **最后解释算法**：遮住公式，说明每一项来自模型、真实奖励还是已有估计；检查固定策略、最优策略、行为策略与目标策略有没有混淆。
+
+这是按课程内容整理的准备顺序，不代表考试题型或分值安排。
+
+### 手算练习
+
+| 练习 | 给定条件与任务 |
+| --- | --- |
+| [GridWorld 策略评估](chapters/07-policy-evaluation.md#gridworld-evaluation) | 4×4 网格，非终止状态每步奖励 $-1$，均匀随机策略，初值全为 0。做一轮同步更新，区分终止与非终止状态。 |
+| [首次访问与每次访问 MC](chapters/09-mc-prediction.md#first-every) | 目标状态在 $t=1,2$ 出现，$t=3$ 终止；$r_2=2,r_3=4,\gamma=1$。分别求两次回报、First-Visit 值与 Every-Visit 均值。 |
+| [Lake 的 TD 更新](chapters/11-td-prediction.md#lake) | 初值为 0，$\alpha=0.1,\gamma=0.5$，每步奖励 $-0.4$；依次经历 $(1,1)\to(1,2)\to(1,3)\to(1,2)$。顺序更新三个出发状态。 |
+| [两步 TD 的终止边界](chapters/11-td-prediction.md#n-step-td) | 两个奖励为 1、2，$\gamma=0.5$。分别计算“两步后未终止且后继价值为 4”与“两步后终止”的目标。 |
+| [SARSA 与 Q-learning](chapters/12-td-control.md#on-off-policy) | $Q(s,a)=2,r=0,\gamma=0.9,\alpha=0.1$；下一状态实际动作价值为 1、最大动作价值为 5。分别写目标与新 Q 值。 |
+| [小狗 Q 表](chapters/12-td-control.md#dog-grid) | Q 表初值为 0，$\alpha=0.1,\gamma=0.99$。先向右获得 $+1$，再向下获得 $-10$ 并终止，指出每步只修改哪个表项。 |
+
+??? success "自测答案：完成手算后再展开"
+
+    - **GridWorld**：所有非终止状态更新为 $-1$，两个终止状态保持 0。第一轮所有后继旧值为 0。
+    - **MC**：$G_1=6,G_2=4$；First-Visit 为 6，Every-Visit 均值为 5。
+    - **Lake**：$V(1,1)=-0.04$，$V(1,2)=-0.04$，$V(1,3)=-0.042$。第三步用到第二步刚更新的值。
+    - **两步 TD**：未终止时目标为 3；终止时为 2，没有自举项。
+    - **SARSA**：目标 0.9，新值 1.89。**Q-learning**：目标 4.5，新值 2.25。
+    - **小狗 Q 表**：$Q((0,0),\rightarrow)=0.1$；$Q((0,1),\downarrow)=-1$，其余表项保持原值。
+
+### 考前自检
+
+- [ ] 能写出 Bellman 期望与最优方程，并解释求和、策略权重与最大值。
+- [ ] 能区分 Value Iteration 和 Policy Iteration，以及同步更新和在线更新。
+- [ ] 能从轨迹正确计算折扣回报，处理重复访问与终止边界。
+- [ ] 能解释 TD target 与 TD error，并完成 TD、SARSA、Q-learning 的逐步更新。
+- [ ] 能解释 SARSA 为什么是 on-policy、Q-learning 为什么允许 off-policy 数据。
+- [ ] 能说清充分访问、步长条件与趋于贪心分别保证什么。
+
+[查看公式速查](#formulas) · [查看术语对照](#glossary)
 
 ## 学习路线
 
@@ -29,7 +94,7 @@ description: ELEC6910J 中文课程笔记。从概率与探索，到 Bellman 方
 
 <div class="route-stage"><span>01 — 04</span><strong>描述问题</strong><small>概率 · 探索 · MDP</small></div>
 <div class="route-stage"><span>05 — 08</span><strong>有模型时求解</strong><small>价值 · Bellman · 动态规划</small></div>
-<div class="route-stage"><span>09 — 10</span><strong>从经验中学习</strong><small>Monte Carlo · 预测与控制</small></div>
+<div class="route-stage"><span>09 — 12</span><strong>从经验中学习</strong><small>Monte Carlo · TD · 控制</small></div>
 
 </div>
 
@@ -59,6 +124,8 @@ description: ELEC6910J 中文课程笔记。从概率与探索，到 Bellman 方
 | --- | --- | --- |
 | [09 · Monte-Carlo Prediction](chapters/09-mc-prediction.md) | 没有模型，怎样估计价值？ | 首次访问与每次访问 |
 | [10 · Monte-Carlo Control](chapters/10-mc-control.md) | 怎样在探索中改进策略？ | Exploring Starts、Blackjack |
+| [11 · Temporal Difference Prediction](chapters/11-td-prediction.md) | 怎样在回合结束前学习？ | Lake、Random Walk、多步回报 |
+| [12 · Temporal Difference Control](chapters/12-td-control.md) | 实际行动和学习目标可以不同吗？ | Windy GridWorld、小狗 Q 表、SARSA 与 Q-learning |
 
 </div>
 
@@ -69,7 +136,7 @@ description: ELEC6910J 中文课程笔记。从概率与探索，到 Bellman 方
     - **课程**：ELEC6910J · Deep Reinforcement Learning
     - **授课教师**：Ling PAN
     - **学校**：The Hong Kong University of Science and Technology，Department of Electronic and Computer Engineering
-    - **笔记范围**：本次提供的 Lecture 1–10，共五份 PDF。后续 TD、Policy Gradient、Actor-Critic 等内容尚不在这些材料中。
+    - **笔记范围**：Lecture 1–12，共六份 PDF；覆盖 DP、MC、TD、SARSA、Q-learning，并包含 DQN 入门。Policy Gradient、Actor-Critic 等后续内容尚未提供。
 
 !!! note "笔记编写方式"
 
@@ -79,9 +146,9 @@ description: ELEC6910J 中文课程笔记。从概率与探索，到 Bellman 方
 
 ## 复习入口
 
-- [公式速查](#formulas)：概率、回报、Bellman、DP 与 MC 的核心公式。
+- [公式速查](#formulas)：概率、回报、Bellman、DP、MC、TD 与控制更新。
 - [术语对照](#glossary)：中英术语和符号。
-- [完整课件与下载](slides/index.md)：329 页原页档案和五份 PDF。
+- [完整课件与下载](slides/index.md)：425 页原页档案和六份 PDF。
 - [赛车迭代演示](chapters/06-value-iteration.md#racing-lab)：调整折扣，观察同一模型的价值如何变化。
 
 ## Formula Sheet · 公式速查 { #formulas }
@@ -243,6 +310,53 @@ $$
 
 $\epsilon$-soft 要求 $\pi(a\mid s)\geq\epsilon/m$。固定正 $\epsilon$ 会保留探索，因而最优性的策略类也受到约束。
 
+### 8. Temporal Difference Prediction
+
+$$
+Y_t=R_{t+1}+\gamma V(S_{t+1}),\qquad
+\delta_t=Y_t-V(S_t),\qquad
+V(S_t)\leftarrow V(S_t)+\alpha\delta_t.
+$$
+
+未到终止时，多步目标为：
+
+$$
+G_{t:t+n}=\sum_{k=0}^{n-1}\gamma^kR_{t+k+1}+\gamma^nV(S_{t+n}),\qquad t+n<T.
+$$
+
+若 $t+n\geq T$，奖励只累加到 $R_T$，并去掉自举项。[Lake 手算](chapters/11-td-prediction.md#lake) · [多步回报](chapters/11-td-prediction.md#n-step-td)。
+
+### 9. SARSA & Q-learning
+
+$$
+Q(S_t,A_t)\leftarrow Q(S_t,A_t)+\alpha[Y_t-Q(S_t,A_t)].
+$$
+
+| 方法 | 非终止转移的目标 $Y_t$ |
+| --- | --- |
+| SARSA | $R_{t+1}+\gamma Q(S_{t+1},A_{t+1})$，使用实际下一动作 |
+| Q-learning | $R_{t+1}+\gamma\max_aQ(S_{t+1},a)$，使用贪心目标 |
+
+$n$-step SARSA 的非终止目标为：
+
+$$
+G_{t:t+n}=\sum_{k=0}^{n-1}\gamma^kR_{t+k+1}
++\gamma^nQ(S_{t+n},A_{t+n}).
+$$
+
+真正终止时，所有这些方法都去掉终止后的价值项。[两种目标的手算对照](chapters/12-td-control.md#on-off-policy)。
+
+### 10. Step Sizes & Exploration
+
+对每个状态或状态—动作对自身的更新序列，常见步长条件为：
+
+$$
+\sum_{k=1}^{\infty}\alpha_k=\infty,\qquad
+\sum_{k=1}^{\infty}\alpha_k^2<\infty.
+$$
+
+还需充分访问等任务条件。SARSA 的最优性结论通常要求 GLIE：无限探索且策略在极限下趋于贪心；仅有 $\epsilon_t\to0$ 不足以保证前者。[收敛条件](chapters/12-td-control.md#glie)。
+
 ## Glossary · 术语对照 { #glossary }
 
 <p class="chapter-subtitle">保留英文术语，对齐中文含义</p>
@@ -319,6 +433,18 @@ $\epsilon$-soft 要求 $\pi(a\mid s)\geq\epsilon/m$。固定正 $\epsilon$ 会�
 | Monte Carlo | 蒙特卡洛 | 用采样回报平均估计价值 |
 | First-Visit | 首次访问 | 每回合只使用某状态或状态—动作对的第一次访问 |
 | Every-Visit | 每次访问 | 使用回合中的全部相应访问 |
+| Temporal Difference / TD | 时序差分 | 结合采样与自举进行价值更新 |
+| TD Target | 时序差分目标 | 一步奖励加折扣后的后继价值估计 |
+| TD Error | 时序差分误差 | TD 目标减去当前估计 |
+| n-step Return | 多步回报 | 前 n 步真实奖励加末尾自举值；到终点后不再自举 |
+| SARSA | 同策略 TD 控制 | 使用实际下一动作的 Q 值构造目标 |
+| Q-learning | 异策略 TD 控制 | 使用下一状态最大 Q 值构造目标 |
+| Behavior Policy | 行为策略 | 用于与环境交互、收集数据的策略 |
+| Target Policy | 目标策略 | 被评估或改进的策略 |
+| GLIE | 无限探索且极限贪心 | 同时要求充分访问和最终趋于贪心 |
+| Tabular Method | 表格方法 | 为各状态或状态—动作对分别存储估计 |
+| Function Approximation | 函数近似 | 用共享参数表示价值等函数 |
+| Deep Q-Network / DQN | 深度 Q 网络 | 用神经网络近似动作价值函数 |
 | Exploring Starts | 探索性起始 | 各相关状态—动作对都有机会成为起点 |
 | Soft Policy | 软策略 | 各可用动作均有正概率 |
 | On-policy | 同策略 | 数据生成策略与被评估／改进策略相同 |
@@ -341,6 +467,9 @@ $\epsilon$-soft 要求 $\pi(a\mid s)\geq\epsilon/m$。固定正 $\epsilon$ 会�
 | $\epsilon$ | 探索概率或软策略参数 |
 | $\gamma$ | 折扣因子 |
 | $N(s),N(s,a)$ | 纳入统计的访问计数 |
+| $\delta_t$ | 当前转移的 TD 误差 |
+| $G_{t:t+n}$ | 从时刻 t 开始的 n 步更新目标 |
+| $\theta$ | 函数近似器或神经网络的参数 |
 
 <div class="source-note" markdown="1">
 课程内容与原图归课件作者及其注明的来源所有。发现问题可在 [GitHub 仓库](https://github.com/ZJUCQR/ELEC6910J/issues)反馈。

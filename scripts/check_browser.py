@@ -13,7 +13,8 @@ shots = ROOT / ".work/screenshots"
 shots.mkdir(parents=True, exist_ok=True)
 routes = [""] + [str(p.relative_to(ROOT/"site").parent)+"/" for p in sorted((ROOT/"site/chapters").glob("*/index.html"))]
 routes += ["reference/formulas/", "reference/glossary/", "reference/sources/", "slides/"]
-routes += [f"slides/lecture-{i:02}/" for i in range(1,11)]
+course = json.loads((ROOT/"course.json").read_text())
+routes += [f"slides/lecture-{chapter['number']:02}/" for chapter in course["chapters"]]
 report = {"pages": [], "search": {}, "checks": []}
 
 with sync_playwright() as p:
@@ -72,7 +73,7 @@ with sync_playwright() as p:
 
     # Start Chinese search on a fresh page, and reject stale previous results.
     page.goto(base+"chapters/02-probability/", wait_until="networkidle")
-    for term in ["蒙特卡洛", "Bellman", "餐厅"]:
+    for term in ["蒙特卡洛", "Bellman", "餐厅", "时序差分", "Q-learning"]:
         query = page.locator(".md-search__input")
         previous = page.locator(".md-search-result__list").text_content()
         query.fill(term)
