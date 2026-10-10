@@ -26,11 +26,9 @@ description: ELEC6910J 中文课程笔记与期中复习。从概率与探索，
 
 ### 考试范围
 
-以下范围依据 **Lecture 11–12，PDF p. 95「For Mid-Term Exam」** 整理。[查看原页](slides/lecture-12.md#p095) · [下载课件](assets/pdf/ELEC6910J_Lec_11_12.pdf#page=95)。
-
 <div class="exam-scope" markdown="1">
 
-| 课件列出的主题 | 对应笔记 | 复习时需要掌握 |
+| 考试主题 | 对应笔记 | 复习时需要掌握 |
 | --- | --- | --- |
 | Bandits and Markov Decision Process | [第 3 章](chapters/03-bandits.md)、[第 4 章](chapters/04-mdp.md) | 探索与利用；状态、动作、转移、奖励；Markov 性；折扣回报 |
 | Value Functions and Bellman Equations | [第 5 章](chapters/05-bellman.md) | $V^\pi$ 与 $Q^\pi$；期望方程与最优方程；策略平均与动作最大值 |
@@ -41,19 +39,15 @@ description: ELEC6910J 中文课程笔记与期中复习。从概率与探索，
 
 </div>
 
-概率基础作为前置工具复习；DQN 在本次课件中仅作引入。这两项均未在 p. 95 单列为考试主题，复习时优先掌握上表明确列出的内容。
+!!! info "考试时间"
 
-!!! info "课件中的考试通知"
-
-    [PDF p. 2](slides/lecture-11.md#p002) 记载考试时间为 **10 月 23 日 15:00**，并提到后续复习课；该页未注明年份。具体时间及范围调整以课程最新通知为准。
+    **10 月 23 日 15:00**
 
 ### 复习顺序
 
 1. **先串起概念**：从 MDP 和回报出发，写出 Bellman 关系；再按“需要模型吗、是否采样、是否自举、何时更新、评估哪种策略”比较 DP、MC、TD、SARSA 与 Q-learning。
 2. **再独立手算**：做下面的练习。每一步都写清旧值、目标、误差与新值，终止状态单独处理；完成后再展开答案核对。
 3. **最后解释算法**：遮住公式，说明每一项来自模型、真实奖励还是已有估计；检查固定策略、最优策略、行为策略与目标策略有没有混淆。
-
-这是按课程内容整理的准备顺序，不代表考试题型或分值安排。
 
 ### 手算练习
 
@@ -75,28 +69,7 @@ description: ELEC6910J 中文课程笔记与期中复习。从概率与探索，
     - **SARSA**：目标 0.9，新值 1.89。**Q-learning**：目标 4.5，新值 2.25。
     - **小狗 Q 表**：$Q((0,0),\rightarrow)=0.1$；$Q((0,1),\downarrow)=-1$，其余表项保持原值。
 
-### 考前自检
-
-- [ ] 能写出 Bellman 期望与最优方程，并解释求和、策略权重与最大值。
-- [ ] 能区分 Value Iteration 和 Policy Iteration，以及同步更新和在线更新。
-- [ ] 能从轨迹正确计算折扣回报，处理重复访问与终止边界。
-- [ ] 能解释 TD target 与 TD error，并完成 TD、SARSA、Q-learning 的逐步更新。
-- [ ] 能解释 SARSA 为什么是 on-policy、Q-learning 为什么允许 off-policy 数据。
-- [ ] 能说清充分访问、步长条件与趋于贪心分别保证什么。
-
-[查看公式速查](#formulas) · [查看术语对照](#glossary)
-
-## 学习路线
-
-课程内容由“如何描述不确定性”，逐步走向“如何比较行动”和“如何从经验中改进策略”。按授课顺序阅读，也可以从熟悉的主题直接进入。
-
-<div class="learning-route" markdown="1">
-
-<div class="route-stage"><span>01 — 04</span><strong>描述问题</strong><small>概率 · 探索 · MDP</small></div>
-<div class="route-stage"><span>05 — 08</span><strong>有模型时求解</strong><small>价值 · Bellman · 动态规划</small></div>
-<div class="route-stage"><span>09 — 12</span><strong>从经验中学习</strong><small>Monte Carlo · TD · 控制</small></div>
-
-</div>
+## 课程目录
 
 <div class="chapter-index" markdown="1">
 
@@ -136,20 +109,7 @@ description: ELEC6910J 中文课程笔记与期中复习。从概率与探索，
     - **课程**：ELEC6910J · Deep Reinforcement Learning
     - **授课教师**：Ling PAN
     - **学校**：The Hong Kong University of Science and Technology，Department of Electronic and Computer Engineering
-    - **笔记范围**：Lecture 1–12，共六份 PDF；覆盖 DP、MC、TD、SARSA、Q-learning，并包含 DQN 入门。Policy Gradient、Actor-Critic 等后续内容尚未提供。
-
-!!! note "笔记编写方式"
-
-    正文采用英文术语与中文解释，按“概念—公式—例子—易错点”整理。课件原图、例题和分步演示保存在[完整课件](slides/index.md)中；正文选取重点截图并标注 PDF 页码。可点击图片放大，或跳转原页核对。
-
-    标为“笔记补充”的计算、代码和交互演示用于帮助理解。涉及原页不一致之处，说明见[资料来源与勘误](reference/sources.md)。
-
-## 复习入口
-
-- [公式速查](#formulas)：概率、回报、Bellman、DP、MC、TD 与控制更新。
-- [术语对照](#glossary)：中英术语和符号。
-- [完整课件与下载](slides/index.md)：425 页原页档案和六份 PDF。
-- [赛车迭代演示](chapters/06-value-iteration.md#racing-lab)：调整折扣，观察同一模型的价值如何变化。
+    - **笔记范围**：Lecture 1–12，涵盖 DP、MC、TD、SARSA、Q-learning 与 DQN 入门。
 
 ## Formula Sheet · 公式速查 { #formulas }
 
