@@ -1,13 +1,12 @@
 """Create the public PDFs, all slide images, and page-by-page archives.
 
-Run once with local originals: python scripts/prepare_materials.py
+Import available local originals from originals/: python scripts/prepare_materials.py
 Rebuild from checked-in public PDFs: python scripts/prepare_materials.py --public
 """
 from pathlib import Path
 import argparse
 import hashlib
 import html
-import io
 import json
 import re
 
@@ -20,8 +19,12 @@ COURSE = json.loads((ROOT / 'course.json').read_text())
 
 
 def public_pdf(source):
-    original = ROOT / source['file']
+    original = ROOT / 'originals' / source['file']
     target = DOCS / 'assets/pdf' / source['file']
+    if not original.is_file():
+        if not target.is_file():
+            raise FileNotFoundError(f'Missing PDF: {original} or {target}')
+        return
     target.parent.mkdir(parents=True, exist_ok=True)
     if source['id'] != 'lec01-02':
         target.write_bytes(original.read_bytes())
@@ -57,7 +60,7 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--public', action='store_true', help='Use already reviewed public PDFs')
     args = parser.parse_args()
-    manifest = {'total_pages': 0, 'sources': [], 'chapters': COURSE['chapters']}
+    manifest = {'total_pages': 0, 'sources': []}
     all_pages = {}
     for source in COURSE['sources']:
         if not args.public:

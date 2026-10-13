@@ -4,5 +4,6 @@ site/
 __pycache__/
 *.pyc
 .DS_Store
-# Keep the supplied originals local; publish reviewed copies under docs/assets/pdf/.
+# Keep private originals local; publish reviewed copies under docs/assets/pdf/.
+/originals/
 /*.pdf

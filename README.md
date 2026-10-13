@@ -1,14 +1,8 @@
 # ELEC6910J · 深度强化学习笔记
 
-[在线阅读](https://zjucqr.github.io/ELEC6910J/) · [内容规划](PLAN.md)
+[在线阅读](https://zjucqr.github.io/ELEC6910J/)
 
-根据 HKUST Ling PAN 老师的六份 ELEC6910J 课件整理的中文课程笔记。涵盖 Lecture 1–12：导论、概率、Bandits、MDP、Bellman 方程、动态规划、Monte Carlo、TD、SARSA 与 Q-learning，并衔接 DQN 入门。
-
-- 12 章中文讲解，保留英文术语、公式、原课件实例与页码。
-- 425 页截图档案、6 份公开 PDF；公式速查与术语表汇总在课程笔记主页。
-- 首页整理期中考试范围、复习顺序、手算练习与自测答案，范围依据 Lecture 11–12 的 p. 95。
-- 桌面三栏阅读、手机导航、中英文搜索、图片放大、深浅主题。
-- 赛车价值迭代演示，使用与课件相同的转移模型。
+根据 HKUST Ling PAN 老师的课件整理，包含 12 章笔记、53 项检查题与答案、期中复习、公式速查及术语对照。保留 425 页课件档案、6 份 PDF 和原课件例题，支持搜索、图片放大、深浅主题与赛车价值迭代演示。
 
 ## 本地预览
 
@@ -19,7 +13,7 @@ python -m pip install -r requirements.txt
 python -m mkdocs serve
 ~~~
 
-访问终端显示的本地地址。所有 PDF、截图与 KaTeX 资源已放在仓库中，常规构建无需重新渲染课件。
+访问终端显示的地址。PDF、截图和公式资源均在仓库内，常规构建无需重新生成课件。
 
 ## 构建与检查
 
@@ -29,62 +23,51 @@ python -m mkdocs build --strict
 python scripts/check_site.py
 ~~~
 
-检查包括本地链接、页码锚点、全部 425 页覆盖、示例计算，以及正文中的 MC、TD、SARSA 与 Q-learning 更新代码。
-
-浏览器验收脚本为 scripts/check_browser.py。先安装 Chromium，再以实际 Pages 路径提供预览：
+静态检查覆盖链接、页码、全部课件及正文中的数值和算法示例。浏览器检查还覆盖公式、搜索、图片放大、赛车交互、主题和手机布局：
 
 ~~~sh
 python -m playwright install chromium
-mkdir -p .work/preview
-ln -sfn ../../site .work/preview/ELEC6910J
-python -m http.server 8765 --directory .work/preview
+python -m http.server 8765 --bind 127.0.0.1 --directory site
 ~~~
 
-在另一个终端运行：
+在另一个已激活虚拟环境的终端运行：
 
 ~~~sh
 python scripts/check_browser.py
 ~~~
 
-脚本检查全部页面公式、中文／英文搜索、课件定位、图片预览、赛车交互、主题与手机布局，截图和报告输出到被 Git 忽略的 .work 目录。
+截图和报告写入 .work/；site/、.work/ 和 Python 缓存均为可删除的生成文件。
 
-## 内容维护
+## 目录与维护
 
 | 路径 | 用途 |
 | --- | --- |
-| docs/index.md | 课程笔记主页、期中复习、公式速查与术语对照 |
-| docs/chapters/ | 十二章正文 |
-| docs/reference/ | 来源与勘误，以及公式、术语旧地址的跳转 |
-| docs/slides/ | 按讲次划分的逐页档案 |
-| docs/assets/pdf/ | 已检查的公开 PDF |
-| docs/assets/slides/ | 1600px 课件截图 |
-| docs/assets/manifest.json | 页码、标题、尺寸与公开 PDF 校验值 |
-| course.json | 文件与章节映射 |
-| scripts/prepare_materials.py | 生成公开 PDF、截图与档案 |
-| scripts/hooks.py | 统一渲染正文中的课件引用 |
-| docs/assets/stylesheets/extra.css | 视觉样式 |
-| docs/assets/javascripts/site.js | 公式、图片预览、档案过滤、赛车演示 |
+| docs/index.md | 课程首页、期中复习、公式与术语 |
+| docs/chapters/ | 12 章正文与检查题答案 |
+| docs/slides/ | 逐页课件档案 |
+| docs/reference/ | 来源、勘误及旧地址跳转 |
+| docs/assets/ | 公开 PDF、截图、样式、脚本与公式资源 |
+| course.json | 课件文件、页数与章节划分 |
+| scripts/ | 课件生成、引用渲染和验证脚本 |
+| overrides/ | 阅读信息与跳转模板 |
+| originals/ | 与公开副本不同的本地原始 PDF，不提交 Git |
 
-正文插图可使用以下语法，构建时会自动添加截图、说明、逐页档案与 PDF 链接：
+正文插图语法：
 
 ~~~text
-{{ slide lec03-04 64 | 折扣回报的原课件例题 }}
+{{ slide lec03-04 64 | 折扣回报的例题 }}
 ~~~
 
-重新生成课件档案：
+从仓库中的公开 PDF 重新生成截图、档案与资源清单：
 
 ~~~sh
 python scripts/prepare_materials.py --public
 ~~~
 
-不带参数时读取根目录的本地原始 PDF，生成经检查的公开副本。原始文件被 Git 忽略；Lecture 1 教学团队页的会议访问凭据会被移除，原文件不作修改。实际内容与页码映射见 PLAN.md。
+需要导入原始课件时，将文件放入 originals/，文件名与 course.json 对应，再运行不带 --public 的命令。脚本处理现有的原始文件；没有本地原件时沿用公开副本。Lecture 1 教学事务页中的会议访问凭据会在公开副本中移除，原件不变。
 
-## 发布
+## 发布与来源
 
-GitHub Pages 使用 GitHub Actions 构建。推送 main 后，工作流严格构建、检查链接与覆盖，然后部署 site 目录。Pages 设置的构建来源应为 GitHub Actions。
+推送 main 后，GitHub Actions 完成严格构建和静态检查，再发布到 GitHub Pages。
 
-## 来源与范围
-
-课件、原图及其引用素材归原作者所有，保留原页署名；本站不为这些材料重新授予许可。新增讲解与原页差异在 [资料来源与说明](docs/reference/sources.md) 中记录。现有课件中的视频以 PDF 提供的静态页面保留。
-
-第 11–12 讲已包含 TD 与控制方法；DQN 目前只涉及基本表示与损失思路。Policy Gradient、Actor-Critic 等后续内容尚未提供。
+课件、原图及其引用素材归原作者所有，保留原页署名；整理说明和公式勘误见[资料来源](docs/reference/sources.md)。

@@ -14,8 +14,6 @@ theme:
     logo: material/book-open-page-variant
     repo: fontawesome/brands/github
   features:
-    - navigation.indexes
-    - navigation.expand
     - navigation.top
     - navigation.footer
     - navigation.tracking
@@ -48,7 +46,6 @@ markdown_extensions:
   - attr_list
   - md_in_html
   - tables
-  - footnotes
   - toc:
       permalink: true
       toc_depth: 3
@@ -58,10 +55,6 @@ markdown_extensions:
   - pymdownx.superfences
   - pymdownx.highlight:
       anchor_linenums: true
-  - pymdownx.tabbed:
-      alternate_style: true
-  - pymdownx.tasklist:
-      custom_checkbox: true
 extra_css:
   - assets/vendor/katex/katex.min.css
   - assets/stylesheets/extra.css

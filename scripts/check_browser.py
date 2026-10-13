@@ -1,4 +1,4 @@
-"""Browser acceptance checks. Serve site at /ELEC6910J/ before running."""
+"""Browser acceptance checks. Serve the built site locally before running."""
 from pathlib import Path
 import argparse
 import json
@@ -6,7 +6,7 @@ from playwright.sync_api import sync_playwright
 
 ROOT = Path(__file__).resolve().parents[1]
 parser = argparse.ArgumentParser()
-parser.add_argument("--base-url", default="http://127.0.0.1:8765/ELEC6910J/")
+parser.add_argument("--base-url", default="http://127.0.0.1:8765/")
 args = parser.parse_args()
 base = args.base_url.rstrip("/") + "/"
 shots = ROOT / ".work/screenshots"
