@@ -23,7 +23,6 @@ python -m mkdocs serve
 | docs/assets/figures/ | 68 张正文截图，统一命名为讲次与页码，如 lec13-14-p002.webp |
 | docs/assets/theme/ | 页面样式 site.css 与交互脚本 site.js |
 | docs/assets/math/ | KaTeX 公式渲染、许可证与 fonts/ 字体 |
-| 考试/ | A4 横向单页 cheat sheet：[可编辑 Word](考试/ELEC6910J_Midterm_CheatSheet_A4_Landscape.docx) · [打印 PDF](考试/ELEC6910J_Midterm_CheatSheet_A4_Landscape.pdf) |
 | course.json | 课件页数、章节范围与 SHA-256 |
 | hooks.py | 必需的构建钩子：渲染课件图片、校验 PDF、生成旧链接跳转 |
 
