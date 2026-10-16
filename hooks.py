@@ -1,14 +1,22 @@
 """Render selected slide figures and preserve old bookmarks without source copies."""
 from pathlib import Path
+import hashlib
 import html
 import json
 import posixpath
 import re
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parent
 COURSE = json.loads((ROOT / 'course.json').read_text())
 SOURCES = {s['id']: s for s in COURSE['sources']}
 SLIDE = re.compile(r'^\{\{\s*slide\s+(lec\d{2}-\d{2})\s+(\d+)\s*\|\s*(.*?)\s*\}\}\s*$', re.M)
+
+
+def on_pre_build(config):
+    for source in SOURCES.values():
+        path = ROOT / 'docs/assets/pdf' / source['file']
+        if hashlib.sha256(path.read_bytes()).hexdigest() != source['sha256']:
+            raise ValueError(f'PDF does not match course.json: {path.name}')
 
 
 def on_page_markdown(markdown, page, config, files):

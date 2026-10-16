@@ -1,5 +1,4 @@
 .venv/
-.work/
 site/
 __pycache__/
 *.pyc

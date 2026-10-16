@@ -39,7 +39,11 @@ plugins:
   - search:
       lang: [zh, en]
 hooks:
-  - scripts/hooks.py
+  - hooks.py
+validation:
+  links:
+    not_found: warn
+    anchors: warn
 markdown_extensions:
   - admonition
   - attr_list

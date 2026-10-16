@@ -24,7 +24,7 @@ python -m mkdocs serve
 | docs/assets/theme/ | 页面样式 site.css 与交互脚本 site.js |
 | docs/assets/math/ | KaTeX 公式渲染、许可证与 fonts/ 字体 |
 | course.json | 课件页数、章节范围与 SHA-256 |
-| scripts/ | 引用渲染、截图生成、静态检查和浏览器检查 |
+| hooks.py | 必需的构建钩子：渲染课件图片、校验 PDF、生成旧链接跳转 |
 
 依赖统一放在 requirements.txt。PDF 是课件原页的完整存档，不再维护逐页截图副本、提取文本、独立公式表或术语表。
 
@@ -32,17 +32,9 @@ python -m mkdocs serve
 
 ~~~sh
 python -m mkdocs build --strict
-python scripts/check_site.py
 ~~~
 
-浏览器检查：
-
-~~~sh
-python -m playwright install chromium
-python -m http.server 8765 --bind 127.0.0.1 --directory site
-~~~
-
-在另一个已激活虚拟环境的终端运行 python scripts/check_browser.py。推送 main 后，GitHub Actions 构建、检查并发布。
+构建时检查内部链接、锚点和 PDF 校验值。推送 main 后，GitHub Actions 自动构建并发布。
 
 ## 编辑
 
@@ -52,8 +44,8 @@ python -m http.server 8765 --bind 127.0.0.1 --directory site
 {{ slide lec13-14 3 | Core Checklist for the Exam }}
 ~~~
 
-更新引用后运行 python scripts/prepare_materials.py：只生成被引用的截图，并移除未使用的图片。更换 PDF 时同步 course.json 中的页数和 SHA-256；日常构建直接使用已提交的资源。
+截图按“讲次＋页码”保存在 docs/assets/figures/，只保留正文实际引用的图片。更换 PDF 时同步 course.json 中的页数和 SHA-256。
 
-site/、.work/、__pycache__/ 都是可删除的构建、检查或缓存产物。旧网页书签的跳转在构建时自动生成，不占用额外源文档。
+site/ 与 __pycache__/ 是可删除的构建和缓存产物，不提交到仓库。
 
 课件版权和公开版本说明见[首页资料说明](docs/index.md#sources)。

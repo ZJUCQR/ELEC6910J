@@ -17,7 +17,6 @@
   --paper: #f3f3ec;
   --line: #dfe4da;
   --muted: #6e786f;
-  --accent-soft: #e8eee5;
 }
 [data-md-color-scheme="slate"] {
   --md-default-bg-color: #17221e;
@@ -30,7 +29,6 @@
   --paper: #203128;
   --line: #354b3e;
   --muted: #b0bfb3;
-  --accent-soft: #283e32;
 }
 html { scroll-behavior: smooth; scroll-padding-top: 6rem; }
 body { -webkit-font-smoothing: antialiased; }
@@ -61,9 +59,6 @@ body { -webkit-font-smoothing: antialiased; }
 .md-typeset strong { font-weight: 650; }
 .md-typeset .admonition, .md-typeset details { font-size: .77rem; border: 1px solid var(--line); box-shadow: none; border-radius: .25rem; }
 .md-typeset .admonition { margin: 1.4rem 0; }
-.md-typeset .admonition.info { border-color: var(--line); border-left: 3px solid #46745d; }
-.md-typeset .info > .admonition-title { background-color: var(--accent-soft); }
-.md-typeset .info > .admonition-title::before { background-color: #46745d; }
 .md-typeset .admonition.note { border-color: var(--line); border-left: 3px solid #82937d; }
 .md-typeset .note > .admonition-title { background-color: var(--paper); }
 .md-typeset .note > .admonition-title::before { background-color: #6d856a; }
