@@ -20,7 +20,7 @@ python -m mkdocs serve
 | docs/index.md | 考试安排、原图、复习重点、公式、术语与课件下载 |
 | docs/chapters/ | 12 章笔记与答案 |
 | docs/assets/pdf/ | 7 份 PDF，每份只保存一次 |
-| docs/assets/figures/ | 69 张正文截图，统一命名为讲次与页码，如 lec13-14-p003.webp |
+| docs/assets/figures/ | 68 张正文截图，统一命名为讲次与页码，如 lec13-14-p002.webp |
 | docs/assets/theme/ | 页面样式 site.css 与交互脚本 site.js |
 | docs/assets/math/ | KaTeX 公式渲染、许可证与 fonts/ 字体 |
 | course.json | 课件页数、章节范围与 SHA-256 |
@@ -41,7 +41,7 @@ python -m mkdocs build --strict
 正文引用课件原图：
 
 ~~~text
-{{ slide lec13-14 3 | Core Checklist for the Exam }}
+{{ slide lec13-14 2 | 考试通知 }}
 ~~~
 
 截图按“讲次＋页码”保存在 docs/assets/figures/，只保留正文实际引用的图片。更换 PDF 时同步 course.json 中的页数和 SHA-256。

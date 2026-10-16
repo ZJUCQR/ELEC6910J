@@ -24,21 +24,19 @@ description: ELEC6910J 期中考试安排、复习重点、公式和例题，维
 
 | 项目 | 安排 |
 | --- | --- |
-| 日期与开始时间 | **10 月 23 日 15:00** |
+| 时间 | **10 月 23 日 15:00–17:50** |
 | 地点 | **Room 6555** |
-| 形式与题型 | 闭卷；选择题、填空题、计算题 |
-| 可携带物品 | 计算器、一张备忘纸 |
+| 形式 | 课堂考试（In-class exam） |
+| 可携带物品 | **一页单面 cheatsheet**、计算器 |
 
-结束时间和备忘纸要求有两处差异：通知页写 **17:50、单面一页**，清单页写 **17:40、双面一张 A4**；这两项待确认。
+如有时间冲突，请提前联系助教（TAs）。
 
 [下载期中复习原课件](assets/pdf/ELEC6910J_Lec_13_14.pdf#page=1)
 
 <details class="exam-originals" markdown="1">
-<summary>考试通知与复习清单原图</summary>
+<summary>考试通知原图</summary>
 
 {{ slide lec13-14 2 | 考试通知 }}
-
-{{ slide lec13-14 3 | Core Checklist for the Exam }}
 
 </details>
 
