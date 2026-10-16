@@ -57,9 +57,7 @@ body { -webkit-font-smoothing: antialiased; }
 .md-typeset h3 { font-size: .93rem; font-weight: 650; margin-top: 1.6rem; }
 .md-typeset h4 { font-size: .82rem; }
 .md-typeset .chapter-subtitle { color: var(--muted); font-size: .85rem; margin: 0 0 1.65rem; letter-spacing: .06em; }
-.reading-meta { display: flex; flex-wrap: wrap; gap: .5rem 1rem; justify-content: space-between; font-size: .57rem; font-weight: 600; letter-spacing: .1em; color: var(--muted); margin: .15rem 1.7rem 1rem 0; }
-.reading-meta span span { padding: 0 .35rem; color: #ac774a; }
-.md-typeset a:not(.md-button):hover { text-decoration: underline; text-underline-offset: .18em; }
+.md-typeset a:hover { text-decoration: underline; text-underline-offset: .18em; }
 .md-typeset strong { font-weight: 650; }
 .md-typeset .admonition, .md-typeset details { font-size: .77rem; border: 1px solid var(--line); box-shadow: none; border-radius: .25rem; }
 .md-typeset .admonition { margin: 1.4rem 0; }
@@ -78,8 +76,6 @@ body { -webkit-font-smoothing: antialiased; }
 .md-typeset table:not([class]) th { background: var(--paper); font-weight: 650; padding: .65em 1em; min-width: 0; }
 .md-typeset table:not([class]) td { padding: .65em 1em; border-color: var(--line); }
 .md-typeset__table { display: block; }
-.md-typeset .md-button { font-size: .69rem; padding: .6em 1.25em; border: 1px solid var(--line); border-radius: .22rem; font-weight: 600; }
-.md-typeset .md-button:hover { background: #376953; border-color: #376953; color: #fff; }
 .md-typeset .arithmatex { overflow: auto; padding: .1rem 0; }
 .md-typeset .katex { font-size: 1.1em; }
 .md-typeset .katex-display { margin: .7em 0; }
@@ -103,16 +99,6 @@ body { -webkit-font-smoothing: antialiased; }
 .cover-equation > span { font-size: .43rem; letter-spacing: .09em; }
 .cover-equation > b { padding: .3rem; color: #a5784c; font-weight: 400; }
 .cover-equation > div { padding-top: 1rem; font-size: .85rem; }
-.archive-tools { display: flex; gap: .65rem; align-items: center; flex-wrap: wrap; padding: .85rem; background: var(--paper); border: 1px solid var(--line); margin: 1.5rem 0; border-radius: .25rem; }
-.archive-tools label { font-size: .7rem; font-weight: 600; }
-.archive-tools input { background: var(--md-default-bg-color); border: 1px solid var(--line); padding: .45rem .6rem; border-radius: .2rem; color: var(--md-default-fg-color); min-width: 10rem; flex: 1; font-size: .73rem; }
-.archive-tools span { font-size: .6rem; color: var(--muted); }
-.md-typeset details.slide-page { margin: .55rem 0; border: 1px solid var(--line); }
-.md-typeset details.slide-page > summary { background: var(--paper); padding: .75rem 2rem .75rem .75rem; margin: 0; font-weight: 500; }
-.md-typeset details.slide-page > summary::before { display: none; }
-.md-typeset details.slide-page > summary::after { top: .9rem; }
-.page-number { display: inline-block; min-width: 2rem; font-family: var(--md-code-font); color: #a57b54; font-size: .65rem; }
-.md-typeset details.slide-page > figure { border: none; margin: .7rem 0; }
 [hidden] { display: none !important; }
 .image-dialog { border: 1px solid #ffffff22; border-radius: .35rem; background: #17231f; color: #fff; padding: 2.3rem .7rem .7rem; max-width: 96vw; width: fit-content; max-height: 96dvh; overflow: auto; }
 .image-dialog::backdrop { background: #0b1712e8; backdrop-filter: blur(4px); }
@@ -160,7 +146,6 @@ button:focus-visible, a:focus-visible, input:focus-visible { outline: 2px solid 
   .md-typeset { font-size: .78rem; line-height: 1.9; }
   .md-typeset h1 { font-size: 1.55rem; overflow-wrap: anywhere; }
   .md-typeset h2 { font-size: 1.03rem; margin-top: 2rem; }
-  .reading-meta { font-size: .51rem; }
   .md-typeset .course-cover h1 { font-size: 2rem; }
   .md-typeset .cover-english { font-size: .83rem; }
   .cover-label { font-size: .5rem; margin-bottom: 1.2rem; }
@@ -182,7 +167,7 @@ button:focus-visible, a:focus-visible, input:focus-visible { outline: 2px solid 
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 @media print {
-  .md-header, .md-sidebar, .md-footer, .md-content__button, .archive-tools, .lab-controls, .lab-actions { display: none !important; }
+  .md-header, .md-sidebar, .md-footer, .md-content__button, .lab-controls, .lab-actions { display: none !important; }
   .md-content__inner { margin: 0; }
   .slide-figure, .admonition { break-inside: avoid; }
   .md-typeset { font-size: 10pt; }

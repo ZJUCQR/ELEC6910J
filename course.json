@@ -1,24 +1,127 @@
 {
   "sources": [
-    {"id":"lec01-02","file":"ELEC6910J_Lec_1_2_updated.pdf","pages":85},
-    {"id":"lec03-04","file":"ELEC6910J_Lec_3_4.pdf","pages":81},
-    {"id":"lec05-06","file":"ELEC6910J_Lec_5_6.pdf","pages":65},
-    {"id":"lec07-08","file":"ELEC6910J_Lec_7_8.pdf","pages":57},
-    {"id":"lec09-10","file":"ELEC6910J_Lec_9_10.pdf","pages":41},
-    {"id":"lec11-12","file":"ELEC6910J_Lec_11_12.pdf","pages":96}
+    {
+      "id": "lec01-02",
+      "file": "ELEC6910J_Lec_1_2_updated.pdf",
+      "pages": 85,
+      "sha256": "019e744087e45a2c12ee98ef8006c1b91b63bcb6db7cbd117ce2de8118e9e98e"
+    },
+    {
+      "id": "lec03-04",
+      "file": "ELEC6910J_Lec_3_4.pdf",
+      "pages": 81,
+      "sha256": "6f36852f6d2140405620634830d268f161400ef8e1ffa9142712a3afc736cb10"
+    },
+    {
+      "id": "lec05-06",
+      "file": "ELEC6910J_Lec_5_6.pdf",
+      "pages": 65,
+      "sha256": "e3173af38695b49594a56c5d4be2e0feb41027f7181ceecc19a66b5205e174fe"
+    },
+    {
+      "id": "lec07-08",
+      "file": "ELEC6910J_Lec_7_8.pdf",
+      "pages": 57,
+      "sha256": "6d3378a02abb1d278e0d219218962ea45f3cd982aff63283d597bbaa33a605b7"
+    },
+    {
+      "id": "lec09-10",
+      "file": "ELEC6910J_Lec_9_10.pdf",
+      "pages": 41,
+      "sha256": "5cc180c35bb9890c0ac9c31d83e77a1fae771d3477bd84d0df502f46b7f97926"
+    },
+    {
+      "id": "lec11-12",
+      "file": "ELEC6910J_Lec_11_12.pdf",
+      "pages": 96,
+      "sha256": "30ab00d7ebec5dc8a3b411eb6516e8fe9669d7ad39df4de737f358354df7d0b3"
+    },
+    {
+      "id": "lec13-14",
+      "file": "ELEC6910J_Lec_13_14.pdf",
+      "pages": 125,
+      "review_end": 38,
+      "sha256": "cf77701d1af022d5afc48b98e40cdaff61bcbb8e50c2eb3b3a3ff2ac1d1d5ae2"
+    }
   ],
   "chapters": [
-    {"number":1,"title":"Introduction","zh":"导论与学习范式","source":"lec01-02","start":1,"end":49},
-    {"number":2,"title":"Probability Basics","zh":"概率基础","source":"lec01-02","start":50,"end":85},
-    {"number":3,"title":"Multi-Armed Bandits","zh":"多臂老虎机与探索","source":"lec03-04","start":1,"end":35},
-    {"number":4,"title":"Markov Decision Processes","zh":"马尔可夫决策过程","source":"lec03-04","start":36,"end":81},
-    {"number":5,"title":"Value Functions & Bellman Equations","zh":"价值函数与贝尔曼方程","source":"lec05-06","start":1,"end":35},
-    {"number":6,"title":"Value Iteration","zh":"动态规划与价值迭代","source":"lec05-06","start":36,"end":65},
-    {"number":7,"title":"Policy Evaluation","zh":"固定策略与策略评估","source":"lec07-08","start":1,"end":29},
-    {"number":8,"title":"Policy Iteration & Convergence","zh":"策略改进、迭代与收敛","source":"lec07-08","start":30,"end":57},
-    {"number":9,"title":"Monte-Carlo Prediction","zh":"蒙特卡洛预测","source":"lec09-10","start":1,"end":23},
-    {"number":10,"title":"Monte-Carlo Control","zh":"蒙特卡洛控制","source":"lec09-10","start":24,"end":41},
-    {"number":11,"title":"Temporal Difference Prediction","zh":"时序差分预测与多步回报","source":"lec11-12","start":1,"end":50},
-    {"number":12,"title":"Temporal Difference Control","zh":"SARSA、Q-learning 与时序差分控制","source":"lec11-12","start":51,"end":96}
+    {
+      "number": 1,
+      "source": "lec01-02",
+      "start": 1,
+      "end": 49
+    },
+    {
+      "number": 2,
+      "source": "lec01-02",
+      "start": 50,
+      "end": 85
+    },
+    {
+      "number": 3,
+      "source": "lec03-04",
+      "start": 1,
+      "end": 35
+    },
+    {
+      "number": 4,
+      "source": "lec03-04",
+      "start": 36,
+      "end": 81
+    },
+    {
+      "number": 5,
+      "source": "lec05-06",
+      "start": 1,
+      "end": 35
+    },
+    {
+      "number": 6,
+      "source": "lec05-06",
+      "start": 36,
+      "end": 65
+    },
+    {
+      "number": 7,
+      "source": "lec07-08",
+      "start": 1,
+      "end": 29
+    },
+    {
+      "number": 8,
+      "source": "lec07-08",
+      "start": 30,
+      "end": 57
+    },
+    {
+      "number": 9,
+      "source": "lec09-10",
+      "start": 1,
+      "end": 23
+    },
+    {
+      "number": 10,
+      "source": "lec09-10",
+      "start": 24,
+      "end": 41
+    },
+    {
+      "number": 11,
+      "source": "lec11-12",
+      "start": 1,
+      "end": 50
+    },
+    {
+      "number": 12,
+      "source": "lec11-12",
+      "start": 51,
+      "end": 96
+    },
+    {
+      "number": 13,
+      "source": "lec13-14",
+      "start": 1,
+      "end": 38
+    }
   ]
 }

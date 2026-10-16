@@ -1,37 +1,23 @@
-# Slides · 完整课件
+# 原课件
 
-<p class="chapter-subtitle">六份文件，425 页 · 按讲次查看与下载</p>
+笔记范围截至 **Lecture 13 · Exam Review**。每份 PDF 保留一份，正文中的例题图片可点击放大。
 
-逐页档案保留所有页面，包括例题分步、图示、复习页和教学事务页。正文合并讲解的重复内容，也可以在这里逐页核对。点击页标题展开，点击图片放大。
+| 课件 | 内容 | 页数 |
+| --- | --- | ---: |
+| [Lecture 1–2](../assets/pdf/ELEC6910J_Lec_1_2_updated.pdf) | Introduction、Probability Basics | 85 |
+| [Lecture 3–4](../assets/pdf/ELEC6910J_Lec_3_4.pdf) | Bandits、MDPs | 81 |
+| [Lecture 5–6](../assets/pdf/ELEC6910J_Lec_5_6.pdf) | Bellman Equations、Value Iteration | 65 |
+| [Lecture 7–8](../assets/pdf/ELEC6910J_Lec_7_8.pdf) | Policy Evaluation、Policy Iteration | 57 |
+| [Lecture 9–10](../assets/pdf/ELEC6910J_Lec_9_10.pdf) | Monte Carlo Prediction & Control | 41 |
+| [Lecture 11–12](../assets/pdf/ELEC6910J_Lec_11_12.pdf) | TD Prediction、SARSA、Q-learning | 96 |
+| [Lecture 13–14](../assets/pdf/ELEC6910J_Lec_13_14.pdf) | 期中复习为 p. 1–38；p. 39–125 为后续监督学习，随原文件完整归档 | 125 |
 
-## 按讲次阅读
+[期中考试安排与复习重点](../index.md#midterm)
 
-| 讲次 | 主题 | PDF 页码 | 页数 |
-| --- | --- | --- | ---: |
-| [L1](lecture-01.md) | Introduction | Lec 1–2：1–49 | 49 |
-| [L2](lecture-02.md) | Probability Basics | Lec 1–2：50–85 | 36 |
-| [L3](lecture-03.md) | Multi-Armed Bandits | Lec 3–4：1–35 | 35 |
-| [L4](lecture-04.md) | Markov Decision Processes | Lec 3–4：36–81 | 46 |
-| [L5](lecture-05.md) | Value Functions & Bellman Equations | Lec 5–6：1–35 | 35 |
-| [L6](lecture-06.md) | Value Iteration | Lec 5–6：36–65 | 30 |
-| [L7](lecture-07.md) | Policy Evaluation | Lec 7–8：1–29 | 29 |
-| [L8](lecture-08.md) | Policy Iteration & Convergence | Lec 7–8：30–57 | 28 |
-| [L9](lecture-09.md) | Monte-Carlo Prediction | Lec 9–10：1–23 | 23 |
-| [L10](lecture-10.md) | Monte-Carlo Control | Lec 9–10：24–41 | 18 |
-| [L11](lecture-11.md) | Temporal Difference Prediction | Lec 11–12：1–50 | 50 |
-| [L12](lecture-12.md) | Temporal Difference Control | Lec 11–12：51–96 | 46 |
+## 资料说明 {#sources}
 
-## PDF 下载
+课程由 HKUST ECE 的 **Ling PAN** 讲授。课件与图片归原作者所有，原页署名及致谢完整保留；推荐教材为 Sutton 与 Barto 的 [Reinforcement Learning](http://incompleteideas.net/book/the-book-2nd.html)。
 
-- [Lecture 1–2 · Introduction & Probability Basics](../assets/pdf/ELEC6910J_Lec_1_2_updated.pdf) · 85 页
-- [Lecture 3–4 · Bandits & MDPs](../assets/pdf/ELEC6910J_Lec_3_4.pdf) · 81 页
-- [Lecture 5–6 · Bellman Equations & Value Iteration](../assets/pdf/ELEC6910J_Lec_5_6.pdf) · 65 页
-- [Lecture 7–8 · Policy Evaluation & Iteration](../assets/pdf/ELEC6910J_Lec_7_8.pdf) · 57 页
-- [Lecture 9–10 · Monte Carlo](../assets/pdf/ELEC6910J_Lec_9_10.pdf) · 41 页
-- [Lecture 11–12 · TD Prediction & Control](../assets/pdf/ELEC6910J_Lec_11_12.pdf) · 96 页
+Lecture 1 的公开版遮盖了教学事务页的会议访问凭据，课程内容和页序未变；其余 PDF 按原文件保存。正文引用采用 PDF 物理页码，公式勘误与补充计算直接写在相应章节。
 
-!!! note "公开副本说明"
-
-    课程内容、例题、图示及页序保持完整；Lecture 1 的教学团队页已遮盖会议访问凭据。课程日程、联系方式和作业通知是课件记录，当前安排应以课程通知为准。PDF 物理页码从 1 开始，不采用“每讲重新计数”的页码。
-
-原课件及其引用图片归原作者所有，见[资料来源与说明](../reference/sources.md)。
+项目只维护期中考试及之前的课程内容，Lecture 14 不另行整理为笔记。问题可在 [GitHub Issues](https://github.com/ZJUCQR/ELEC6910J/issues)反馈。

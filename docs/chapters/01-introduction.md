@@ -148,21 +148,21 @@ Deep Reinforcement Learning 将深度网络的表示能力用于策略、价值�
 
 | 原课件应用 | 用来理解的决策特点 | 原页 |
 | --- | --- | --- |
-| Atari 游戏 | 视觉输入与累计得分 | [p. 33](../slides/lecture-01.md#p033) |
-| Locomotion | 通过试错学习运动控制 | [p. 34](../slides/lecture-01.md#p034) |
-| Go / AlphaGo | 多步决策与自我对弈 | [p. 35](../slides/lecture-01.md#p035) |
-| Robot Manipulation | 机器人与物体交互 | [p. 36](../slides/lecture-01.md#p036) |
-| Dota 2 | 多智能体协作、对抗与长期目标 | [p. 37](../slides/lecture-01.md#p037) |
-| Nuclear Fusion Control | 连续控制与物理系统 | [p. 38](../slides/lecture-01.md#p038) |
-| 语言助手与 RL | 通过反馈改善生成行为 | [p. 39](../slides/lecture-01.md#p039) |
-| Hide and Seek | 多智能体交互产生复杂行为 | [p. 48](../slides/lecture-01.md#p048) |
-| StarCraft II | 部分可观测、实时、长时程与巨大动作空间 | [p. 49](../slides/lecture-01.md#p049) |
+| Atari 游戏 | 视觉输入与累计得分 | [p. 33](../assets/pdf/ELEC6910J_Lec_1_2_updated.pdf#page=33) |
+| Locomotion | 通过试错学习运动控制 | [p. 34](../assets/pdf/ELEC6910J_Lec_1_2_updated.pdf#page=34) |
+| Go / AlphaGo | 多步决策与自我对弈 | [p. 35](../assets/pdf/ELEC6910J_Lec_1_2_updated.pdf#page=35) |
+| Robot Manipulation | 机器人与物体交互 | [p. 36](../assets/pdf/ELEC6910J_Lec_1_2_updated.pdf#page=36) |
+| Dota 2 | 多智能体协作、对抗与长期目标 | [p. 37](../assets/pdf/ELEC6910J_Lec_1_2_updated.pdf#page=37) |
+| Nuclear Fusion Control | 连续控制与物理系统 | [p. 38](../assets/pdf/ELEC6910J_Lec_1_2_updated.pdf#page=38) |
+| 语言助手与 RL | 通过反馈改善生成行为 | [p. 39](../assets/pdf/ELEC6910J_Lec_1_2_updated.pdf#page=39) |
+| Hide and Seek | 多智能体交互产生复杂行为 | [p. 48](../assets/pdf/ELEC6910J_Lec_1_2_updated.pdf#page=48) |
+| StarCraft II | 部分可观测、实时、长时程与巨大动作空间 | [p. 49](../assets/pdf/ELEC6910J_Lec_1_2_updated.pdf#page=49) |
 
 {{ slide lec01-02 49 | StarCraft II：对抗、部分可观测与长时程决策同时存在 }}
 
 !!! note "阅读范围"
 
-    现有 10 讲主要建立概率、表格型 RL、动态规划和 Monte Carlo 的基础。课程大纲还提到 TD、Policy Gradient 与 Actor-Critic，但本目录没有这些后续课件，因此本站不将它们写作已覆盖章节。课件中的应用年份按原页保留，时间线说明见[资料来源](../reference/sources.md)。
+    本项目维护 Lecture 1–12 与 Lecture 13 期中复习，涵盖概率、表格型 RL、DP、MC、TD、SARSA 和 Q-learning。应用图中的 DeepSeek-R1 年份标注有误，其正式发布于 2025 年 1 月；原图保留原样。
 
 ## 1.5 本章检查
 

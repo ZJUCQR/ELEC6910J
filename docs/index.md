@@ -1,6 +1,6 @@
 ---
-title: 深度强化学习
-description: ELEC6910J 中文课程笔记与期中复习。从概率与探索，到动态规划、Monte Carlo、TD、SARSA 和 Q-learning。
+title: 期中复习与课程笔记
+description: ELEC6910J 期中考试安排、复习重点、公式和例题，维护范围截至 Lecture 13 Exam Review。
 ---
 
 <div class="course-cover" markdown="1">
@@ -9,7 +9,7 @@ description: ELEC6910J 中文课程笔记与期中复习。从概率与探索，
 # 深度强化学习
 
 <p class="cover-english">Deep Reinforcement Learning</p>
-<p class="cover-intro">从一次选择，到长期回报。<br>沿着概率、价值与策略，理解智能体如何从交互中学习。</p>
+<p class="cover-intro">期中复习与考前课程笔记。<br>从概率与探索，到 Bellman、DP、MC 和 TD。</p>
 
 <div class="cover-equation" aria-label="价值等于奖励与折扣后的未来价值的期望">
 <span>STATE</span><b>→</b><span>ACTION</span><b>→</b><span>REWARD</span><b>↗</b>
@@ -20,36 +20,57 @@ description: ELEC6910J 中文课程笔记与期中复习。从概率与探索，
 
 ## Mid-Term Exam · 期中复习 {#midterm}
 
+### 考试安排
+
+| 项目 | 安排 |
+| --- | --- |
+| 日期与开始时间 | **10 月 23 日 15:00** |
+| 地点 | **Room 6555** |
+| 形式与题型 | 闭卷；选择题、填空题、计算题 |
+| 可携带物品 | 计算器、一张备忘纸 |
+
+结束时间和备忘纸要求有两处差异：通知页写 **17:50、单面一页**，清单页写 **17:40、双面一张 A4**；这两项待确认。
+
+[下载期中复习原课件](assets/pdf/ELEC6910J_Lec_13_14.pdf#page=1)
+
+<details class="exam-originals" markdown="1">
+<summary>考试通知与复习清单原图</summary>
+
+{{ slide lec13-14 2 | 考试通知 }}
+
+{{ slide lec13-14 3 | Core Checklist for the Exam }}
+
+</details>
+
 ### 考试范围
 
 <div class="exam-scope" markdown="1">
 
 | 考试主题 | 对应笔记 | 复习时需要掌握 |
 | --- | --- | --- |
-| Bandits and Markov Decision Process | [第 3 章](chapters/03-bandits.md)、[第 4 章](chapters/04-mdp.md) | 探索与利用；状态、动作、转移、奖励；Markov 性；折扣回报 |
-| Value Functions and Bellman Equations | [第 5 章](chapters/05-bellman.md) | $V^\pi$ 与 $Q^\pi$；期望方程与最优方程；策略平均与动作最大值 |
-| Dynamic Programming | [第 6 章](chapters/06-value-iteration.md)、[第 7 章](chapters/07-policy-evaluation.md)、[第 8 章](chapters/08-policy-iteration.md) | Value Iteration；Policy Evaluation、Improvement、Iteration；终止边界与收敛条件 |
-| Monte-Carlo Methods | [第 9 章](chapters/09-mc-prediction.md)、[第 10 章](chapters/10-mc-control.md) | Prediction 与 Control；First-Visit / Every-Visit；完整回报；ES 与 soft policy |
+| 学习方式与特征表示 | [第 1 章](chapters/01-introduction.md)、[第 12 章](chapters/12-td-control.md#dqn-preview) | 监督学习与强化学习的区别；状态、动作的特征表示；表格与函数近似 |
+| Bandits & Exploration | [第 3 章](chapters/03-bandits.md) | 探索与利用；$\epsilon$-greedy；平稳与非平稳问题 |
+| Markov Decision Process | [第 4 章](chapters/04-mdp.md) | 状态、动作、转移、奖励；Markov 性；折扣因子如何影响策略 |
+| Value Functions & Bellman Equations | [第 5 章](chapters/05-bellman.md) | $V^\pi$ 与 $Q^\pi$；期望与最优方程；从公式识别 Bellman 算子 |
+| Dynamic Programming | [第 6 章](chapters/06-value-iteration.md)、[第 7 章](chapters/07-policy-evaluation.md)、[第 8 章](chapters/08-policy-iteration.md) | Value Iteration；策略评估、改进与迭代；收敛条件；计算复杂度 |
+| Monte-Carlo Methods | [第 9 章](chapters/09-mc-prediction.md)、[第 10 章](chapters/10-mc-control.md) | First-Visit / Every-Visit；Prediction 与 Control；完整回报；与 TD 的偏差、方差比较 |
 | Temporal Difference Prediction | [第 11 章](chapters/11-td-prediction.md) | TD target、TD error、TD(0)；采样与自举；偏差与方差；多步回报 |
-| Temporal Difference Control：On-policy SARSA、Off-policy Q-learning | [第 12 章](chapters/12-td-control.md) | 实际下一动作与贪心目标的差别；Q 表更新；探索覆盖、步长与 GLIE；多步 SARSA |
+| SARSA & Q-learning | [第 12 章](chapters/12-td-control.md) | On-policy / Off-policy；更新目标与实现顺序；探索覆盖、步长与 GLIE；多步 SARSA |
 
 </div>
-
-!!! info "考试时间"
-
-    **10 月 23 日 15:00**
 
 ### 复习顺序
 
 1. **先串起概念**：从 MDP 和回报出发，写出 Bellman 关系；再按“需要模型吗、是否采样、是否自举、何时更新、评估哪种策略”比较 DP、MC、TD、SARSA 与 Q-learning。
 2. **再独立手算**：做下面的练习。每一步都写清旧值、目标、误差与新值，终止状态单独处理；完成后再展开答案核对。
-3. **最后解释算法**：遮住公式，说明每一项来自模型、真实奖励还是已有估计；检查固定策略、最优策略、行为策略与目标策略有没有混淆。
+3. **整理备忘纸**：从下方公式速查选出 Bellman 关系、DP / MC / TD 比较、控制更新式、终止边界与收敛条件；每个公式旁标明适用前提。
 
 ### 手算练习
 
 | 练习 | 给定条件与任务 |
 | --- | --- |
 | [GridWorld 策略评估](chapters/07-policy-evaluation.md#gridworld-evaluation) | 4×4 网格，非终止状态每步奖励 $-1$，均匀随机策略，初值全为 0。做一轮同步更新，区分终止与非终止状态。 |
+| [线性方程组](chapters/07-policy-evaluation.md) | 固定策略下，两个状态交替转移，即时奖励分别为 1、2，$\gamma=0.5$。写出 Bellman 方程并求两个状态的价值。 |
 | [首次访问与每次访问 MC](chapters/09-mc-prediction.md#first-every) | 目标状态在 $t=1,2$ 出现，$t=3$ 终止；$r_2=2,r_3=4,\gamma=1$。分别求两次回报、First-Visit 值与 Every-Visit 均值。 |
 | [Lake 的 TD 更新](chapters/11-td-prediction.md#lake) | 初值为 0，$\alpha=0.1,\gamma=0.5$，每步奖励 $-0.4$；依次经历 $(1,1)\to(1,2)\to(1,3)\to(1,2)$。顺序更新三个出发状态。 |
 | [两步 TD 的终止边界](chapters/11-td-prediction.md#n-step-td) | 两个奖励为 1、2，$\gamma=0.5$。分别计算“两步后未终止且后继价值为 4”与“两步后终止”的目标。 |
@@ -59,6 +80,7 @@ description: ELEC6910J 中文课程笔记与期中复习。从概率与探索，
 ??? success "自测答案：完成手算后再展开"
 
     - **GridWorld**：所有非终止状态更新为 $-1$，两个终止状态保持 0。第一轮所有后继旧值为 0。
+    - **线性方程组**：$v_1=1+0.5v_2,\ v_2=2+0.5v_1$，解得 $v_1=8/3,\ v_2=10/3$。矩阵形式为 $(I-\gamma P)v=r$。
     - **MC**：$G_1=6,G_2=4$；First-Visit 为 6，Every-Visit 均值为 5。
     - **Lake**：$V(1,1)=-0.04$，$V(1,2)=-0.04$，$V(1,3)=-0.042$。第三步用到第二步刚更新的值。
     - **两步 TD**：未终止时目标为 3；终止时为 2，没有自举项。
@@ -98,14 +120,7 @@ description: ELEC6910J 中文课程笔记与期中复习。从概率与探索，
 
 </div>
 
-## 课程与笔记
-
-!!! info "课程基本信息"
-
-    - **课程**：ELEC6910J · Deep Reinforcement Learning
-    - **授课教师**：Ling PAN
-    - **学校**：The Hong Kong University of Science and Technology，Department of Electronic and Computer Engineering
-    - **笔记范围**：Lecture 1–12，涵盖 DP、MC、TD、SARSA、Q-learning 与 DQN 入门。
+HKUST ECE · Ling PAN · ELEC6910J。维护范围为 Lecture 1–12 与 Lecture 13 期中复习。[原课件下载与资料说明](slides/index.md)。
 
 ## Formula Sheet · 公式速查 { #formulas }
 

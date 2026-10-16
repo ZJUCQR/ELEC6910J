@@ -1,8 +1,7 @@
-"""Expand verified slide references and add reading metadata at build time."""
+"""Render selected slide figures and preserve old bookmarks without source copies."""
 from pathlib import Path
 import html
 import json
-import math
 import posixpath
 import re
 
@@ -20,22 +19,44 @@ def on_page_markdown(markdown, page, config, files):
         source_id, number, caption = match.groups()
         number = int(number)
         source = SOURCES[source_id]
-        if not 1 <= number <= source['pages']:
-            raise ValueError(f'Invalid source page: {source_id} {number}')
-        chapter = next(c for c in COURSE['chapters'] if c['source'] == source_id and c['start'] <= number <= c['end'])
+        if not 1 <= number <= source.get('review_end', source['pages']):
+            raise ValueError(f'Page outside the maintained scope: {source_id} {number}')
         image = link(f'assets/slides/{source_id}/{number:03}.webp')
-        archive = link(f'slides/lecture-{chapter["number"]:02}.md') + f'#p{number:03}'
         pdf = link(f'assets/pdf/{source["file"]}') + f'#page={number}'
         text = html.escape(caption)
         return (
             '<figure class="slide-figure" markdown="1">\n'
             f'[{"!["+caption+"]("+image+")"}]({image}){{ .slide-zoom aria-label="放大：{text}" }}\n'
-            f'<figcaption markdown="span">{text} · PDF p. {number} · '
-            f'[逐页查看]({archive}) · [PDF]({pdf})</figcaption>\n</figure>\n'
+            f'<figcaption markdown="span">{text} · [PDF p. {number}]({pdf})'
+            '</figcaption>\n</figure>\n'
         )
 
-    markdown = SLIDE.sub(figure, markdown)
-    if not page.file.src_uri.startswith('slides/'):
-        chars = len(re.findall(r'[\u4e00-\u9fff]', markdown)) + len(re.findall(r'[A-Za-z]{2,}', markdown))
-        page.meta['reading_time'] = max(1, math.ceil(chars/360))
-    return markdown
+    return SLIDE.sub(figure, markdown)
+
+
+def on_post_build(config):
+    def redirect(route, target, fallback_hash, hash_expression):
+        path = Path(config['site_dir']) / route / 'index.html'
+        path.parent.mkdir(parents=True, exist_ok=True)
+        fallback = html.escape(target + fallback_hash, quote=True)
+        path.write_text(
+            '<!doctype html><html lang="zh"><meta charset="utf-8">'
+            '<meta name="robots" content="noindex"><title>页面已迁移</title>'
+            f'<script>location.replace({json.dumps(target)} + ({hash_expression}));</script>'
+            f'<noscript><meta http-equiv="refresh" content="0; url={fallback}"></noscript>'
+            f'<a href="{fallback}">前往页面</a></html>'
+        )
+
+    for name in ('formulas', 'glossary'):
+        redirect(f'reference/{name}', '../../', f'#{name}',
+                 f'location.hash || {json.dumps("#" + name)}')
+    redirect('reference/sources', '../../slides/', '#sources', '"#sources"')
+    for chapter in COURSE['chapters']:
+        source = SOURCES[chapter['source']]
+        fallback = f'#page={chapter["start"]}'
+        expression = (
+            r'/^#p\d+$/.test(location.hash) ? "#page=" + Number(location.hash.slice(2)) : '
+            + json.dumps(fallback)
+        )
+        redirect(f'slides/lecture-{chapter["number"]:02}',
+                 f'../../assets/pdf/{source["file"]}', fallback, expression)

@@ -1,12 +1,15 @@
-"""Check built links, page anchors, slide coverage, and mathematical examples."""
+"""Check links, original PDFs, referenced figures, answers and numeric examples."""
 from pathlib import Path
 from urllib.parse import urlsplit, unquote
-from collections import defaultdict
+import hashlib
 import json
 import math
 import re
 
 from bs4 import BeautifulSoup
+import pymupdf
+
+from hooks import SLIDE
 
 ROOT = Path(__file__).resolve().parents[1]
 SITE = ROOT / "site"
@@ -44,22 +47,38 @@ for path, soup in pages.items():
                 errors.append(f"Missing image description in {path}")
 
 course = json.loads((ROOT / "course.json").read_text())
-manifest = json.loads((ROOT / "docs/assets/manifest.json").read_text())
-covered = defaultdict(set)
-for chapter in course["chapters"]:
-    archive = SITE / f'slides/lecture-{chapter["number"]:02}/index.html'
-    doc = pages[archive]
-    ids = {int(s["id"][1:]) for s in doc.select("details.slide-page")}
-    expected = set(range(chapter["start"], chapter["end"] + 1))
-    assert ids == expected, f"Incomplete archive: {archive}"
-    assert not covered[chapter["source"]] & ids, "Duplicate archive coverage"
-    covered[chapter["source"]].update(ids)
-for source in manifest["sources"]:
-    assert covered[source["id"]] == set(range(1, source["pages"] + 1))
-    for slide in source["slides"]:
-        assert (SITE / slide["image"]).is_file()
-total_pages = sum(source["pages"] for source in course["sources"])
-assert sum(map(len, covered.values())) == manifest["total_pages"] == total_pages
+sources = {source["id"]: source for source in course["sources"]}
+pdfs = ROOT / "docs/assets/pdf"
+assert {p.name for p in pdfs.glob("*.pdf")} == {s["file"] for s in sources.values()}
+for source in sources.values():
+    path = pdfs / source["file"]
+    assert hashlib.sha256(path.read_bytes()).hexdigest() == source["sha256"], path
+    assert hashlib.sha256((SITE / "assets/pdf" / source["file"]).read_bytes()).hexdigest() == source["sha256"]
+    with pymupdf.open(path) as pdf:
+        assert len(pdf) == source["pages"], path
+
+required_images = set()
+for path in (ROOT / "docs").rglob("*.md"):
+    for source_id, number, _ in SLIDE.findall(path.read_text()):
+        source = sources[source_id]
+        assert 1 <= int(number) <= source.get("review_end", source["pages"])
+        image = f"assets/slides/{source_id}/{int(number):03}.webp"
+        required_images.add(ROOT / "docs" / image)
+        assert (SITE / image).is_file(), image
+assert set((ROOT / "docs/assets/slides").rglob("*.webp")) == required_images, "Unused or missing slide images"
+
+# Every chapter's self-check keeps a matching answer list.
+answer_count = 0
+for path in (ROOT / "docs/chapters").glob("*.md"):
+    text = path.read_text()
+    section = text[text.rfind("## "):]
+    questions = len(re.findall(r"^- ", section, re.M))
+    soup = pages[SITE / "chapters" / path.stem / "index.html"]
+    summary = next(s for s in soup.select("summary") if s.get_text(strip=True) == "参考答案")
+    answers = summary.parent.select(":scope > ol > li")
+    assert len(answers) == questions, path
+    answer_count += len(answers)
+assert answer_count == 53
 
 # Independent numeric checks against the course examples.
 weather = [(0.45, 0.15), (0.02, 0.08), (0.03, 0.27), (0, 0)]
@@ -67,6 +86,9 @@ assert math.isclose(sum(sum(row) for row in weather), 1)
 assert math.isclose(weather[0][1] / sum(r[1] for r in weather), 0.3)
 assert math.isclose(1-weather[2][1], 0.73)
 assert math.isclose(10 * (1/math.sqrt(10))**2, 1)
+
+assert math.isclose(8/3, 1 + 0.5*(10/3))
+assert math.isclose(10/3, 2 + 0.5*(8/3))
 
 # Check the displayed converged uniform-random GridWorld by Bellman residual.
 grid = [[0,-14,-20,-22],[-14,-18,-20,-20],[-20,-20,-18,-14],[-22,-20,-14,0]]
@@ -135,4 +157,4 @@ assert terminal_q["s", "a"] == -1.0
 
 if errors:
     raise SystemExit("\n".join(errors))
-print(f"PASS: {len(pages)} HTML pages; local links and anchors; {total_pages} archived slides; probability, discounting, GridWorld and displayed learning examples.")
+print(f"PASS: links; {len(sources)} PDFs; {len(required_images)} referenced figures; {answer_count} answers; numeric and displayed learning examples.")

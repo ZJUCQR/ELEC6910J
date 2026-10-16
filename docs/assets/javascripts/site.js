@@ -51,37 +51,6 @@
       document.documentElement.style.overflow = "hidden";
     });
   }
-  function revealAnchor() {
-    if (!location.hash) return;
-    let id;
-    try { id = decodeURIComponent(location.hash.slice(1)); } catch { return; }
-    const target = document.getElementById(id);
-    if (!target) return;
-    const details = target.matches("details") ? target : target.closest("details");
-    if (!details) return;
-    details.hidden = false;
-    details.open = true;
-    requestAnimationFrame(() => details.scrollIntoView({ block: "start" }));
-  }
-  function setupArchive() {
-    const input = document.getElementById("slide-filter");
-    if (!input || input.dataset.bound) return;
-    input.dataset.bound = "true";
-    const slides = Array.from(document.querySelectorAll(".slide-page"));
-    const output = document.getElementById("slide-filter-count");
-    const update = () => {
-      const query = input.value.trim().toLocaleLowerCase();
-      let count = 0;
-      for (const slide of slides) {
-        const match = slide.querySelector("summary").textContent.toLocaleLowerCase().includes(query);
-        slide.hidden = !match;
-        count += Number(match);
-      }
-      output.textContent = "显示 " + count + " / " + slides.length + " 页";
-    };
-    input.addEventListener("input", update);
-    update();
-  }
   function setupSearchInput() {
     const input = document.querySelector(".md-search__input");
     if (!input || input.dataset.inputBound) return;
@@ -136,13 +105,11 @@
     reset();
   }
   function init() {
-    renderMath(); ensureLightbox(); setupArchive(); setupRacing(); setupSearchInput();
+    renderMath(); ensureLightbox(); setupRacing(); setupSearchInput();
     document.querySelectorAll(".slide-figure img").forEach((img) => {
       img.loading = "lazy"; img.decoding = "async";
     });
-    revealAnchor();
   }
-  window.addEventListener("hashchange", revealAnchor);
   if (typeof document$ !== "undefined") document$.subscribe(init);
   else if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init);
   else init();

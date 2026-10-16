@@ -12,9 +12,7 @@ base = args.base_url.rstrip("/") + "/"
 shots = ROOT / ".work/screenshots"
 shots.mkdir(parents=True, exist_ok=True)
 routes = [""] + [str(p.relative_to(ROOT/"site").parent)+"/" for p in sorted((ROOT/"site/chapters").glob("*/index.html"))]
-routes += ["reference/formulas/", "reference/glossary/", "reference/sources/", "slides/"]
-course = json.loads((ROOT/"course.json").read_text())
-routes += [f"slides/lecture-{chapter['number']:02}/" for chapter in course["chapters"]]
+routes += ["slides/"]
 report = {"pages": [], "search": {}, "checks": []}
 
 with sync_playwright() as p:
@@ -28,6 +26,10 @@ with sync_playwright() as p:
         assert response.status == 200, route
         assert page.locator(".katex-error").count() == 0, (route,page.locator(".katex-error").all_text_contents())
         assert page.locator(".arithmatex:not([data-rendered])").count() == 0, route
+        if route.startswith("chapters/"):
+            answers = page.locator("details.success").filter(has=page.get_by_text("参考答案", exact=True))
+            answers.locator("summary").click()
+            assert answers.get_attribute("open") is not None
         count = page.locator(".katex").count()
         report["pages"].append({"route":route,"math":count})
         if route == "":
@@ -44,17 +46,24 @@ with sync_playwright() as p:
     assert not page.locator("dialog").is_visible()
     report["checks"].append("image dialog and Escape")
 
-    page.goto(base+"slides/lecture-02/#p064",wait_until="networkidle")
-    assert page.locator("#p064").get_attribute("open") is not None
-    assert page.locator("#p064 img").evaluate("(img) => img.complete && img.naturalWidth > 0")
-    page.locator("#slide-filter").fill("064")
-    assert page.locator("details.slide-page:not([hidden])").count() == 1
-    assert "1 / 36" in page.locator("#slide-filter-count").inner_text()
-    page.locator("#slide-filter").fill("no-such-slide")
-    assert page.locator("details.slide-page:not([hidden])").count() == 0
-    page.locator("#slide-filter").fill("")
-    assert page.locator("details.slide-page:not([hidden])").count() == 36
-    report["checks"].append("archive hash, image and filter")
+    page.goto(base, wait_until="networkidle")
+    page.locator(".exam-originals > summary").click()
+    originals = page.locator(".exam-originals img")
+    assert originals.count() == 2
+    originals.last.scroll_into_view_if_needed()
+    page.wait_for_function("Array.from(document.querySelectorAll('.exam-originals img')).every(img => img.complete && img.naturalWidth > 0)")
+    page.locator(".exam-originals .slide-zoom").last.click()
+    page.locator("dialog").wait_for(state="visible")
+    page.keyboard.press("Escape")
+    assert "6555" in page.locator("article").inner_text()
+    report["checks"].append("exam information and original slide images")
+
+    for name in ("formulas", "glossary"):
+        page.goto(base + f"reference/{name}/")
+        page.wait_for_url(base + f"#{name}")
+    page.goto(base + "reference/sources/")
+    page.wait_for_url(base + "slides/#sources")
+    report["checks"].append("legacy bookmark redirects")
 
     page.goto(base+"chapters/06-value-iteration/#racing-lab",wait_until="networkidle")
     page.locator("#race-step").click()
@@ -98,7 +107,7 @@ with sync_playwright() as p:
     report["checks"].append("dark and light themes")
 
     page.set_viewport_size({"width":390,"height":844})
-    for route in routes[:15]:
+    for route in routes:
         page.goto(base+route,wait_until="networkidle")
         dimensions = page.evaluate("({width:innerWidth,scroll:document.documentElement.scrollWidth})")
         if dimensions["scroll"] > dimensions["width"]+1:
