@@ -2,7 +2,7 @@
 
 [在线阅读](https://zjucqr.github.io/ELEC6910J/)
 
-维护范围为 **Lecture 1–12 与 Lecture 13 Exam Review**：课程首页集中考试安排、复习重点、公式和术语；12 章保留例题与 53 项检查题答案。Lecture 13–14 原 PDF 完整归档，其中 Lecture 14 不另行扩展为笔记。
+维护范围为 **Lecture 1–12 与 Lecture 13 Exam Review**：课程首页集中考试安排、复习重点、公式、术语和课件下载；12 章保留例题与 53 项检查题答案。Lecture 13–14 原 PDF 完整归档，其中 Lecture 14 不另行扩展为笔记。
 
 ## 使用
 
@@ -17,11 +17,12 @@ python -m mkdocs serve
 
 | 路径 | 用途 |
 | --- | --- |
-| docs/index.md | 考试安排、原图、复习重点、公式与术语 |
+| docs/index.md | 考试安排、原图、复习重点、公式、术语与课件下载 |
 | docs/chapters/ | 12 章笔记与答案 |
-| docs/slides/index.md | 统一课件下载及资料说明 |
 | docs/assets/pdf/ | 7 份 PDF，每份只保存一次 |
-| docs/assets/slides/ | 仅保留正文实际引用的截图 |
+| docs/assets/figures/ | 69 张正文截图，统一命名为讲次与页码，如 lec13-14-p003.webp |
+| docs/assets/theme/ | 页面样式 site.css 与交互脚本 site.js |
+| docs/assets/math/ | KaTeX 公式渲染、许可证与 fonts/ 字体 |
 | course.json | 课件页数、章节范围与 SHA-256 |
 | scripts/ | 引用渲染、截图生成、静态检查和浏览器检查 |
 
@@ -55,4 +56,4 @@ python -m http.server 8765 --bind 127.0.0.1 --directory site
 
 site/、.work/、__pycache__/ 都是可删除的构建、检查或缓存产物。旧网页书签的跳转在构建时自动生成，不占用额外源文档。
 
-课件版权和公开版本说明见[原课件](docs/slides/index.md#sources)。
+课件版权和公开版本说明见[首页资料说明](docs/index.md#sources)。

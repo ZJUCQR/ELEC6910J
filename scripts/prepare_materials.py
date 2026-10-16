@@ -23,7 +23,7 @@ def main():
         with pymupdf.open(pdf_path) as pdf:
             assert len(pdf) == source['pages'], pdf_path
             for number in sorted(required[source_id]):
-                path = ROOT / f'docs/assets/slides/{source_id}/{number:03}.webp'
+                path = ROOT / f'docs/assets/figures/{source_id}-p{number:03}.webp'
                 path.parent.mkdir(parents=True, exist_ok=True)
                 page = pdf[number - 1]
                 scale = 1600 / page.rect.width
@@ -34,13 +34,10 @@ def main():
         print(f'{source_id}: {len(required[source_id])} figures', flush=True)
 
     removed = 0
-    for path in (ROOT / 'docs/assets/slides').rglob('*.webp'):
+    for path in (ROOT / 'docs/assets/figures').glob('*.webp'):
         if path not in retained:
             path.unlink()
             removed += 1
-    for path in (ROOT / 'docs/assets/slides').iterdir():
-        if path.is_dir() and not any(path.iterdir()):
-            path.rmdir()
     print(f'Kept {len(retained)} figures; removed {removed} unused images.')
 
 

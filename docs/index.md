@@ -120,7 +120,20 @@ description: ELEC6910J 期中考试安排、复习重点、公式和例题，维
 
 </div>
 
-HKUST ECE · Ling PAN · ELEC6910J。维护范围为 Lecture 1–12 与 Lecture 13 期中复习。[原课件下载与资料说明](slides/index.md)。
+<details id="slides" markdown="1">
+<summary>原课件下载</summary>
+
+| 课件 | 内容 |
+| --- | --- |
+| [Lecture 1–2](assets/pdf/ELEC6910J_Lec_1_2_updated.pdf) | Introduction、Probability Basics |
+| [Lecture 3–4](assets/pdf/ELEC6910J_Lec_3_4.pdf) | Bandits、MDPs |
+| [Lecture 5–6](assets/pdf/ELEC6910J_Lec_5_6.pdf) | Bellman Equations、Value Iteration |
+| [Lecture 7–8](assets/pdf/ELEC6910J_Lec_7_8.pdf) | Policy Evaluation、Policy Iteration |
+| [Lecture 9–10](assets/pdf/ELEC6910J_Lec_9_10.pdf) | Monte Carlo Prediction & Control |
+| [Lecture 11–12](assets/pdf/ELEC6910J_Lec_11_12.pdf) | TD Prediction、SARSA、Q-learning |
+| [Lecture 13–14](assets/pdf/ELEC6910J_Lec_13_14.pdf) | p. 1–38 为期中复习；后续监督学习仅随原文件归档 |
+
+</details>
 
 ## Formula Sheet · 公式速查 { #formulas }
 
@@ -442,6 +455,8 @@ $$
 | $G_{t:t+n}$ | 从时刻 t 开始的 n 步更新目标 |
 | $\theta$ | 函数近似器或神经网络的参数 |
 
-<div class="source-note" markdown="1">
-课程内容与原图归课件作者及其注明的来源所有。发现问题可在 [GitHub 仓库](https://github.com/ZJUCQR/ELEC6910J/issues)反馈。
+<div class="source-note" id="sources" markdown="1">
+HKUST ECE · Ling PAN · ELEC6910J。笔记范围为 Lecture 1–12 与 Lecture 13 期中复习，课件与原图归原作者及其注明的来源所有。推荐教材：Sutton & Barto 的 [Reinforcement Learning](http://incompleteideas.net/book/the-book-2nd.html)。
+
+Lecture 1 公开版已遮盖会议访问凭据，课程内容与页序不变；其余 PDF 按原文件保存。页码均为 PDF 物理页码。问题可在 [GitHub Issues](https://github.com/ZJUCQR/ELEC6910J/issues)反馈。
 </div>

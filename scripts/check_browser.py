@@ -12,7 +12,6 @@ base = args.base_url.rstrip("/") + "/"
 shots = ROOT / ".work/screenshots"
 shots.mkdir(parents=True, exist_ok=True)
 routes = [""] + [str(p.relative_to(ROOT/"site").parent)+"/" for p in sorted((ROOT/"site/chapters").glob("*/index.html"))]
-routes += ["slides/"]
 report = {"pages": [], "search": {}, "checks": []}
 
 with sync_playwright() as p:
@@ -62,7 +61,14 @@ with sync_playwright() as p:
         page.goto(base + f"reference/{name}/")
         page.wait_for_url(base + f"#{name}")
     page.goto(base + "reference/sources/")
-    page.wait_for_url(base + "slides/#sources")
+    page.wait_for_url(base + "#sources")
+    page.goto(base + "slides/#sources")
+    page.wait_for_url(base + "#sources")
+    page.goto(base + "slides/")
+    page.wait_for_url(base + "#slides", wait_until="networkidle")
+    downloads = page.locator('#slides a[href$=".pdf"]')
+    assert downloads.count() == 7
+    downloads.first.wait_for(state="visible")
     report["checks"].append("legacy bookmark redirects")
 
     page.goto(base+"chapters/06-value-iteration/#racing-lab",wait_until="networkidle")
@@ -117,6 +123,9 @@ with sync_playwright() as p:
             page.screenshot(path=str(shots/"home-mobile.png"),full_page=True)
         print("MOBILE",route or "home","no overflow",flush=True)
     page.goto(base,wait_until="networkidle")
+    page.locator("#slides > summary").click()
+    assert page.locator('#slides a[href$=".pdf"]').first.is_visible()
+    assert page.evaluate("document.documentElement.scrollWidth <= innerWidth + 1")
     page.locator('label.md-header__button[for="__drawer"]').click()
     assert page.locator("#__drawer").is_checked()
     page.locator(".md-nav--primary").get_by_role("link",name="2: Probability Basics",exact=True).click()

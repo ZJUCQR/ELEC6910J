@@ -21,7 +21,7 @@ def on_page_markdown(markdown, page, config, files):
         source = SOURCES[source_id]
         if not 1 <= number <= source.get('review_end', source['pages']):
             raise ValueError(f'Page outside the maintained scope: {source_id} {number}')
-        image = link(f'assets/slides/{source_id}/{number:03}.webp')
+        image = link(f'assets/figures/{source_id}-p{number:03}.webp')
         pdf = link(f'assets/pdf/{source["file"]}') + f'#page={number}'
         text = html.escape(caption)
         return (
@@ -50,7 +50,8 @@ def on_post_build(config):
     for name in ('formulas', 'glossary'):
         redirect(f'reference/{name}', '../../', f'#{name}',
                  f'location.hash || {json.dumps("#" + name)}')
-    redirect('reference/sources', '../../slides/', '#sources', '"#sources"')
+    redirect('reference/sources', '../../', '#sources', '"#sources"')
+    redirect('slides', '../', '#slides', 'location.hash || "#slides"')
     for chapter in COURSE['chapters']:
         source = SOURCES[chapter['source']]
         fallback = f'#page={chapter["start"]}'

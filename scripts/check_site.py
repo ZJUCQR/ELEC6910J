@@ -62,10 +62,10 @@ for path in (ROOT / "docs").rglob("*.md"):
     for source_id, number, _ in SLIDE.findall(path.read_text()):
         source = sources[source_id]
         assert 1 <= int(number) <= source.get("review_end", source["pages"])
-        image = f"assets/slides/{source_id}/{int(number):03}.webp"
+        image = f"assets/figures/{source_id}-p{int(number):03}.webp"
         required_images.add(ROOT / "docs" / image)
         assert (SITE / image).is_file(), image
-assert set((ROOT / "docs/assets/slides").rglob("*.webp")) == required_images, "Unused or missing slide images"
+assert set((ROOT / "docs/assets/figures").rglob("*.webp")) == required_images, "Unused or missing slide images"
 
 # Every chapter's self-check keeps a matching answer list.
 answer_count = 0

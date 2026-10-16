@@ -55,11 +55,11 @@ markdown_extensions:
   - pymdownx.highlight:
       anchor_linenums: true
 extra_css:
-  - assets/vendor/katex/katex.min.css
-  - assets/stylesheets/extra.css
+  - assets/math/katex.min.css
+  - assets/theme/site.css
 extra_javascript:
-  - assets/vendor/katex/katex.min.js
-  - assets/javascripts/site.js
+  - assets/math/katex.min.js
+  - assets/theme/site.js
 nav:
   - 课程笔记主页: index.md
   - "1: Introduction": chapters/01-introduction.md
@@ -74,5 +74,3 @@ nav:
   - "10: Monte-Carlo Control": chapters/10-mc-control.md
   - "11: Temporal Difference Prediction": chapters/11-td-prediction.md
   - "12: Temporal Difference Control": chapters/12-td-control.md
-not_in_nav: |
-  /slides/
