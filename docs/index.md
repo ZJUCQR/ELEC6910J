@@ -1,6 +1,8 @@
 ---
 title: 期中复习与课程笔记
 description: ELEC6910J 期中考试安排、复习重点、公式和例题，维护范围截至 Lecture 13 Exam Review。
+hide:
+  - toc
 ---
 
 <div class="course-cover" markdown="1">
@@ -57,6 +59,9 @@ description: ELEC6910J 期中考试安排、复习重点、公式和例题，维
 
 </div>
 
+<details id="practice" markdown="1">
+<summary>复习方法与手算练习</summary>
+
 ### 复习顺序
 
 1. **先串起概念**：从 MDP 和回报出发，写出 Bellman 关系；再按“需要模型吗、是否采样、是否自举、何时更新、评估哪种策略”比较 DP、MC、TD、SARSA 与 Q-learning。
@@ -85,38 +90,7 @@ description: ELEC6910J 期中考试安排、复习重点、公式和例题，维
     - **SARSA**：目标 0.9，新值 1.89。**Q-learning**：目标 4.5，新值 2.25。
     - **小狗 Q 表**：$Q((0,0),\rightarrow)=0.1$；$Q((0,1),\downarrow)=-1$，其余表项保持原值。
 
-## 课程目录
-
-<div class="chapter-index" markdown="1">
-
-### Part I · Foundations
-
-| 章节 | 核心问题 | 课件中的例子 |
-| --- | --- | --- |
-| [01 · Introduction](chapters/01-introduction.md) | 智能体为什么需要策略？ | 出租车 PEAS、图像识别、随机网格 |
-| [02 · Probability Basics](chapters/02-probability.md) | 怎样用分布描述不确定性？ | 天气与温度、骰子、条件概率 |
-| [03 · Multi-Armed Bandits](chapters/03-bandits.md) | 何时探索，何时利用？ | 广告投放、LG1 / LG7 餐厅选择 |
-| [04 · Markov Decision Processes](chapters/04-mdp.md) | 当前行动怎样影响未来？ | GridWorld、赛车、折扣路径选择 |
-
-### Part II · Planning with a Model
-
-| 章节 | 核心问题 | 课件中的例子 |
-| --- | --- | --- |
-| [05 · Value Functions & Bellman Equations](chapters/05-bellman.md) | 怎样把长期回报分解为一步？ | 状态价值、动作价值与备份图 |
-| [06 · Value Iteration](chapters/06-value-iteration.md) | 最优价值如何逐轮计算？ | 五状态方程、赛车、价值传播 |
-| [07 · Policy Evaluation](chapters/07-policy-evaluation.md) | 一套固定策略有多好？ | 折扣赛车、4×4 GridWorld |
-| [08 · Policy Iteration & Convergence](chapters/08-policy-iteration.md) | 怎样保证策略越改越好？ | 赛车策略迭代、压缩映射 |
-
-### Part III · Learning from Experience
-
-| 章节 | 核心问题 | 课件中的例子 |
-| --- | --- | --- |
-| [09 · Monte-Carlo Prediction](chapters/09-mc-prediction.md) | 没有模型，怎样估计价值？ | 首次访问与每次访问 |
-| [10 · Monte-Carlo Control](chapters/10-mc-control.md) | 怎样在探索中改进策略？ | Exploring Starts、Blackjack |
-| [11 · Temporal Difference Prediction](chapters/11-td-prediction.md) | 怎样在回合结束前学习？ | Lake、Random Walk、多步回报 |
-| [12 · Temporal Difference Control](chapters/12-td-control.md) | 实际行动和学习目标可以不同吗？ | Windy GridWorld、小狗 Q 表、SARSA 与 Q-learning |
-
-</div>
+</details>
 
 <details id="slides" markdown="1">
 <summary>原课件下载</summary>
@@ -135,7 +109,8 @@ description: ELEC6910J 期中考试安排、复习重点、公式和例题，维
 
 ## Formula Sheet · 公式速查 { #formulas }
 
-<p class="chapter-subtitle">先确认条件，再选择公式</p>
+<details markdown="1">
+<summary>展开公式速查</summary>
 
 本页统一使用 $R_{t+1}$ 表示执行 $A_t$ 后获得的奖励；$T$ 表示回合终止时刻。概率和期望均按相关事件有定义、所需矩存在的条件使用。
 
@@ -339,9 +314,12 @@ $$
 
 还需充分访问等任务条件。SARSA 的最优性结论通常要求 GLIE：无限探索且策略在极限下趋于贪心；仅有 $\epsilon_t\to0$ 不足以保证前者。[收敛条件](chapters/12-td-control.md#glie)。
 
+</details>
+
 ## Glossary · 术语对照 { #glossary }
 
-<p class="chapter-subtitle">保留英文术语，对齐中文含义</p>
+<details markdown="1">
+<summary>展开术语对照</summary>
 
 ### 1. Learning & Decision Making
 
@@ -452,6 +430,8 @@ $$
 | $\delta_t$ | 当前转移的 TD 误差 |
 | $G_{t:t+n}$ | 从时刻 t 开始的 n 步更新目标 |
 | $\theta$ | 函数近似器或神经网络的参数 |
+
+</details>
 
 <div class="source-note" id="sources" markdown="1">
 HKUST ECE · Ling PAN · ELEC6910J。笔记范围为 Lecture 1–12 与 Lecture 13 期中复习，课件与原图归原作者及其注明的来源所有。推荐教材：Sutton & Barto 的 [Reinforcement Learning](http://incompleteideas.net/book/the-book-2nd.html)。
