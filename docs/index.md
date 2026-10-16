@@ -29,18 +29,11 @@ hide:
 | 时间 | **10 月 23 日 15:00–17:50** |
 | 地点 | **Room 6555** |
 | 形式 | 课堂考试（In-class exam） |
-| 可携带物品 | **一页单面 cheatsheet**、计算器 |
+| 可携带物品 | **一张双面 A4 cheatsheet**、计算器 |
 
 如有时间冲突，请提前联系助教（TAs）。
 
 [下载期中复习原课件](assets/pdf/ELEC6910J_Lec_13_14.pdf#page=1)
-
-<details class="exam-originals" markdown="1">
-<summary>考试通知原图</summary>
-
-{{ slide lec13-14 2 | 考试通知 }}
-
-</details>
 
 ### 考试范围
 
