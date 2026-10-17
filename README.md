@@ -2,7 +2,7 @@
 
 [在线阅读](https://zjucqr.github.io/ELEC6910J/)
 
-维护范围为 **Lecture 1–12 与 Lecture 13 Exam Review**：课程首页集中考试安排、复习重点、公式、术语和课件下载；12 章保留例题与 53 项检查题答案。Lecture 13–14 原 PDF 完整归档，其中 Lecture 14 不另行扩展为笔记。
+维护范围为 **Lecture 1–12 与 Lecture 13 Exam Review**：课程首页集中考试安排、复习重点、公式、术语和课件下载；12 章保留例题与 53 项检查题答案。期中复习课件保留 Lecture 13 的 37 页，包含最后两页 Checklist。
 
 ## 使用
 

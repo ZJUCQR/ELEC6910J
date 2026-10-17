@@ -39,9 +39,9 @@
     {
       "id": "lec13-14",
       "file": "ELEC6910J_Lec_13_14.pdf",
-      "pages": 125,
-      "review_end": 38,
-      "sha256": "cf77701d1af022d5afc48b98e40cdaff61bcbb8e50c2eb3b3a3ff2ac1d1d5ae2"
+      "pages": 37,
+      "review_end": 37,
+      "sha256": "44813901b3c8ff1c528e15caed147f94e9498da8f544caa2d882187426c805f1"
     }
   ],
   "chapters": [
@@ -121,7 +121,7 @@
       "number": 13,
       "source": "lec13-14",
       "start": 1,
-      "end": 38
+      "end": 37
     }
   ]
 }

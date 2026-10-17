@@ -93,7 +93,7 @@ hide:
 | [Lecture 7–8](assets/pdf/ELEC6910J_Lec_7_8.pdf) | Policy Evaluation、Policy Iteration |
 | [Lecture 9–10](assets/pdf/ELEC6910J_Lec_9_10.pdf) | Monte Carlo Prediction & Control |
 | [Lecture 11–12](assets/pdf/ELEC6910J_Lec_11_12.pdf) | TD Prediction、SARSA、Q-learning |
-| [Lecture 13–14](assets/pdf/ELEC6910J_Lec_13_14.pdf) | p. 1–38 为期中复习；后续监督学习仅随原文件归档 |
+| [Lecture 13 · Exam Review](assets/pdf/ELEC6910J_Lec_13_14.pdf) | 期中复习，共 37 页；最后两页为 Checklist |
 
 </details>
 
