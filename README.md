@@ -4,7 +4,7 @@
 
 维护范围为 **Lecture 1–12 与 Lecture 13 Exam Review**：课程首页集中考试安排、复习重点、公式、术语和课件下载；12 章保留例题与 53 项检查题答案。期中复习课件保留 Lecture 13 的 37 页，包含最后两页 Checklist。
 
-[期中模拟卷与解答](https://zjucqr.github.io/ELEC6910J/mock-exam/)按第 3、36、37 页 Checklist 编排，共 100 分，包含 8 道单选、8 道填空、8 道课件例题改编计算。计算解答先列公式，再代入数值，包含逐步表格更新、最优策略推导和矩阵计算。
+[期中模拟卷与解答](https://zjucqr.github.io/ELEC6910J/mock-exam/)共 100 分：16 道单选（每题 1 分）、8 道填空、8 道计算。每题下方附折叠解答；计算题独立给出完整条件和示意图。
 
 ## 使用
 
@@ -20,10 +20,10 @@ python -m mkdocs serve
 | 路径 | 用途 |
 | --- | --- |
 | docs/index.md | 考试安排、复习重点、公式、术语与课件下载 |
-| docs/mock-exam.md | 期中模拟卷、折叠解答与课件题源对应 |
+| docs/mock-exam.md | 期中模拟卷与逐题解答 |
 | docs/chapters/ | 12 章笔记与答案 |
 | docs/assets/pdf/ | 7 份 PDF，每份只保存一次 |
-| docs/assets/figures/ | 正文课件截图，以讲次与页码命名；局部截图增加主题后缀 |
+| docs/assets/figures/ | 课件截图与模拟卷 SVG 示意图；模拟卷图使用 mock- 前缀 |
 | docs/assets/theme/ | 页面样式 site.css 与交互脚本 site.js |
 | docs/assets/math/ | KaTeX 公式渲染、许可证与 fonts/ 字体 |
 | course.json | 课件页数、章节范围与 SHA-256 |

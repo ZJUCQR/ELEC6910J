@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 338" role="img" aria-labelledby="title">
+<title id="title">2×2 GridWorld，左上终止，右上 A、左下 B、右下 C</title>
+<defs>
+  <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 Z" fill="#365f51"/></marker>
+  <marker id="fast" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 Z" fill="#3063a1"/></marker>
+</defs>
+<rect width="440" height="338" rx="12" fill="#fcfdfb"/>
+<g font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif">
+<rect x="60" y="24" width="160" height="110" fill="#fceae7" stroke="#678575" stroke-width="2"/><text x="140" y="81" font-size="32" text-anchor="middle" fill="#213b33" font-weight="600">T</text><text x="140" y="109" font-size="17" text-anchor="middle" fill="#213b33" font-weight="400">终止</text><rect x="220" y="24" width="160" height="110" fill="#eaf3ee" stroke="#678575" stroke-width="2"/><text x="300" y="81" font-size="32" text-anchor="middle" fill="#213b33" font-weight="600">A</text><rect x="60" y="134" width="160" height="110" fill="#eaf3ee" stroke="#678575" stroke-width="2"/><text x="140" y="191" font-size="32" text-anchor="middle" fill="#213b33" font-weight="600">B</text><rect x="220" y="134" width="160" height="110" fill="#eaf3ee" stroke="#678575" stroke-width="2"/><text x="300" y="191" font-size="32" text-anchor="middle" fill="#213b33" font-weight="600">C</text><text x="220" y="281" font-size="19" text-anchor="middle" fill="#213b33" font-weight="400">上 / 下 / 左 / 右：各 1/4</text><text x="220" y="313" font-size="17" text-anchor="middle" fill="#213b33" font-weight="400">每步奖励 −1 · γ = 1 · 撞墙留在原格</text>
+</g>
+</svg>
