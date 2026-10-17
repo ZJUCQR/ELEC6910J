@@ -20,7 +20,7 @@ python -m mkdocs serve
 | docs/index.md | 考试安排、复习重点、公式、术语与课件下载 |
 | docs/chapters/ | 12 章笔记与答案 |
 | docs/assets/pdf/ | 7 份 PDF，每份只保存一次 |
-| docs/assets/figures/ | 67 张正文截图，统一命名为讲次与页码，如 lec01-02-p016.webp |
+| docs/assets/figures/ | 68 张正文截图，统一命名为讲次与页码，如 lec01-02-p016.webp |
 | docs/assets/theme/ | 页面样式 site.css 与交互脚本 site.js |
 | docs/assets/math/ | KaTeX 公式渲染、许可证与 fonts/ 字体 |
 | course.json | 课件页数、章节范围与 SHA-256 |
