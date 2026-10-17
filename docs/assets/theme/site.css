@@ -80,6 +80,10 @@ body { -webkit-font-smoothing: antialiased; }
 .slide-figure > p { margin: 0; line-height: 0; }
 .slide-figure a.slide-zoom { display: block; cursor: zoom-in; line-height: 0; }
 .slide-figure img { width: 100%; height: auto; display: block; background: white; border-radius: .15rem; }
+.md-typeset figure.exam-figure { width: 100%; overflow-x: auto; padding-bottom: .35rem; }
+.exam-figure a.slide-zoom { min-width: 660px; }
+.md-typeset figure.exam-figure-grid { max-width: 620px; }
+.exam-figure-grid a.slide-zoom { min-width: 440px; }
 .md-typeset .slide-figure figcaption { max-width: 100%; font-size: .62rem; line-height: 1.7; color: var(--muted); font-style: normal; padding: .65rem .45rem; margin: 0; text-align: left; }
 .md-typeset .slide-figure figcaption a { white-space: nowrap; }
 .source-note { color: var(--muted); border-top: 1px solid var(--line); margin-top: 2rem; padding-top: 1rem; font-size: .66rem; }
@@ -164,5 +168,6 @@ button:focus-visible, a:focus-visible, input:focus-visible { outline: 2px solid 
   .md-header, .md-sidebar, .md-footer, .md-content__button, .lab-controls, .lab-actions { display: none !important; }
   .md-content__inner { margin: 0; }
   .slide-figure, .admonition { break-inside: avoid; }
+  .exam-figure a.slide-zoom { min-width: 0; }
   .md-typeset { font-size: 10pt; }
 }
