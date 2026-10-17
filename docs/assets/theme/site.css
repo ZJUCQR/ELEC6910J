@@ -72,7 +72,8 @@ body { -webkit-font-smoothing: antialiased; }
 .md-typeset table:not([class]) td { padding: .65em 1em; border-color: var(--line); }
 .md-typeset__table { display: block; }
 .md-typeset .arithmatex { overflow: auto; padding: .1rem 0; }
-.md-typeset .katex { font-size: 1.1em; }
+/* Keep accessible MathML inside its formula when a wide table scrolls. */
+.md-typeset .katex { font-size: 1.1em; position: relative; }
 .md-typeset .katex-display { margin: .7em 0; }
 .md-typeset pre { border: 1px solid var(--line); border-radius: .3rem; font-size: .69rem; }
 .md-typeset figure.slide-figure { display: block; max-width: 100%; margin: 1.4rem 0 1.9rem; padding: .35rem .35rem 0; background: var(--paper); border: 1px solid var(--line); border-radius: .3rem; overflow: hidden; }

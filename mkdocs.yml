@@ -66,6 +66,7 @@ extra_javascript:
   - assets/theme/site.js
 nav:
   - 课程笔记主页: index.md
+  - 期中模拟卷与解答: mock-exam.md
   - "1: Introduction": chapters/01-introduction.md
   - "2: Probability Basics": chapters/02-probability.md
   - "3: Multi-Armed Bandits": chapters/03-bandits.md

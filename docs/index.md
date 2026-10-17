@@ -33,7 +33,7 @@ hide:
 
 如有时间冲突，请提前联系助教（TAs）。
 
-[下载期中复习原课件](assets/pdf/ELEC6910J_Lec_13_14.pdf#page=1)
+[期中模拟卷与解答](mock-exam.md) · [下载期中复习原课件](assets/pdf/ELEC6910J_Lec_13_14.pdf#page=1)
 
 ### 考试范围
 
