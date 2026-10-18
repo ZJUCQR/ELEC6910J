@@ -1034,6 +1034,66 @@ $$
     0.6v_W=3\Rightarrow\boxed{v_W=5}.
     $$
 
+    **矩阵方程法：评估同一个 $\pi_0$。** 这里 $\pi_0$ 表示初始策略“在 $C,W$ 都选择 Slow”；$v^{\pi_0}$ 是该策略待求的精确价值向量，下标 0 并不表示价值都为 0。
+
+    **① 按 $(C,W)$ 的顺序构造转移矩阵和奖励向量。** 行表示当前状态，列表示下一状态。只使用 $\pi_0$ 指定的 Slow 动作：
+
+    - 从 $C$ 出发，以概率 1 回到 $C$，奖励为 1，所以第一行是 $(1,0)$。
+    - 从 $W$ 出发，以概率 $0.5$ 到 $C$、以概率 $0.5$ 回到 $W$，两种转移的奖励均为 1，所以第二行是 $(0.5,0.5)$。
+
+    $$
+    P^{\pi_0}=\begin{bmatrix}1&0\\0.5&0.5\end{bmatrix},\qquad
+    r^{\pi_0}=\begin{bmatrix}1\\0.5(1)+0.5(1)\end{bmatrix}
+    =\begin{bmatrix}1\\1\end{bmatrix},\qquad
+    v^{\pi_0}=\begin{bmatrix}v_C\\v_W\end{bmatrix}.
+    $$
+
+    该策略不会进入 $O$；终止态价值仍固定为 0，因此只列两个非终止状态。
+
+    **② 写 Bellman 矩阵方程并移项。**
+
+    $$
+    v^{\pi_0}=r^{\pi_0}+\gamma P^{\pi_0}v^{\pi_0}
+    \quad\Longrightarrow\quad
+    (I-\gamma P^{\pi_0})v^{\pi_0}=r^{\pi_0}.
+    $$
+
+    **③ 代入 $\gamma=0.8$，逐项计算系数矩阵。**
+
+    $$
+    I-0.8P^{\pi_0}
+    =\begin{bmatrix}1-0.8(1)&0-0.8(0)\\0-0.8(0.5)&1-0.8(0.5)\end{bmatrix}
+    =\begin{bmatrix}0.2&0\\-0.4&0.6\end{bmatrix}.
+    $$
+
+    所以要求解的是
+
+    $$
+    \begin{bmatrix}0.2&0\\-0.4&0.6\end{bmatrix}
+    \begin{bmatrix}v_C\\v_W\end{bmatrix}
+    =\begin{bmatrix}1\\1\end{bmatrix}.
+    $$
+
+    **④ 逐行展开并回代。** 第一行先求 $v_C$，再代入第二行：
+
+    $$
+    \begin{cases}
+    0.2v_C=1\quad\Rightarrow\quad v_C=5,\\
+    -0.4v_C+0.6v_W=1\quad\Rightarrow\quad
+    0.6v_W=1+0.4(5)=3\quad\Rightarrow\quad v_W=5.
+    \end{cases}
+    $$
+
+    也可以用逆矩阵直接核对：
+
+    $$
+    v^{\pi_0}=(I-0.8P^{\pi_0})^{-1}r^{\pi_0}
+    =\frac{1}{0.2(0.6)-0(-0.4)}
+    \begin{bmatrix}0.6&0\\0.4&0.2\end{bmatrix}
+    \begin{bmatrix}1\\1\end{bmatrix}
+    =\boxed{\begin{bmatrix}5\\5\end{bmatrix}}.
+    $$
+
     **（2）改进公式。**
 
     $$
