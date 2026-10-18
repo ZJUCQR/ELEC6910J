@@ -1,8 +1,8 @@
-# ELEC6910J · 期中复习笔记
+# ELEC6910J
 
 [在线阅读](https://zjucqr.github.io/ELEC6910J/)
 
-维护范围为 **Lecture 1–12 与 Lecture 13 Exam Review**：课程首页集中考试安排、复习重点、公式、术语和课件下载；12 章保留例题与 53 项检查题答案。期中复习课件保留 Lecture 13 的 37 页，包含最后两页 Checklist。
+深度强化学习课程笔记，包含 12 章正文、例题与检查题答案。首页提供考试安排、公式速查和课件下载。
 
 [期中模拟卷与解答](https://zjucqr.github.io/ELEC6910J/mock-exam/)共 100 分：16 道单选（每题 1 分）、8 道填空、8 道计算。每题下方附折叠解答；计算题独立给出完整条件和示意图。
 
@@ -19,7 +19,7 @@ python -m mkdocs serve
 
 | 路径 | 用途 |
 | --- | --- |
-| docs/index.md | 考试安排、复习重点、公式、术语与课件下载 |
+| docs/index.md | 考试安排、公式速查与课件下载 |
 | docs/mock-exam.md | 期中模拟卷与逐题解答 |
 | docs/chapters/ | 12 章笔记与答案 |
 | docs/assets/pdf/ | 7 份 PDF，每份只保存一次 |
@@ -29,7 +29,7 @@ python -m mkdocs serve
 | course.json | 课件页数、章节范围与 SHA-256 |
 | hooks.py | 必需的构建钩子：渲染课件图片、校验 PDF、生成旧链接跳转 |
 
-依赖统一放在 requirements.txt。PDF 是课件原页的完整存档，不再维护逐页截图副本、提取文本、独立公式表或术语表。
+依赖统一放在 requirements.txt。
 
 ## 检查与发布
 
@@ -51,4 +51,4 @@ python -m mkdocs build --strict
 
 site/ 与 __pycache__/ 是可删除的构建和缓存产物，不提交到仓库。
 
-课件版权和公开版本说明见[首页资料说明](docs/index.md#sources)。
+课件版权见[首页资料说明](docs/index.md#sources)。

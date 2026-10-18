@@ -55,9 +55,7 @@ def on_post_build(config):
             f'<a href="{fallback}">前往页面</a></html>'
         )
 
-    for name in ('formulas', 'glossary'):
-        redirect(f'reference/{name}', '../../', f'#{name}',
-                 f'location.hash || {json.dumps("#" + name)}')
+    redirect('reference/formulas', '../../', '#formulas', 'location.hash || "#formulas"')
     redirect('reference/sources', '../../', '#sources', '"#sources"')
     redirect('slides', '../', '#slides', 'location.hash || "#slides"')
     for chapter in COURSE['chapters']:

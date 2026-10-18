@@ -160,9 +160,9 @@ Deep Reinforcement Learning 将深度网络的表示能力用于策略、价值�
 
 {{ slide lec01-02 49 | StarCraft II：对抗、部分可观测与长时程决策同时存在 }}
 
-!!! note "阅读范围"
+!!! note "课件勘误"
 
-    本项目维护 Lecture 1–12 与 Lecture 13 期中复习，涵盖概率、表格型 RL、DP、MC、TD、SARSA 和 Q-learning。应用图中的 DeepSeek-R1 年份标注有误，其正式发布于 2025 年 1 月；原图保留原样。
+    应用图中的 DeepSeek-R1 年份标注有误，其正式发布于 2025 年 1 月；原图保留原样。
 
 ## 1.5 本章检查
 

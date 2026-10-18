@@ -94,8 +94,7 @@ body { -webkit-font-smoothing: antialiased; }
 .cover-divider { color: #aab4a8; margin: 0 .25rem; }
 .md-typeset .course-cover h1 { font-family: "Iowan Old Style", "Songti SC", "STSong", Georgia, serif; font-size: 2.65rem; font-weight: 700; letter-spacing: .025em; margin: 0; }
 .md-typeset .cover-english { font-family: "Iowan Old Style", Georgia, serif; font-size: 1.04rem; letter-spacing: .025em; color: var(--muted); margin: .5rem 0 1.2rem; }
-.md-typeset .cover-intro { font-size: .82rem; line-height: 2; max-width: 24rem; margin: 0 0 1.35rem; }
-.cover-equation { position: absolute; right: .25rem; top: 4rem; width: 13rem; text-align: center; padding: 1.8rem .2rem; color: var(--muted); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); transform: rotate(-3deg); }
+.cover-equation { position: absolute; right: .25rem; top: 2.8rem; width: 13rem; text-align: center; padding: 1rem .2rem; color: var(--muted); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); transform: rotate(-3deg); }
 .cover-equation > span { font-size: .43rem; letter-spacing: .09em; }
 .cover-equation > b { padding: .3rem; color: #a5784c; font-weight: 400; }
 .cover-equation > div { padding-top: 1rem; font-size: .85rem; }
@@ -154,14 +153,6 @@ button:focus-visible, a:focus-visible, input:focus-visible { outline: 2px solid 
   .race-states > div { padding: .5rem .35rem; }
   .race-states strong { font-size: 1.1rem; }
   .race-states span, .race-states small { font-size: .53rem; }
-  .md-typeset .exam-scope table:not([class]) { display: block; border: 0; }
-  .md-typeset .exam-scope table thead { display: none; }
-  .md-typeset .exam-scope table tbody { display: block; }
-  .md-typeset .exam-scope table tr { display: block; border: 1px solid var(--line); border-radius: .25rem; padding: .65rem .8rem; margin-bottom: .55rem; background: var(--paper); }
-  .md-typeset .exam-scope table td { display: block; border: 0; padding: .2rem 0; line-height: 1.75; }
-  .md-typeset .exam-scope table td:first-child { font-size: .78rem; font-weight: 600; }
-  .md-typeset .exam-scope table td:nth-child(2) { font-size: .7rem; }
-  .md-typeset .exam-scope table td:nth-child(3) { font-size: .7rem; color: var(--md-default-fg-color); }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 @media print {
