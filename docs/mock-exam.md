@@ -881,13 +881,59 @@ $$
     =\begin{bmatrix}-7/4\\-7/4\\-2\end{bmatrix}.
     $$
 
-    **（3）矩阵公式。**
+    **（3）从 Bellman 方程到矩阵方程，再消元求精确价值。**
+
+    **① 确定状态顺序，写出已知量。** 按 $A,B,C$ 排列，记 $v_A=V^\pi(A)$、$v_B=V^\pi(B)$、$v_C=V^\pi(C)$：
 
     $$
-    (I-\gamma P^\pi)v=r^\pi.
+    v=\begin{bmatrix}v_A\\v_B\\v_C\end{bmatrix},\qquad
+    P^\pi=\begin{bmatrix}
+    1/2&0&1/4\\
+    0&1/2&1/4\\
+    1/4&1/4&1/2
+    \end{bmatrix},\qquad
+    r^\pi=\begin{bmatrix}-1\\-1\\-1\end{bmatrix}.
     $$
 
-    **代入：**
+    本题 $\gamma=1$。终止态 $T$ 的价值固定为 0，因此只把三个非终止状态的价值列为未知量。
+
+    **② 从 Bellman 方程移项。** 当前价值等于一步期望奖励加上折扣后的后继价值：
+
+    $$
+    v=r^\pi+\gamma P^\pi v.
+    $$
+
+    把后继价值项移到左边，再利用 $v=Iv$：
+
+    $$
+    \begin{aligned}
+    v-\gamma P^\pi v&=r^\pi,\\
+    Iv-\gamma P^\pi v&=r^\pi,\\
+    (I-\gamma P^\pi)v&=r^\pi.
+    \end{aligned}
+    $$
+
+    这里 $I$ 是 $3\times3$ 单位矩阵，对角线上为 1，其余位置为 0；最后一步把共同的右侧向量 $v$ 提出来。
+
+    **③ 逐个位置计算 $I-\gamma P^\pi$。** 代入 $\gamma=1$：
+
+    $$
+    I-P^\pi=
+    \begin{bmatrix}
+    1-1/2&0-0&0-1/4\\
+    0-0&1-1/2&0-1/4\\
+    0-1/4&0-1/4&1-1/2
+    \end{bmatrix}
+    =\begin{bmatrix}
+    1/2&0&-1/4\\
+    0&1/2&-1/4\\
+    -1/4&-1/4&1/2
+    \end{bmatrix}.
+    $$
+
+    一般情况下，**对角线元素写 $1-\gamma P^\pi_{ii}$，非对角线元素写 $-\gamma P^\pi_{ij}$**。矩阵中的每个位置都要减去对应的转移概率乘以 $\gamma$。
+
+    **④ 代入价值向量，逐行展开。**
 
     $$
     \begin{bmatrix}
@@ -899,19 +945,47 @@ $$
     =\begin{bmatrix}-1\\-1\\-1\end{bmatrix}.
     $$
 
-    两边乘 4，得到代数方程：
+    矩阵的每一行分别与列向量相乘，得到三个方程：
 
     $$
-    2v_A-v_C=-4,\quad 2v_B-v_C=-4,\quad -v_A-v_B+2v_C=-4.
+    \begin{cases}
+    \frac12v_A-\frac14v_C=-1,\\
+    \frac12v_B-\frac14v_C=-1,\\
+    -\frac14v_A-\frac14v_B+\frac12v_C=-1.
+    \end{cases}
     $$
 
-    前两式相减得 $v_A=v_B=x$；第三式给出 $v_C=x-2$。代回第一式：
+    每个方程两边都乘 4，去掉分母：
+
+    $$
+    \begin{cases}
+    2v_A-v_C=-4,\\
+    2v_B-v_C=-4,\\
+    -v_A-v_B+2v_C=-4.
+    \end{cases}
+    $$
+
+    **⑤ 消元求解。** 第一式减去第二式，$v_C$ 项抵消：
+
+    $$
+    2v_A-2v_B=0\quad\Rightarrow\quad v_A=v_B=x.
+    $$
+
+    代入第三式，先把 $v_C$ 表示成 $x$：
+
+    $$
+    -x-x+2v_C=-4\quad\Rightarrow\quad v_C=x-2.
+    $$
+
+    再代回第一式：
 
     $$
     2x-(x-2)=-4\Rightarrow x=-6,\qquad v_C=-6-2=-8.
     $$
 
     因此 $\boxed{V^\pi(A)=V^\pi(B)=-6,\ V^\pi(C)=-8}$。每步奖励为 $-1$，它们分别对应期望还需 6、6、8 步终止。
+
+    **为什么 $\gamma=1$ 时本题仍能评估？**
 
     从任何非终止状态出发，都至少有 $1/8$ 的概率在接下来两步内终止：从 $C$ 可经上再左或左再上，两条路径总概率 $2(1/4)^2=1/8$；从 $A,B$ 下一步就有 $1/4$ 的终止概率。因此生存概率按两步区间至多以 $7/8$ 衰减，期望回合长度有限。本题靠终止结构保证价值有限与评估收敛，不能直接套用 $\gamma<1$ 的一步压缩结论。
 
